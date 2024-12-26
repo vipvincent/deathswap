@@ -1,0 +1,27 @@
+{
+    "pools": [
+        {
+            "rolls": 1.0,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "ender_pearl"
+                }
+            ],
+            "functions": [
+                {
+                    "function": "set_components",
+                    "components": {
+                        "custom_data": {"ui":1}
+                    }
+                },
+                {
+                    "function": "set_name",
+                    "entity": "this",
+                    "target": "item_name",
+                    "name": [{"text":"Arena Start: After ","color": "yellow"},{"score": {"name": "arena.start","objective": "deathswap.setting"}}," rounds of swap"]
+                }
+            ]
+        }
+    ]
+}

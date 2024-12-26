@@ -1,0 +1,92 @@
+[
+    {
+        "conditions": [
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "team": "red"
+                }
+            }
+        ],
+        "function": "set_components",
+        "components": {
+            "trim": {
+                "material": "redstone",
+                "pattern": "silence"
+            }
+        }
+    },
+    {
+        "conditions": [
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "team": "blue"
+                }
+            }
+        ],
+        "function": "set_components",
+        "components": {
+            "trim": {
+                "material": "lapis",
+                "pattern": "silence"
+            }
+        }
+    },
+    {
+        "conditions": [
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "team": "yellow"
+                }
+            }
+        ],
+        "function": "set_components",
+        "components": {
+            "trim": {
+                "material": "gold",
+                "pattern": "silence"
+            }
+        }
+    },
+    {
+        "conditions": [
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "team": "green"
+                }
+            }
+        ],
+        "function": "set_components",
+        "components": {
+            "trim": {
+                "material": "emerald",
+                "pattern": "silence"
+            }
+        }
+    },
+    {
+        "conditions": [
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "team": "spectator"
+                }
+            }
+        ],
+        "function": "set_components",
+        "components": {
+            "trim": {
+                "material": "iron",
+                "pattern": "silence"
+            }
+        }
+    }
+]

@@ -1,0 +1,3 @@
+scoreboard players operation @s deathswap.hurt -= @s deathswap.health
+execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"selector":"@s"},{"text": " §fis taking "},{"score":{"name": "@s","objective": "deathswap.hurt"},"color": "light_purple"},{"text": " §dpoints HP §fof damage"}]
+execute if score language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"selector":"@s"},{"text": " §f正在受到"},{"score":{"name": "@s","objective": "deathswap.hurt"},"color": "light_purple"},{"text": "§d點血量§f的傷害"}]

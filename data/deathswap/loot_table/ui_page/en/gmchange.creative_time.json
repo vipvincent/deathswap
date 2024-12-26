@@ -1,0 +1,27 @@
+{
+    "pools": [
+        {
+            "rolls": 1.0,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "grass_block"
+                }
+            ],
+            "functions": [
+                {
+                    "function": "set_components",
+                    "components": {
+                        "custom_data": {"ui":1}
+                    }
+                },
+                {
+                    "function": "set_name",
+                    "entity": "this",
+                    "target": "item_name",
+                    "name": [{"text":"Creative time: ","color": "yellow"},{"score": {"name": "gmchange.creative_time","objective": "deathswap.setting"}},"s"]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+[
+    {
+        "conditions": [
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "team": "red"
+                }
+            }
+        ],
+        "function": "set_components",
+        "components": {
+            "dyed_color": {
+                "rgb": 11546150,
+                "show_in_tooltip": false
+            }
+        }
+    },
+    {
+        "conditions": [
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "team": "blue"
+                }
+            }
+        ],
+        "function": "set_components",
+        "components": {
+            "dyed_color": {
+                "rgb": 3949748,
+                "show_in_tooltip": false
+            }
+        }
+    },
+    {
+        "conditions": [
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "team": "yellow"
+                }
+            }
+        ],
+        "function": "set_components",
+        "components": {
+            "dyed_color": {
+                "rgb": 16701501,
+                "show_in_tooltip": false
+            }
+        }
+    },
+    {
+        "conditions": [
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "team": "green"
+                }
+            }
+        ],
+        "function": "set_components",
+        "components": {
+            "dyed_color": {
+                "rgb": 8439583,
+                "show_in_tooltip": false
+            }
+        }
+    },
+    {
+        "conditions": [
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "team": "spectator"
+                }
+            }
+        ],
+        "function": "set_components",
+        "components": {
+            "dyed_color": {
+                "rgb": 10329495,
+                "show_in_tooltip": false
+            }
+        }
+    }
+]

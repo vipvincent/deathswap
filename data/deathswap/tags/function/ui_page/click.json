@@ -1,0 +1,17 @@
+{
+    "values": [
+        "deathswap:ui/page/click/air",
+        "deathswap:ui/page/click/armor_display",
+        "deathswap:ui/page/click/team",
+        "deathswap:ui/page/click/notadmin",
+        "deathswap:ui/page/click/admin_hotbar",
+        "deathswap:ui/page/click/admin_back",
+        "deathswap:ui/page/click/admin_0",
+        "deathswap:ui/page/click/admin_1",
+        "deathswap:ui/page/click/admin_2",
+        "deathswap:ui/page/click/admin_3",
+        "deathswap:ui/page/click/admin_101",
+        "deathswap:ui/page/click/admin_102",
+        "deathswap:ui/page/click/admin_103"
+    ]
+}
