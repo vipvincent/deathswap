@@ -23,7 +23,6 @@ execute if entity @a[team=blue] run scoreboard players add team_count deathswap.
 execute if entity @a[team=yellow] run scoreboard players add team_count deathswap.count 1
 execute if entity @a[team=green] run scoreboard players add team_count deathswap.count 1
 
-
 #effect
 effect give @a night_vision 11 255 true
 effect give @a water_breathing 1 255 true
@@ -47,4 +46,3 @@ execute as @a[tag=admin,tag=creative,gamemode=!creative] run function deathswap:
 #ui_click right
 function #deathswap:ui_page/click
 scoreboard players set @a deathswap.carrot_right_click 0
-scoreboard players set @a deathswap.warped_right_click 0

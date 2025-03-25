@@ -9,7 +9,7 @@ execute if score language deathswap.setting matches 2 run title @a[tag=!win] tit
 
 title @a subtitle [{"selector":"@s","color": "dark_red"}]
 
-tellraw @a {"text": "---------------------------------------------------"}
+tellraw @a {"text": "-----------------------------------------------------"}
 execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§4================================"}]
 execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§4Congratulations! The Killer "},{"selector":"@a[tag=win]","color": "dark_red"},{"text":" §4wins!"}]
 execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§4================================"}]

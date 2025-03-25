@@ -1,2 +1,2 @@
-summon marker ~ ~ ~ {Tags:["pos"],CustomName:"\"blue_pos\""}
-tp @e[name="blue_pos"] @s
+summon marker ~ ~ ~ {Tags:["pos","blue_pos"]}
+tp @e[tag=blue_pos] @s

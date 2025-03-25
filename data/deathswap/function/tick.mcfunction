@@ -50,9 +50,10 @@ kill @e[tag=inventory_limit]
 execute as @a unless score @s deathswap.win_score matches 1.. run scoreboard players set @s deathswap.win_score 0
 
 #win_display
-execute if score language deathswap.setting matches 1 run scoreboard objectives modify deathswap.win_score displayname "§6Death Swap §7| §dScores"
-execute if score language deathswap.setting matches 2 run scoreboard objectives modify deathswap.win_score displayname "§6死亡交換 §7| §d分數"
-scoreboard players set §bMade_By_vipvincent deathswap.win_score -99
+execute if score language deathswap.setting matches 1 run scoreboard objectives modify deathswap.win_score displayname "§6Death Swap §7| §eWin Scores"
+execute if score language deathswap.setting matches 2 run scoreboard objectives modify deathswap.win_score displayname "§6死亡交換 §7| §e獲勝分數"
+scoreboard players set §dDeath_Swap_v3.1 deathswap.win_score -98
+scoreboard players set §bMade_by_vipvincent deathswap.win_score -99
 
 #lobby
 execute as @e[type=marker,tag=lobby] at @s run spawnpoint @a ~ ~ ~

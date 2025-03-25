@@ -1,5 +1,5 @@
 {
     "values": [
-        "minecraft:vipvincent_loader","deathswap:load"
+        "vipvincent:loader","deathswap:load"
     ]
 }

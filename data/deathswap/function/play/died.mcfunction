@@ -14,15 +14,17 @@ attribute @s minecraft:entity_interaction_range base set 3.0
 
 #text
 title @a title ""
-execute if score language deathswap.setting matches 1 run title @a subtitle [{"text": "§fEliminate "},{"selector":"@s"}]
-execute if score language deathswap.setting matches 2 run title @a subtitle [{"text": "§f淘汰 "},{"selector":"@s"}]
+execute if score language deathswap.setting matches 1 run title @s title [{"text": "§4You died!"}]
+execute if score language deathswap.setting matches 2 run title @s title [{"text": "§4你死了！"}]
+execute if score language deathswap.setting matches 1 run title @a subtitle ["",{"text":"§4❌ "},{"selector":"@s"},{"text": " §4eliminated!"}]
+execute if score language deathswap.setting matches 2 run title @a subtitle ["",{"text":"§4❌ "},{"selector":"@s"},{"text": " §4淘汰！ "}]
 
-#red
-execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"selector":"@s"},{"text": " §feliminated!"}]
-execute if score language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"selector":"@s"},{"text": " §f淘汰！ "}]
+#tellraw
+execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text":"§4❌ "},{"selector":"@s"},{"text": " §reliminated!"}]
+execute if score language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text":"§4❌ "},{"selector":"@s"},{"text": " §r淘汰！ "}]
 
 #killer
-execute if score killer.identity deathswap.setting matches 1 if entity @s[tag=killer] if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text":"§4§l殺手 "},{"selector":"@s"},{"text": " §fhas been eliminated!"}]
-execute if score killer.identity deathswap.setting matches 1 if entity @s[tag=killer] if score language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text":"§4§l殺手 "},{"selector":"@s"},{"text": " §f已淘汰！"}]
+execute if entity @s[tag=killer] if score killer.identity deathswap.setting matches 1 if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "A §4§lkiller§r named "},{"selector":"@s"},{"text": " has been eliminated!"}]
+execute if entity @s[tag=killer] if score killer.identity deathswap.setting matches 1 if score language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "一位§4§l殺手§r名叫 "},{"selector":"@s"},{"text": " 已淘汰！"}]
 
 execute as @a at @s run playsound entity.wither.break_block master @s ^ ^ ^ 1 1 1

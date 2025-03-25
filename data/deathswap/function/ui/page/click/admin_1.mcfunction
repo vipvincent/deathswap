@@ -56,10 +56,10 @@ execute if score inventory_limit deathswap.setting matches 28 as @a[tag=admin,ta
 execute if score inventory_limit deathswap.setting matches 19 as @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] unless items entity @s inventory.15 *[custom_data={ui:1b},count=19] run function deathswap:setting/inventory_limit
 execute if score inventory_limit deathswap.setting matches 10 as @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] unless items entity @s inventory.15 *[custom_data={ui:1b},count=10] run function deathswap:setting/inventory_limit
 execute if score inventory_limit deathswap.setting matches 2 as @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] unless items entity @s inventory.15 *[custom_data={ui:1b},count=2] run function deathswap:setting/inventory_limit
-execute as @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] unless items entity @s inventory.24 *[custom_data={ui:1b}] run function deathswap:setting/lobbymode
+execute as @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] unless items entity @s inventory.24 *[custom_data={ui:1b}] run function deathswap:setting/start_pos
 
 #air
-item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.7 with stick[custom_data={ui:1b},max_stack_size=1,hide_tooltip={},item_model="air",item_name='""']
-item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.16 with stick[custom_data={ui:1b},max_stack_size=1,hide_tooltip={},item_model="air",item_name='""']
-item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.17 with stick[custom_data={ui:1b},max_stack_size=1,hide_tooltip={},item_model="air",item_name='""']
-item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.25 with stick[custom_data={ui:1b},max_stack_size=1,hide_tooltip={},item_model="air",item_name='""']
+item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.7 with stick[custom_data={ui:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},item_model="air",item_name=""]
+item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.16 with stick[custom_data={ui:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},item_model="air",item_name=""]
+item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.17 with stick[custom_data={ui:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},item_model="air",item_name=""]
+item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.25 with stick[custom_data={ui:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},item_model="air",item_name=""]

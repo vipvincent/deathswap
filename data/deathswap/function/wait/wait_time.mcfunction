@@ -6,8 +6,8 @@ bossbar set deathswap:wait max 200
 execute store result bossbar deathswap:wait value run scoreboard players get wait deathswap.timer
 execute if score wait deathswap.timer matches 1 if score language deathswap.setting matches 1 run bossbar set deathswap:wait name {"text":"§bThe system is being prepared"}
 execute if score wait deathswap.timer matches 1 if score language deathswap.setting matches 2 run bossbar set deathswap:wait name {"text":"§b系統正在準備中"}
-execute if score wait deathswap.timer matches 140 if score language deathswap.setting matches 1 run bossbar set deathswap:wait name {"text":"§eThe game is about to begin"}
-execute if score wait deathswap.timer matches 140 if score language deathswap.setting matches 2 run bossbar set deathswap:wait name {"text":"§e遊戲即將開始"}
+execute if score wait deathswap.timer matches 100 if score language deathswap.setting matches 1 run bossbar set deathswap:wait name {"text":"§eThe game is about to begin"}
+execute if score wait deathswap.timer matches 100 if score language deathswap.setting matches 2 run bossbar set deathswap:wait name {"text":"§e遊戲即將開始"}
 
 #0.05s
 execute if score wait deathswap.timer matches 1..200 run clear @a

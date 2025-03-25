@@ -9,7 +9,7 @@ execute if score team_green deathswap.status matches 1 as @a[team=green,tag=play
 function deathswap:play/swap/random
 
 kill @e[tag=pos]
-scoreboard players reset swap_check deathswap.status
+#scoreboard players reset swap_check deathswap.status
 
 #swap_invincibility
 execute if score swap_invincible deathswap.setting matches 1 run effect give @a[tag=player] resistance 1 255 true

@@ -10,7 +10,7 @@ bossbar set deathswap:gmchange visible false
 bossbar set deathswap:arena max 200
 
 #text
-tellraw @a {"text": "---------------------------------------------------"}
+tellraw @a {"text": "-----------------------------------------------------"}
 execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fLoading arena~"}]
 execute if score language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f正在載入競技場~"}]
 

@@ -32,17 +32,24 @@ execute as @a run scoreboard players operation @s deathswap.hurt = @s deathswap.
 #status
 scoreboard players set game deathswap.status 2
 
+#play_count
+scoreboard players add play_count deathswap.count 1
+
 #text
 #start
 execute if score language deathswap.setting matches 1 run tellraw @a[tag=!admin] [{"text": "§6Death Swap§7 | §r"},{"text": "§fGame started!"}]
 execute if score language deathswap.setting matches 2 run tellraw @a[tag=!admin] [{"text": "§6死亡交換§7 | §r"},{"text": "§f遊戲開始！"}]
 
-execute if score language deathswap.setting matches 1 run tellraw @a[tag=admin] [{"text": "§6Death Swap§7 | §r"},{"text": "§fGame started!"},{"text": " §b[Reset Game]","clickEvent": {"action": "run_command","value": "/trigger deathswap set 5"},"hoverEvent": {"action": "show_text","contents": "§eClick here or type command\n§d/trigger deathswap set 5 §a[Admin rights]\n§d/function deathswap:reset §c[OP players]"}}]
-execute if score language deathswap.setting matches 2 run tellraw @a[tag=admin] [{"text": "§6死亡交換§7 | §r"},{"text": "§f遊戲開始！"},{"text": "§b[重製遊戲]","clickEvent": {"action": "run_command","value": "/trigger deathswap set 5"},"hoverEvent": {"action": "show_text","contents": "§e點此或輸入以下指令\n§d/trigger deathswap set 5 §a[管理員權限]\n§d/function deathswap:reset §c[OP 玩家]"}}]
+execute if score language deathswap.setting matches 1 run tellraw @a[tag=admin] [{"text": "§6Death Swap§7 | §r"},{"text": "§fGame started! "},\
+{"text": "§b[Reset Game]","click_event": {"action": "run_command","command": "/trigger deathswap set 5"},"hover_event": {"action": "show_text","value": "§eClick here or type command\n§d/trigger deathswap set 5 §a[Admin]\n§d/function deathswap:reset §c[OP players]"}}\
+]
+execute if score language deathswap.setting matches 2 run tellraw @a[tag=admin] [{"text": "§6死亡交換§7 | §r"},{"text": "§f遊戲開始！"},\
+{"text": "§b[重製遊戲]","click_event": {"action": "run_command","command": "/trigger deathswap set 5"},"hover_event": {"action": "show_text","value": "§e點此或輸入以下指令\n§d/trigger deathswap set 5 §a[管理員權限]\n§d/function deathswap:reset §c[OP 玩家]"}}\
+]
 
 #/tm
-execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fYou can use /tm to chat with teammates","clickEvent": {"action": "suggest_command","value": "/tm "},"hoverEvent": {"action": "show_text","contents": "/tm <message>"}}]
-execute if score language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f你可以使用 /tm 與隊友聊天","clickEvent": {"action": "suggest_command","value": "/tm "},"hoverEvent": {"action": "show_text","contents": "/tm <訊息>"}}]
+execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fYou can use /tm to chat with teammates","click_event": {"action": "suggest_command","command": "/tm "},"hover_event": {"action": "show_text","value": "/tm <message>"}}]
+execute if score language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f你可以使用 /tm 與隊友聊天","click_event": {"action": "suggest_command","command": "/tm "},"hover_event": {"action": "show_text","value": "/tm <訊息>"}}]
 
 #inventory_limit
 execute if score inventory_limit deathswap.setting matches ..36 if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§d§lNote: §r§fDo not put items into locked inventory!"}]

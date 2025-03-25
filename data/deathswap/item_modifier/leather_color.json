@@ -11,10 +11,7 @@
         ],
         "function": "set_components",
         "components": {
-            "dyed_color": {
-                "rgb": 11546150,
-                "show_in_tooltip": false
-            }
+            "dyed_color": 11546150
         }
     },
     {
@@ -29,10 +26,7 @@
         ],
         "function": "set_components",
         "components": {
-            "dyed_color": {
-                "rgb": 3949748,
-                "show_in_tooltip": false
-            }
+            "dyed_color": 3949748
         }
     },
     {
@@ -47,10 +41,7 @@
         ],
         "function": "set_components",
         "components": {
-            "dyed_color": {
-                "rgb": 16701501,
-                "show_in_tooltip": false
-            }
+            "dyed_color": 16701501
         }
     },
     {
@@ -65,10 +56,7 @@
         ],
         "function": "set_components",
         "components": {
-            "dyed_color": {
-                "rgb": 8439583,
-                "show_in_tooltip": false
-            }
+            "dyed_color": 8439583
         }
     },
     {
@@ -83,10 +71,7 @@
         ],
         "function": "set_components",
         "components": {
-            "dyed_color": {
-                "rgb": 10329495,
-                "show_in_tooltip": false
-            }
+            "dyed_color": 10329495
         }
     }
 ]

@@ -97,7 +97,6 @@ scoreboard players set green_count deathswap.count 0
 scoreboard players set swap_count deathswap.count 0
 scoreboard players set team_count deathswap.count 0
 
-scoreboard players set @a deathswap.warped_right_click 0
 scoreboard players set @a deathswap.carrot_right_click 0
 
 scoreboard objectives setdisplay list deathswap.win_score
@@ -132,7 +131,7 @@ function deathswap:ui/page/update
 scoreboard players set @a[tag=admin] deathswap.ui_page 0
 
 #text
-tellraw @a {"text": "---------------------------------------------------"}
+tellraw @a {"text": "-----------------------------------------------------"}
 #en
 execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§2Successfully reset §6Death Swap"}]
 execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§6Death Swap §fMade by §bvipvincent"}]

@@ -1,3 +1,4 @@
+tag @a remove killer
 #only one
 execute if score killer.quantity deathswap.setting matches 0 run tag @a[tag=player,sort=random,limit=1] add killer
 

@@ -27,6 +27,8 @@ Death Swap is an original concept proposed by [SethBling](https://www.youtube.co
 
 ## Download
 
+> It is recommended to use the latest version for a better experience.
+
 > The features of the mod and the data pack are identical.   
 > The data pack only for single world, and can be used in LAN world and server.  
 > The mod applies to all worlds, so it's recommended for server.   
@@ -72,6 +74,8 @@ Death Swap is an original concept proposed by [SethBling](https://www.youtube.co
 死亡交換是由[SethBling](https://www.youtube.com/watch?v=r5rEaHPt6mw)所提出的原創概念  
 
 ## 下載
+
+> 建議使用最新版本以獲得更好的體驗。
 
 > 模組與資料包的所有功能皆為相同。   
 > 資料包僅會套用於單一世界，區網世界和伺服器都可以使用。   

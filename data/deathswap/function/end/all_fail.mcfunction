@@ -4,7 +4,7 @@ execute if score language deathswap.setting matches 1 run title @a subtitle {"te
 execute if score language deathswap.setting matches 2 run title @a title {"text": "§d無人生還！"}
 execute if score language deathswap.setting matches 2 run title @a subtitle {"text": "§d我的天呀！"}
 
-tellraw @a {"text": "---------------------------------------------------"}
+tellraw @a {"text": "-----------------------------------------------------"}
 execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§d================================"}]
 execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§dNo one survived! No team wins!"}]
 execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§d================================"}]

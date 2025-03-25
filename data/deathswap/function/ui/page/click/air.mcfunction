@@ -71,3 +71,7 @@ execute as @a[tag=notadmin] if items entity @s hotbar.0 *[custom_data={ui:1b}] r
 execute as @a[tag=notadmin] if items entity @s hotbar.1 *[custom_data={ui:1b}] run item replace entity @s hotbar.1 with air
 execute as @a[tag=notadmin] if items entity @s hotbar.7 *[custom_data={ui:1b}] run item replace entity @s hotbar.7 with air
 execute as @a[tag=notadmin] if items entity @s hotbar.8 *[custom_data={ui:1b}] run item replace entity @s hotbar.8 with air
+
+
+#offhand
+execute as @a if items entity @s weapon.offhand *[custom_data={ui:1b}] run item replace entity @s weapon.offhand with air
