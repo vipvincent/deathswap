@@ -1,0 +1,27 @@
+{
+    "pools": [
+        {
+            "rolls": 1.0,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "clock"
+                }
+            ],
+            "functions": [
+                {
+                    "function": "set_components",
+                    "components": {
+                        "custom_data": {"ui":1}
+                    }
+                },
+                {
+                    "function": "set_name",
+                    "entity": "this",
+                    "target": "custom_name",
+                    "name": [{"text":"隨機效果間隔：","color": "yellow","italic": false},{"score": {"name": "random_effect.time","objective": "deathswap.setting"}},"秒"]
+                }
+            ]
+        }
+    ]
+}

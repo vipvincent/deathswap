@@ -1,3 +1,5 @@
+#wait_actionbar
+
 #en
 execute if score language deathswap.setting matches 1 as @a[team=red,tag=!killer] run title @s actionbar [{"text": "§cRed"}]
 execute if score language deathswap.setting matches 1 as @a[team=blue,tag=!killer] run title @s actionbar [{"text": "§9Blue"}]

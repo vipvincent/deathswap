@@ -20,11 +20,14 @@ execute if score team_collisionrule deathswap.setting matches 1 run team modify 
 gamerule maxEntityCramming 24
 
 #bossbar 
-execute if score arena deathswap.setting matches 1 if score arena.start deathswap.setting matches 0 if score arena.shrink deathswap.setting matches 0 run bossbar set deathswap:arena visible true
-bossbar set deathswap:swap_countdown visible true
-execute if score gmchange deathswap.setting matches 1 run bossbar set deathswap:gmchange visible true
 bossbar set deathswap:wait visible false
+bossbar set deathswap:swap_countdown visible true
+execute if score arena deathswap.setting matches 1 if score arena.start deathswap.setting matches 0 if score arena.shrink deathswap.setting matches 0 run bossbar set deathswap:arena visible true
+execute if score gmchange deathswap.setting matches 1 run bossbar set deathswap:gmchange visible true
+execute if score random_effect deathswap.setting matches 1 run bossbar set deathswap:random_effect visible true
 
+
+#scoreboard
 scoreboard players reset @a deathswap.hurt
 scoreboard players reset @a deathswap.death
 execute as @a run scoreboard players operation @s deathswap.hurt = @s deathswap.health
@@ -64,3 +67,6 @@ function deathswap:wait/give_item
 execute if score arena deathswap.setting matches 1 if score arena.start deathswap.setting matches 0 run scoreboard players set arena deathswap.status 2
 execute if score arena deathswap.setting matches 1 if score arena.start deathswap.setting matches 0 run execute store result score arena.border deathswap.status run scoreboard players get arena.border deathswap.setting
 execute if score arena deathswap.setting matches 1 if score arena.start deathswap.setting matches 0 run execute if score arena.shrink deathswap.setting matches 0 run function deathswap:play/arena/shrink_wait
+
+#random_effect
+execute if score random_effect deathswap.setting matches 1 run function deathswap:play/random_effect/random

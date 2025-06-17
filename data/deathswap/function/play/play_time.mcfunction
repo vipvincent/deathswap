@@ -6,26 +6,25 @@ execute unless score arena deathswap.status matches 0..1 run function deathswap:
 execute if score arena deathswap.status matches 0..1 run function deathswap:wait/actionbar
 
 #bossbar
-execute store result bossbar deathswap:swap_countdown max run scoreboard players get swap_time deathswap.status
-execute store result bossbar deathswap:swap_countdown value run scoreboard players get swap_countdown deathswap.timer
-bossbar set deathswap:gmchange players @a
-bossbar set deathswap:arena players @a
-execute if score swap_bossbar deathswap.setting matches 0 run bossbar set deathswap:swap_countdown players @a[tag=spectator]
-execute if score swap_bossbar deathswap.setting matches 1 run bossbar set deathswap:swap_countdown players @a
 execute if score arena deathswap.setting matches 0..1 if score language deathswap.setting matches 1 if score swap_bossbar deathswap.setting matches 0 run bossbar set deathswap:swap_countdown name [{"text": "§f[Spectator/Eliminate] Swap countdown: "},{"score":{"name": "swap_countdown","objective": "deathswap.timer"}},{"text": "s"}]
 execute if score arena deathswap.setting matches 0..1 if score language deathswap.setting matches 2 if score swap_bossbar deathswap.setting matches 0 run bossbar set deathswap:swap_countdown name [{"text": "§f[旁觀/淘汰者顯示] 交換倒數："},{"score":{"name": "swap_countdown","objective": "deathswap.timer"}},{"text": "秒"}]
 execute if score arena deathswap.setting matches 0..1 if score language deathswap.setting matches 1 if score swap_bossbar deathswap.setting matches 1 run bossbar set deathswap:swap_countdown name [{"text": "§fSwap countdown: "},{"score":{"name": "swap_countdown","objective": "deathswap.timer"}},{"text": "s"}]
 execute if score arena deathswap.setting matches 0..1 if score language deathswap.setting matches 2 if score swap_bossbar deathswap.setting matches 1 run bossbar set deathswap:swap_countdown name [{"text": "§f交換倒數："},{"score":{"name": "swap_countdown","objective": "deathswap.timer"}},{"text": "秒"}]
+execute store result bossbar deathswap:swap_countdown max run scoreboard players get swap_time deathswap.status
+execute store result bossbar deathswap:swap_countdown value run scoreboard players get swap_countdown deathswap.timer
 
 #effect
 execute if score saturation deathswap.setting matches 1 run effect give @a[tag=player] saturation 1 255 true
 execute if score night_vision deathswap.setting matches 1 run effect give @a[tag=player] night_vision 11 255 true
 
 #function
-execute if score gmchange deathswap.setting matches 1 run function deathswap:play/gmchange/main
-execute if score arena deathswap.setting matches 1 run function deathswap:play/arena/main
 execute if score furnace deathswap.setting matches 1 run function deathswap:play/furnace
 execute if score inventory_limit deathswap.setting matches 1.. run function deathswap:play/inventory_limit
+
+#special_gameplay
+execute if score gmchange deathswap.setting matches 1 run function deathswap:play/gmchange/main
+execute if score arena deathswap.setting matches 1 run function deathswap:play/arena/main
+execute if score random_effect deathswap.setting matches 1 run function deathswap:play/random_effect/main
 
 #hurt_tip
 execute as @a[tag=player] if score @s deathswap.hurt > @s deathswap.health run function deathswap:play/hurt_tip
@@ -81,8 +80,8 @@ execute if score team_green deathswap.status matches 1 if score team_red deathsw
 execute if score team_red deathswap.status matches 0 if score team_blue deathswap.status matches 0 if score team_yellow deathswap.status matches 0 if score team_green deathswap.status matches 0 run return run function deathswap:end/all_fail
 
 #swap warn
-execute if score tick deathswap.timer matches 0 unless score swap_countdown deathswap.timer matches 0 if score swap_countdown deathswap.timer <= swap_warn deathswap.setting run execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},[{"text": "Swap in "},{"score": {"name": "swap_countdown","objective": "deathswap.timer"}},{"text": "s!"}]]
-execute if score tick deathswap.timer matches 0 unless score swap_countdown deathswap.timer matches 0 if score swap_countdown deathswap.timer <= swap_warn deathswap.setting run execute if score language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},[{"score": {"name": "swap_countdown","objective": "deathswap.timer"}},{"text": "秒後交換！"}]]
+execute if score tick deathswap.timer matches 0 unless score swap_countdown deathswap.timer matches 0 if score swap_countdown deathswap.timer = swap_warn deathswap.setting run execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},[{"text": "Swap in "},{"score": {"name": "swap_countdown","objective": "deathswap.timer"}},{"text": "s!"}]]
+execute if score tick deathswap.timer matches 0 unless score swap_countdown deathswap.timer matches 0 if score swap_countdown deathswap.timer = swap_warn deathswap.setting run execute if score language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},[{"score": {"name": "swap_countdown","objective": "deathswap.timer"}},{"text": "秒後交換！"}]]
 execute if score tick deathswap.timer matches 0 unless score swap_countdown deathswap.timer matches 0 if score swap_countdown deathswap.timer = swap_warn deathswap.setting run execute as @a at @s run playsound block.anvil.land master @s ~ ~ ~
 
 #swap

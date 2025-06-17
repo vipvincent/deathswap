@@ -18,8 +18,8 @@
                 {
                     "function": "set_name",
                     "entity": "this",
-                    "target": "item_name",
-                    "name": [{"text":"競技場開始：交換","color": "yellow"},{"score": {"name": "arena.start","objective": "deathswap.setting"}},"回合後"]
+                    "target": "custom_name",
+                    "name": [{"text":"競技場開始：交換","color": "yellow","italic": false},{"score": {"name": "arena.start","objective": "deathswap.setting"}},"回合後"]
                 }
             ]
         }

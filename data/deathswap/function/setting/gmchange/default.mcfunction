@@ -1,6 +1,6 @@
 #gmchange
 scoreboard players set gmchange.survival_time deathswap.setting 60
-scoreboard players set gmchange.creative_time deathswap.setting 5
+scoreboard players set gmchange.creative_time deathswap.setting 3
 
 function deathswap:ui/page/update
 

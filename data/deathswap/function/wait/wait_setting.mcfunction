@@ -112,7 +112,7 @@ execute as @a[tag=player] run attribute @s minecraft:block_interaction_range bas
 execute as @a[tag=player] run attribute @s minecraft:entity_interaction_range base set 0.0
 
 effect give @a[tag=player] water_breathing 8 255 true
-effect give @a[tag=player] saturation 8 255 true 
-effect give @a[tag=player] instant_health 8 4 true 
+effect give @a[tag=player] saturation 160 255 true 
+effect give @a[tag=player] instant_health 160 31 true 
 effect give @a[tag=player] regeneration 18 255 true
 effect give @a[tag=player] resistance 18 255 true 

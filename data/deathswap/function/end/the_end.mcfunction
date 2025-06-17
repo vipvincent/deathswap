@@ -13,6 +13,7 @@ scoreboard players set game deathswap.status 3
 bossbar set deathswap:swap_countdown visible false
 bossbar set deathswap:arena visible false
 bossbar set deathswap:gmchange visible false
+bossbar set deathswap:random_effect visible false
 
 #score
 scoreboard players add @a[tag=win] deathswap.win_score 1

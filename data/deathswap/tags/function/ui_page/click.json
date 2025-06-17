@@ -9,9 +9,10 @@
         "deathswap:ui/page/click/admin_0",
         "deathswap:ui/page/click/admin_1",
         "deathswap:ui/page/click/admin_2",
-        "deathswap:ui/page/click/admin_3",
+        "deathswap:ui/page/click/admin_100",
         "deathswap:ui/page/click/admin_101",
         "deathswap:ui/page/click/admin_102",
-        "deathswap:ui/page/click/admin_103"
+        "deathswap:ui/page/click/admin_103",
+        "deathswap:ui/page/click/admin_104"
     ]
 }

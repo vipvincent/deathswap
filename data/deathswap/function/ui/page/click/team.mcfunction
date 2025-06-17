@@ -1,3 +1,5 @@
+#team_choose
+
 #team
 execute if score team_choose deathswap.setting matches 1 as @a[tag=!creative] unless items entity @s hotbar.2 *[custom_data={ui:1b}] run function deathswap:ui/team/join/red
 execute if score team_choose deathswap.setting matches 1 as @a[tag=!creative] unless items entity @s hotbar.3 *[custom_data={ui:1b}] run function deathswap:ui/team/join/blue

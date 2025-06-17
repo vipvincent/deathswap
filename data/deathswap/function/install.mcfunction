@@ -1,3 +1,5 @@
+#install
+
 #install_stage
 execute if data storage deathswap:status {install_stage:1b} unless score language deathswap.setting matches 1.. run return run function deathswap:ui/language
 execute if data storage deathswap:status {install_stage:1b} if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§6Death Swap §finstall completed!"}]
@@ -5,7 +7,7 @@ execute if data storage deathswap:status {install_stage:1b} if score language de
 execute if data storage deathswap:status {install_stage:1b} if score language deathswap.setting matches 1.. run function deathswap:reset
 execute if data storage deathswap:status {install_stage:1b} if score language deathswap.setting matches 1.. run return run data remove storage deathswap:status install_stage
 
-#check install
+#return
 execute if data storage deathswap:status {install:1b} if score language deathswap.setting matches 1 run tellraw @s [{"text": "§cYou have installed Death Swap! "},\
 {"text": "§d[Reinstall] ","click_event": {"action": "run_command","command": "/function deathswap:reinstall"},"hover_event": {"action": "show_text","value": "§eClick here or type command\n§d/function deathswap:reinstall §c[OP players]"}},\
 {"text": "§4[Uninstall] ","click_event": {"action": "run_command","command": "/function deathswap:uninstall"},"hover_event": {"action": "show_text","value": "§eClick here or type command\n§d/function deathswap:uninstall §c[OP players]"}}\
@@ -17,6 +19,7 @@ execute if data storage deathswap:status {install:1b} if score language deathswa
 execute if data storage deathswap:status {install:1b} at @s run playsound entity.villager.no master @s ~ ~ ~
 execute if data storage deathswap:status {install:1b} run return fail
 
+#install main
 execute unless data storage deathswap:status {reinstall:1b} run tellraw @a {"text": "-----------------------------------------------------"}
 execute unless data storage deathswap:status {reinstall:1b} run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fInstalling §6Death Swap§f... §f正在安裝§6死亡交換§f..."}]
 execute unless data storage deathswap:status {reinstall:1b} run tellraw @a {"text": "-----------------------------------------------------"}
@@ -25,6 +28,7 @@ execute as @a at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~
 #gamerule
 gamerule doImmediateRespawn true
 gamerule sendCommandFeedback false
+gamerule locatorBar false
 gamerule spawnRadius 0
 
 #worldborder
@@ -43,7 +47,8 @@ scoreboard objectives add deathswap.join_game dummy
 scoreboard objectives add deathswap.carrot_right_click minecraft.used:minecraft.carrot_on_a_stick
 
 scoreboard players set team_choose deathswap.setting 0
-scoreboard players set safetime deathswap.timer 30
+scoreboard players set safetime deathswap.status 30
+scoreboard players set tick deathswap.status 20
 
 #health
 scoreboard objectives add deathswap.health health {"text": "§c❤"}
@@ -75,21 +80,26 @@ bossbar set deathswap:wait max 200
 bossbar add deathswap:gmchange ""
 bossbar add deathswap:arena ""
 bossbar set deathswap:arena color yellow
+bossbar add deathswap:random_effect ""
+bossbar set deathswap:random_effect color purple
 
-#
+#player
 scoreboard players set @a deathswap.join_game 1
 tag @a add notadmin
+
+#for install player give admin
+tag @s add admin 
 
 #setting default
 function deathswap:setting/default_all
 
 #install
 data modify storage deathswap:status install set value 1b
-data modify storage deathswap:status version set value "v3.1"
+data modify storage deathswap:status version set value "v3.2"
 data modify storage deathswap:status install_stage set value 1b
 
-#for install player give admin
-tag @s add admin
-
+#reinstall
 execute if data storage deathswap:status {reinstall:1b} run return fail
+
+#ui/language
 function deathswap:ui/language

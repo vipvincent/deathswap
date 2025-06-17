@@ -1,3 +1,4 @@
+#clear ender chest of all players
 item replace entity @a enderchest.0 with air
 item replace entity @a enderchest.1 with air
 item replace entity @a enderchest.2 with air

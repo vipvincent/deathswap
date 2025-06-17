@@ -1,3 +1,4 @@
+#reset
 scoreboard players set game deathswap.status -1
 
 #worldborder
@@ -22,7 +23,8 @@ gamerule announceAdvancements false
 gamerule keepInventory true
 gamerule showDeathMessages false
 difficulty peaceful
-#
+
+#other
 effect clear @a
 clear @a
 function deathswap:wait/clear_ender_chest
@@ -35,7 +37,6 @@ gamemode survival @a
 tp @a @e[type=marker,tag=lobby,limit=1]
 advancement revoke @a everything
 recipe take @a *
-
 title @a reset
 
 #time 
@@ -60,6 +61,7 @@ team modify blue friendlyFire true
 team modify yellow friendlyFire true
 team modify green friendlyFire true
 
+#scoreboard
 scoreboard players set tick deathswap.timer 0
 scoreboard players set round_time deathswap.timer 0
 scoreboard players set swap_countdown deathswap.timer 0
@@ -67,9 +69,9 @@ scoreboard players set swap_countdown deathswap.timer 0
 scoreboard players set wait deathswap.timer 0
 scoreboard players set end deathswap.timer 0
 scoreboard players set play_time deathswap.timer 0
-scoreboard players set safetime deathswap.timer 30
 scoreboard players set gmchange deathswap.timer 0
 scoreboard players set arena deathswap.timer 0
+scoreboard players set random_effect deathswap.timer 0
 scoreboard players set tick deathswap.timer 0
 scoreboard players set round_time deathswap.timer 0
 scoreboard players set swap_countdown deathswap.timer 0
@@ -86,6 +88,7 @@ scoreboard players set swap_time deathswap.status 0
 scoreboard players set win deathswap.status -1
 scoreboard players set gmchange deathswap.status 0
 scoreboard players set arena deathswap.status -1
+scoreboard players set random_effect.effect deathswap.status 0
 scoreboard players set arena.shrink deathswap.status -1
 scoreboard players set arena.border deathswap.status -1
 
@@ -121,9 +124,11 @@ execute as @a run attribute @s minecraft:entity_interaction_range base set 3.0
 bossbar set deathswap:gmchange visible false
 bossbar set deathswap:swap_countdown visible false
 bossbar set deathswap:arena visible false
+bossbar set deathswap:random_effect visible false
 bossbar set deathswap:wait visible true
 bossbar set deathswap:wait value 200
 
+#end
 scoreboard players set game deathswap.status 0
 
 #ui
@@ -142,8 +147,9 @@ execute if score language deathswap.setting matches 2 run tellraw @a [{"text": "
 execute if score language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§6死亡交換§f是由§b早安豆江 vipvincent§f製作"}]
 execute if score language deathswap.setting matches 2 run title @a title {"text": "§6死亡交換"}
 execute if score language deathswap.setting matches 2 run title @a subtitle {"text": "§b製作：早安豆江 vipvincent"}
-
+#sound
 execute as @a at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~
 
+#link&info
 execute as @a run function deathswap:ui/link
 execute as @a run function deathswap:ui/click_admin

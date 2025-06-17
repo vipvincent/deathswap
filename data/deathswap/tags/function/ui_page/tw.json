@@ -7,9 +7,10 @@
         "deathswap:ui/page/tw/admin_0",
         "deathswap:ui/page/tw/admin_1",
         "deathswap:ui/page/tw/admin_2",
-        "deathswap:ui/page/tw/admin_3",
+        "deathswap:ui/page/tw/admin_100",
         "deathswap:ui/page/tw/admin_101",
         "deathswap:ui/page/tw/admin_102",
-        "deathswap:ui/page/tw/admin_103"
+        "deathswap:ui/page/tw/admin_103",
+        "deathswap:ui/page/tw/admin_104"
     ]
 }

@@ -2,7 +2,6 @@
 function deathswap:prepare/actionbar
 
 #bossbar
-bossbar set deathswap:wait players @a
 execute if score language deathswap.setting matches 1 run bossbar set deathswap:wait name {"text": "§eYou are waiting for play §6Death Swap"}
 execute if score language deathswap.setting matches 2 run bossbar set deathswap:wait name {"text": "§e你正在等待遊玩§6死亡交換"}
 
@@ -28,6 +27,8 @@ effect give @a night_vision 11 255 true
 effect give @a water_breathing 1 255 true
 effect give @a resistance 1 255 true
 effect give @a regeneration 1 255 true
+effect give @a instant_health 1 31 true
+effect give @a saturation 1 255 true
 effect give @a glowing 1 255 true
 
 #admin
@@ -42,7 +43,3 @@ execute as @a if score @s deathswap.death matches 1 run tp @s @e[type=marker,tag
 #creative
 execute as @a[tag=admin,tag=!creative,gamemode=creative] run function deathswap:prepare/changeto_creative
 execute as @a[tag=admin,tag=creative,gamemode=!creative] run function deathswap:prepare/changeto_survival
-
-#ui_click right
-function #deathswap:ui_page/click
-scoreboard players set @a deathswap.carrot_right_click 0

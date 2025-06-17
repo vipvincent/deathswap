@@ -1,13 +1,29 @@
+#tick
+
+#return
 execute unless data storage deathswap:status {install:1b} run return fail
+execute if data storage deathswap:status {install_stage:1b} run return fail
 
 #trigger
 function deathswap:trigger
+
+#right_click
+execute if score game deathswap.status matches 0 run function #deathswap:ui_page/click
+scoreboard players set @a deathswap.carrot_right_click 0
 
 #join_game
 scoreboard players add @a deathswap.join_game 0
 execute as @a[scores={deathswap.join_game=0}] run function deathswap:join_game
 scoreboard players reset * deathswap.join_game
 scoreboard players set @a deathswap.join_game 1
+
+#bossbar players
+bossbar set deathswap:wait players @a
+execute if score swap_bossbar deathswap.setting matches 0 run bossbar set deathswap:swap_countdown players @a[tag=spectator]
+execute if score swap_bossbar deathswap.setting matches 1 run bossbar set deathswap:swap_countdown players @a
+bossbar set deathswap:gmchange players @a
+bossbar set deathswap:arena players @a
+bossbar set deathswap:random_effect players @a
 
 #team
 execute if score language deathswap.setting matches 1 run team modify red displayName {"text":"Red Team","color": "red"}
@@ -52,7 +68,7 @@ execute as @a unless score @s deathswap.win_score matches 1.. run scoreboard pla
 #win_display
 execute if score language deathswap.setting matches 1 run scoreboard objectives modify deathswap.win_score displayname "§6Death Swap §7| §eWin Scores"
 execute if score language deathswap.setting matches 2 run scoreboard objectives modify deathswap.win_score displayname "§6死亡交換 §7| §e獲勝分數"
-scoreboard players set §dDeath_Swap_v3.1 deathswap.win_score -98
+scoreboard players set §dDeath_Swap_v3.2 deathswap.win_score -98
 scoreboard players set §bMade_by_vipvincent deathswap.win_score -99
 
 #lobby

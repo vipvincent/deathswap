@@ -1,7 +1,7 @@
-#gmchange
+#special_gameplay/gmchange
 
 #reset gmchange setting
-item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=101}] inventory.26 with nautilus_shell[custom_data={ui:1b},item_name={"text":"§eReset Game Mode Auto Switch setting"}]
+item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=101}] inventory.26 with nautilus_shell[custom_data={ui:1b},custom_name={"text":"§eReset Game Mode Auto Switch setting"}]
 
 #gmchange.survival_time
 item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=101}] inventory.11 with player_head[custom_data={ui:1b},custom_name={"text": "§c-5s"},profile={name:MHF_ArrowLeft},tooltip_display={hidden_components:["profile"]}] 5

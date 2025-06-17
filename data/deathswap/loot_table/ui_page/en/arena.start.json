@@ -18,8 +18,8 @@
                 {
                     "function": "set_name",
                     "entity": "this",
-                    "target": "item_name",
-                    "name": [{"text":"Arena Start: After ","color": "yellow"},{"score": {"name": "arena.start","objective": "deathswap.setting"}}," rounds of swap"]
+                    "target": "custom_name",
+                    "name": [{"text":"Arena Start: After ","color": "yellow","italic": false},{"score": {"name": "arena.start","objective": "deathswap.setting"}}," rounds of swap"]
                 }
             ]
         }

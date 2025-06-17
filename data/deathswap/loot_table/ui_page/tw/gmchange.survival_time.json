@@ -18,8 +18,8 @@
                 {
                     "function": "set_name",
                     "entity": "this",
-                    "target": "item_name",
-                    "name": [{"text":"生存模式時長：","color": "yellow"},{"score": {"name": "gmchange.survival_time","objective": "deathswap.setting"}},"秒"]
+                    "target": "custom_name",
+                    "name": [{"text":"生存模式時長：","color": "yellow","italic": false},{"score": {"name": "gmchange.survival_time","objective": "deathswap.setting"}},"秒"]
                 }
             ]
         }

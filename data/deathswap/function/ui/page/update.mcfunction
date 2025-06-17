@@ -5,6 +5,7 @@
 #hotbar
 #  0  1  2  3  4  5  6  7  8 
 
+
 #fail
 execute unless score game deathswap.status matches 0 run return fail
 

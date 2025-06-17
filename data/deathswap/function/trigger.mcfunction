@@ -1,3 +1,4 @@
+#trigger
 scoreboard players enable @a deathswap
 
 #  1 info

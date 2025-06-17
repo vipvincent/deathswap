@@ -34,6 +34,8 @@ execute if score wait deathswap.timer matches 60 run advancement revoke @a every
 execute if score wait deathswap.timer matches 60 run gamerule announceAdvancements true
 
 #sound
+execute if score wait deathswap.timer matches 100 as @a at @s run playsound ui.button.click master @s ~ ~ ~
+execute if score wait deathswap.timer matches 120 as @a at @s run playsound ui.button.click master @s ~ ~ ~
 execute if score wait deathswap.timer matches 140 as @a at @s run playsound ui.button.click master @s ~ ~ ~
 execute if score wait deathswap.timer matches 160 as @a at @s run playsound ui.button.click master @s ~ ~ ~
 execute if score wait deathswap.timer matches 180 as @a at @s run playsound ui.button.click master @s ~ ~ ~
