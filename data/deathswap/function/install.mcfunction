@@ -95,7 +95,7 @@ function deathswap:setting/default_all
 
 #install
 data modify storage deathswap:status install set value 1b
-data modify storage deathswap:status version set value "v3.2"
+data modify storage deathswap:status version set value "v3.3"
 data modify storage deathswap:status install_stage set value 1b
 
 #reinstall

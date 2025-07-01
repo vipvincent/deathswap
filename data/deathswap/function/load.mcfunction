@@ -7,9 +7,9 @@ execute unless data storage deathswap:status {install:1b} run return run tellraw
 execute unless score language deathswap.setting matches 1.. as @a[scores={deathswap.join_game=1}] run return run function deathswap:ui/language
 
 #update reinstall
-execute unless data storage deathswap:status {version:"v3.2"} if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§eFound a new version and will reinstall it soon"}]
-execute unless data storage deathswap:status {version:"v3.2"} if score language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§e找到新版本，即將重新安裝"}]
-execute unless data storage deathswap:status {version:"v3.2"} run return run function deathswap:reinstall
+execute unless data storage deathswap:status {version:"v3.3"} if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§eFound a new version and will reinstall it soon"}]
+execute unless data storage deathswap:status {version:"v3.3"} if score language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§e找到新版本，即將重新安裝"}]
+execute unless data storage deathswap:status {version:"v3.3"} run return run function deathswap:reinstall
 
 #ui
 function deathswap:ui/page/update

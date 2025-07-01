@@ -1,12 +1,12 @@
 #load_text
 #not install
-execute unless data storage deathswap:status {install:1b} run tellraw @a [{"text": "§6Death Swap 死亡交換","click_event": {"action": "open_url","url": "https://modrinth.com/datapack/deathswap"}},{"text": " §ev3.2"}]
+execute unless data storage deathswap:status {install:1b} run tellraw @a [{"text": "§6Death Swap 死亡交換","click_event": {"action": "open_url","url": "https://modrinth.com/datapack/deathswap"}},{"text": " §ev3.3"}]
 execute unless data storage deathswap:status {install:1b} run tellraw @a [{"text": "§r- "},\
 {"text": "§f[Install 安裝] ","click_event": {"action": "run_command","command": "/function deathswap:install"},"hover_event": {"action": "show_text","value": "§eClick here or type command 點此或輸入以下指令\n§d/function deathswap:install §c[OP players OP 玩家]"}}\
 ]
 
 #install_stage
-execute if data storage deathswap:status {install_stage:1b} run tellraw @a [{"text": "§6Death Swap 死亡交換","click_event": {"action": "open_url","url": "https://modrinth.com/datapack/deathswap"}},{"text": " §ev3.2"}]
+execute if data storage deathswap:status {install_stage:1b} run tellraw @a [{"text": "§6Death Swap 死亡交換","click_event": {"action": "open_url","url": "https://modrinth.com/datapack/deathswap"}},{"text": " §ev3.3"}]
 execute if data storage deathswap:status {install_stage:1b} run tellraw @a [{"text": "§r- "},\
 [{"text": "","color":"yellow","click_event": {"action": "run_command","command": "/function deathswap:ui/language"},"hover_event": {"action": "show_text","value": "§eClick here or type command 點此或輸入以下指令\n§d/function deathswap:ui/language \n§c[OP players OP 玩家]"}},{"text": "["},{"translate": "narrator.button.language"},{"text": "] "}],\
 {"text": "§d[Reinstall 重新安裝] ","click_event": {"action": "run_command","command": "/function deathswap:reinstall"},"hover_event": {"action": "show_text","value": "§eClick here or type command 點此或輸入以下指令\n§d/function deathswap:reinstall \n§c[OP players OP 玩家]"}},\
@@ -14,7 +14,7 @@ execute if data storage deathswap:status {install_stage:1b} run tellraw @a [{"te
 ]
 
 #install/en
-execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap","click_event": {"action": "open_url","url": "https://modrinth.com/datapack/deathswap"}},{"text": " §ev3.2"}]
+execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap","click_event": {"action": "open_url","url": "https://modrinth.com/datapack/deathswap"}},{"text": " §ev3.3"}]
 #install/en/notadmin
 execute if score language deathswap.setting matches 1 run tellraw @a[tag=notadmin] [{"text": "§r- "},\
 {"text": "§b[Obtain admin] ","click_event":{"action": "run_command","command": "/tag @s add admin"},"hover_event": {"action":"show_text","value": "§eClick here or type command\n§d/tag @s add admin §c[OP players]"}},\
@@ -33,7 +33,7 @@ execute if score language deathswap.setting matches 1 run tellraw @a[tag=admin] 
 ]
 
 #install/tw
-execute if score language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換","click_event": {"action": "open_url","url": "https://modrinth.com/datapack/deathswap"}},{"text": " §ev3.2"}]
+execute if score language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換","click_event": {"action": "open_url","url": "https://modrinth.com/datapack/deathswap"}},{"text": " §ev3.3"}]
 #install/tw/notadmin
 execute if score language deathswap.setting matches 2 run tellraw @a[tag=notadmin] [{"text": "§r- "},\
 {"text": "§b[獲得管理員] ","click_event":{"action": "run_command","command": "/tag @s add admin"},"hover_event": {"action":"show_text","value": "§e點此或輸入以下指令\n§d/tag @s add admin §c[OP 玩家]"}},\
