@@ -21,8 +21,8 @@ execute if score weather deathswap.setting matches 1 run item replace entity @a[
 execute if score weather deathswap.setting matches 2 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.18 with lightning_rod[custom_data={ui:1b},custom_name={"text":"§9天氣：雷雨"},lore=['§7遊戲天氣']]
 
 #mobspawn
-execute if score mobspawn deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.1 with creeper_spawn_egg[custom_data={ui:1b},custom_name={"text":"§a怪物生成：開啟"},lore=['§7是否生成怪物，不影響生怪磚'],enchantment_glint_override=true]
-execute if score mobspawn deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.1 with creeper_spawn_egg[custom_data={ui:1b},custom_name={"text":"§c怪物生成：關閉"},lore=['§7是否生成怪物，不影響生怪磚']]
+execute if score mobspawn deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.1 with creeper_spawn_egg[custom_data={ui:1b},custom_name={"text":"§a怪物生成：開啟"},lore=['§7是否生成怪物，部分怪物除外'],enchantment_glint_override=true]
+execute if score mobspawn deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.1 with creeper_spawn_egg[custom_data={ui:1b},custom_name={"text":"§c怪物生成：關閉"},lore=['§7是否生成怪物，部分怪物除外']]
 
 #time_cycle
 execute if score time_cycle deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.10 with daylight_detector[custom_data={ui:1b},custom_name={"text":"§a日夜交替：開啟"},lore=['§7是否進行晝夜更替和月相變化'],enchantment_glint_override=true]
@@ -49,27 +49,21 @@ execute if score hp_adj deathswap.setting matches 60 run item replace entity @a[
 execute if score tool deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.11 with wooden_pickaxe[custom_data={ui:1b},custom_name={"text":"§c起始工具：關閉"},lore=['§7遊戲開始後是否要給予玩家起始工具']]
 execute if score tool deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.11 with wooden_pickaxe[custom_data={ui:1b},custom_name={"text":"§a起始工具：木製工具"},lore=['§7遊戲開始後是否要給予玩家起始工具'],enchantment_glint_override=true]
 execute if score tool deathswap.setting matches 2 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.11 with stone_pickaxe[custom_data={ui:1b},custom_name={"text":"§a起始工具：石製工具"},lore=['§7遊戲開始後是否要給予玩家起始工具'],enchantment_glint_override=true]
-execute if score tool deathswap.setting matches 3 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.11 with iron_pickaxe[custom_data={ui:1b},custom_name={"text":"§a起始工具：鐵製工具"},lore=['§7遊戲開始後是否要給予玩家起始工具'],enchantment_glint_override=true]
-execute if score tool deathswap.setting matches 4 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.11 with golden_pickaxe[custom_data={ui:1b},custom_name={"text":"§a起始工具：金製工具"},lore=['§7遊戲開始後是否要給予玩家起始工具'],enchantment_glint_override=true]
-execute if score tool deathswap.setting matches 5 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.11 with diamond_pickaxe[custom_data={ui:1b},custom_name={"text":"§a起始工具：鑽石工具"},lore=['§7遊戲開始後是否要給予玩家起始工具'],enchantment_glint_override=true]
-execute if score tool deathswap.setting matches 6 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.11 with netherite_pickaxe[custom_data={ui:1b},custom_name={"text":"§a起始工具：獄髓工具"},lore=['§7遊戲開始後是否要給予玩家起始工具'],enchantment_glint_override=true]
+execute if score tool deathswap.setting matches 3 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.11 with copper_pickaxe[custom_data={ui:1b},custom_name={"text":"§a起始工具：銅製工具"},lore=['§7遊戲開始後是否要給予玩家起始工具'],enchantment_glint_override=true]
+execute if score tool deathswap.setting matches 4 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.11 with iron_pickaxe[custom_data={ui:1b},custom_name={"text":"§a起始工具：鐵製工具"},lore=['§7遊戲開始後是否要給予玩家起始工具'],enchantment_glint_override=true]
+execute if score tool deathswap.setting matches 5 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.11 with golden_pickaxe[custom_data={ui:1b},custom_name={"text":"§a起始工具：金製工具"},lore=['§7遊戲開始後是否要給予玩家起始工具'],enchantment_glint_override=true]
+execute if score tool deathswap.setting matches 6 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.11 with diamond_pickaxe[custom_data={ui:1b},custom_name={"text":"§a起始工具：鑽石工具"},lore=['§7遊戲開始後是否要給予玩家起始工具'],enchantment_glint_override=true]
+execute if score tool deathswap.setting matches 7 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.11 with netherite_pickaxe[custom_data={ui:1b},custom_name={"text":"§a起始工具：獄髓工具"},lore=['§7遊戲開始後是否要給予玩家起始工具'],enchantment_glint_override=true]
 
 #armor
 execute if score armor deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.12 with leather_chestplate[custom_data={ui:1b},custom_name={"text":"§c起始裝備：關閉"},lore=['§7遊戲開始後是否要給予玩家裝備']]
 execute if score armor deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.12 with leather_chestplate[custom_data={ui:1b},custom_name={"text":"§a起始裝備：皮革裝備"},lore=['§7遊戲開始後是否要給予玩家裝備'],enchantment_glint_override=true]
-execute if score armor deathswap.setting matches 2 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.12 with chainmail_chestplate[custom_data={ui:1b},custom_name={"text":"§a起始裝備：鎖鏈裝備"},lore=['§7遊戲開始後是否要給予玩家裝備'],enchantment_glint_override=true]
-execute if score armor deathswap.setting matches 3 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.12 with iron_chestplate[custom_data={ui:1b},custom_name={"text":"§a起始裝備：鐵製裝備"},lore=['§7遊戲開始後是否要給予玩家裝備'],enchantment_glint_override=true]
-execute if score armor deathswap.setting matches 4 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.12 with golden_chestplate[custom_data={ui:1b},custom_name={"text":"§a起始裝備：黃金裝備"},lore=['§7遊戲開始後是否要給予玩家裝備'],enchantment_glint_override=true]
-execute if score armor deathswap.setting matches 5 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.12 with diamond_chestplate[custom_data={ui:1b},custom_name={"text":"§a起始裝備：鑽石裝備"},lore=['§7遊戲開始後是否要給予玩家裝備'],enchantment_glint_override=true]
-execute if score armor deathswap.setting matches 6 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.12 with netherite_chestplate[custom_data={ui:1b},custom_name={"text":"§a起始裝備：獄髓裝備"},lore=['§7遊戲開始後是否要給予玩家裝備'],enchantment_glint_override=true]
-
-#saturation
-execute if score saturation deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.20 with honey_bottle[custom_data={ui:1b},custom_name={"text":"§c飽食效果：關閉"},lore=['§7是否給予玩家飽食效果']]
-execute if score saturation deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.20 with honey_bottle[custom_data={ui:1b},custom_name={"text":"§a飽食效果：開啟"},lore=['§7是否給予玩家飽食效果'],enchantment_glint_override=true]
-
-#night_vision
-execute if score night_vision deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.21 with potion[custom_data={ui:1b},custom_name={"text":"§c夜視效果：關閉"},lore=['§7是否給予玩家夜視效果'],potion_contents={potion:long_night_vision},tooltip_display={hidden_components:["potion_contents"]}]
-execute if score night_vision deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.21 with potion[custom_data={ui:1b},custom_name={"text":"§a夜視效果：開啟"},lore=['§7是否給予玩家夜視效果'],potion_contents={potion:long_night_vision},tooltip_display={hidden_components:["potion_contents"]},enchantment_glint_override=true]
+execute if score armor deathswap.setting matches 2 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.12 with copper_chestplate[custom_data={ui:1b},custom_name={"text":"§a起始裝備：銅製裝備"},lore=['§7遊戲開始後是否要給予玩家裝備'],enchantment_glint_override=true]
+execute if score armor deathswap.setting matches 3 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.12 with chainmail_chestplate[custom_data={ui:1b},custom_name={"text":"§a起始裝備：鎖鏈裝備"},lore=['§7遊戲開始後是否要給予玩家裝備'],enchantment_glint_override=true]
+execute if score armor deathswap.setting matches 4 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.12 with iron_chestplate[custom_data={ui:1b},custom_name={"text":"§a起始裝備：鐵製裝備"},lore=['§7遊戲開始後是否要給予玩家裝備'],enchantment_glint_override=true]
+execute if score armor deathswap.setting matches 5 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.12 with golden_chestplate[custom_data={ui:1b},custom_name={"text":"§a起始裝備：黃金裝備"},lore=['§7遊戲開始後是否要給予玩家裝備'],enchantment_glint_override=true]
+execute if score armor deathswap.setting matches 6 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.12 with diamond_chestplate[custom_data={ui:1b},custom_name={"text":"§a起始裝備：鑽石裝備"},lore=['§7遊戲開始後是否要給予玩家裝備'],enchantment_glint_override=true]
+execute if score armor deathswap.setting matches 7 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.12 with netherite_chestplate[custom_data={ui:1b},custom_name={"text":"§a起始裝備：獄髓裝備"},lore=['§7遊戲開始後是否要給予玩家裝備'],enchantment_glint_override=true]
 
 #swap_time
 execute if score swap_time deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.4 with ender_pearl[custom_data={ui:1b},custom_name={"text":"§a交換時間：隨機30秒-1分鐘"},lore=['§7每回合的交換時間'],enchantment_glint_override=true] 1
@@ -94,28 +88,43 @@ execute if score swap_invincible deathswap.setting matches 3 run item replace en
 
 #swap_warn
 execute if score swap_warn deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.14 with note_block[custom_data={ui:1b},custom_name={"text":"§c交換警告：關閉"},lore=['§7交換前是否要警告']] 1
+execute if score swap_warn deathswap.setting matches 3 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.14 with note_block[custom_data={ui:1b},custom_name={"text":"§a交換警告：3秒"},lore=['§7交換前是否要警告'],enchantment_glint_override=true] 3
 execute if score swap_warn deathswap.setting matches 5 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.14 with note_block[custom_data={ui:1b},custom_name={"text":"§a交換警告：5秒"},lore=['§7交換前是否要警告'],enchantment_glint_override=true] 5
 execute if score swap_warn deathswap.setting matches 10 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.14 with note_block[custom_data={ui:1b},custom_name={"text":"§a交換警告：10秒"},lore=['§7交換前是否要警告'],enchantment_glint_override=true] 10
 
 #team collisionRule
-execute if score team_collisionrule deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.22 with lead[custom_data={ui:1b},custom_name={"text":"§a同隊推擠：開啟"},lore=['§7同隊是否要互相推擠'],enchantment_glint_override=true]
-execute if score team_collisionrule deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.22 with lead[custom_data={ui:1b},custom_name={"text":"§c同隊推擠：關閉"},lore=['§7同隊是否要互相推擠']]
+execute if score mode deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.20 with barrier[custom_data={ui:1b},custom_name={"text":"§c個人戰不支援此設定"}]
+execute if score mode deathswap.setting matches 2 if score team_collisionrule deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.20 with lead[custom_data={ui:1b},custom_name={"text":"§a同隊推擠：開啟"},lore=['§7同隊是否要互相推擠'],enchantment_glint_override=true]
+execute if score mode deathswap.setting matches 2 if score team_collisionrule deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.20 with lead[custom_data={ui:1b},custom_name={"text":"§c同隊推擠：關閉"},lore=['§7同隊是否要互相推擠']]
 
 #team friendlyFire
-execute if score team_friendlyfire deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.23 with pufferfish[custom_data={ui:1b},custom_name={"text":"§a同隊互傷：開啟"},lore=['§7同隊是否可以互相傷害'],enchantment_glint_override=true]
-execute if score team_friendlyfire deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.23 with pufferfish[custom_data={ui:1b},custom_name={"text":"§c同隊互傷：關閉"},lore=['§7同隊是否可以互相傷害']]
+execute if score mode deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.21 with barrier[custom_data={ui:1b},custom_name={"text":"§c個人戰不支援此設定"}]
+execute if score mode deathswap.setting matches 2 if score team_friendlyfire deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.21 with pufferfish[custom_data={ui:1b},custom_name={"text":"§a同隊互傷：開啟"},lore=['§7同隊是否可以互相傷害'],enchantment_glint_override=true]
+execute if score mode deathswap.setting matches 2 if score team_friendlyfire deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.21 with pufferfish[custom_data={ui:1b},custom_name={"text":"§c同隊互傷：關閉"},lore=['§7同隊是否可以互相傷害']]
 
 #furnace
-execute if score furnace deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.6 with raw_iron[custom_data={ui:1b},custom_name={"text":"§c物品免燒：關閉"},lore=['§7礦物和食物是否不用燒，就能獲得燒好的']]
-execute if score furnace deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.6 with iron_ingot[custom_data={ui:1b},custom_name={"text":"§a物品免燒：開啟"},lore=['§7礦物和食物是否不用燒，就能獲得燒好的'],enchantment_glint_override=true]
-
-#inventory_limit
-execute if score inventory_limit deathswap.setting matches 37 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.15 with chest[custom_data={ui:1b},custom_name={"text":"§c物品欄限制：關閉"},lore=['§7限制物品欄空間']] 37
-execute if score inventory_limit deathswap.setting matches 28 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.15 with chest[custom_data={ui:1b},custom_name={"text":"§a物品欄限制：剩下28格"},lore=['§7限制物品欄空間'],enchantment_glint_override=true] 28
-execute if score inventory_limit deathswap.setting matches 19 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.15 with chest[custom_data={ui:1b},custom_name={"text":"§a物品欄限制：剩下19格"},lore=['§7限制物品欄空間'],enchantment_glint_override=true] 19
-execute if score inventory_limit deathswap.setting matches 10 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.15 with chest[custom_data={ui:1b},custom_name={"text":"§a物品欄限制：剩下10格"},lore=['§7限制物品欄空間'],enchantment_glint_override=true] 10
-execute if score inventory_limit deathswap.setting matches 2 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.15 with chest[custom_data={ui:1b},custom_name={"text":"§a物品欄限制：剩下2格(主手+副手)"},lore=['§7限制物品欄空間'],enchantment_glint_override=true] 2
+execute if score furnace deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.22 with raw_iron[custom_data={ui:1b},custom_name={"text":"§c自動熔爐：關閉"},lore=['§7礦物和食物自動燒好']]
+execute if score furnace deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.22 with iron_ingot[custom_data={ui:1b},custom_name={"text":"§a自動熔爐：開啟"},lore=['§7礦物和食物自動燒好'],enchantment_glint_override=true]
 
 #start_pos
-execute if score start_pos deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.24 with campfire[custom_data={ui:1b},custom_name={"text":"§c遊戲開始點：隨機"},lore=['§7遊戲一開始的出生地','§7會依照大廳所在緯度']]
-execute if score start_pos deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.24 with campfire[custom_data={ui:1b},custom_name={"text":"§a遊戲開始點：大廳"},lore=['§7遊戲一開始的出生地','§7會依照大廳所在緯度'],enchantment_glint_override=true]
+execute if score start_pos deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.23 with campfire[custom_data={ui:1b},custom_name={"text":"§c遊戲開始點：隨機"},lore=['§7遊戲一開始的出生地','§7會依照大廳所在緯度']]
+execute if score start_pos deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.23 with campfire[custom_data={ui:1b},custom_name={"text":"§a遊戲開始點：大廳"},lore=['§7遊戲一開始的出生地','§7會依照大廳所在緯度'],enchantment_glint_override=true]
+
+#saturation
+execute if score saturation deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.6 with honey_bottle[custom_data={ui:1b},custom_name={"text":"§c飽食效果：關閉"},lore=['§7是否給予玩家飽食效果']]
+execute if score saturation deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.6 with honey_bottle[custom_data={ui:1b},custom_name={"text":"§a飽食效果：開啟"},lore=['§7是否給予玩家飽食效果'],enchantment_glint_override=true]
+
+#night_vision
+execute if score night_vision deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.15 with potion[custom_data={ui:1b},custom_name={"text":"§c夜視效果：關閉"},lore=['§7是否給予玩家夜視效果'],potion_contents={potion:long_night_vision},tooltip_display={hidden_components:["potion_contents"]}]
+execute if score night_vision deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.15 with potion[custom_data={ui:1b},custom_name={"text":"§a夜視效果：開啟"},lore=['§7是否給予玩家夜視效果'],potion_contents={potion:long_night_vision},tooltip_display={hidden_components:["potion_contents"]},enchantment_glint_override=true]
+
+#glowing
+execute if score glowing deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.24 with potion[custom_data={ui:1b},custom_name={"text":"§c發光效果：關閉"},lore=['§7是否給予玩家發光效果'],potion_contents={custom_color:16777215},tooltip_display={hidden_components:["potion_contents"]}]
+execute if score glowing deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.24 with potion[custom_data={ui:1b},custom_name={"text":"§a發光效果：開啟"},lore=['§7是否給予玩家發光效果'],potion_contents={custom_color:16777215},tooltip_display={hidden_components:["potion_contents"]},enchantment_glint_override=true]
+
+#inventory_limit
+execute if score inventory_limit deathswap.setting matches 37 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.7 with chest[custom_data={ui:1b},custom_name={"text":"§c物品欄限制：關閉"},lore=['§7限制物品欄空間']] 37
+execute if score inventory_limit deathswap.setting matches 28 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.7 with chest[custom_data={ui:1b},custom_name={"text":"§a物品欄限制：剩下28格"},lore=['§7限制物品欄空間'],enchantment_glint_override=true] 28
+execute if score inventory_limit deathswap.setting matches 19 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.7 with chest[custom_data={ui:1b},custom_name={"text":"§a物品欄限制：剩下19格"},lore=['§7限制物品欄空間'],enchantment_glint_override=true] 19
+execute if score inventory_limit deathswap.setting matches 10 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.7 with chest[custom_data={ui:1b},custom_name={"text":"§a物品欄限制：剩下10格"},lore=['§7限制物品欄空間'],enchantment_glint_override=true] 10
+execute if score inventory_limit deathswap.setting matches 2 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=1}] inventory.7 with chest[custom_data={ui:1b},custom_name={"text":"§a物品欄限制：剩下2格(主手+副手)"},lore=['§7限制物品欄空間'],enchantment_glint_override=true] 2

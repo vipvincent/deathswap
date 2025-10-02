@@ -28,8 +28,9 @@ execute as @a at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~
 #gamerule
 gamerule doImmediateRespawn true
 gamerule sendCommandFeedback false
-gamerule locatorBar false
 gamerule spawnRadius 0
+gamerule locatorBar false
+gamerule pvp true
 
 #worldborder
 worldborder damage buffer 0
@@ -43,9 +44,14 @@ scoreboard objectives add deathswap.death deathCount
 scoreboard objectives add deathswap.count dummy
 scoreboard objectives add deathswap.win_score dummy
 scoreboard objectives add deathswap.ui_page dummy
-scoreboard objectives add deathswap.join_game dummy
+scoreboard objectives add deathswap.leave_game minecraft.custom:minecraft.leave_game
 scoreboard objectives add deathswap.carrot_right_click minecraft.used:minecraft.carrot_on_a_stick
 
+#swap_use
+scoreboard objectives add deathswap.swap_original dummy
+scoreboard objectives add deathswap.swap_calculated dummy
+
+#set
 scoreboard players set team_choose deathswap.setting 0
 scoreboard players set safetime deathswap.status 30
 scoreboard players set tick deathswap.status 20
@@ -53,30 +59,41 @@ scoreboard players set tick deathswap.status 20
 #health
 scoreboard objectives add deathswap.health health {"text": "§c❤"}
 scoreboard objectives add deathswap.hurt dummy
+
+#setdisplay
 scoreboard objectives setdisplay below_name deathswap.health
+scoreboard objectives setdisplay list deathswap.health
+scoreboard objectives setdisplay sidebar deathswap.win_score
 
 #team
 team add red
 team add blue
 team add yellow
 team add green
+team add solo
 team add spectator
+
 team modify red color red
 team modify blue color blue
 team modify yellow color yellow
 team modify green color green
+team modify solo color dark_green
 team modify spectator color gray
+
 team modify red seeFriendlyInvisibles true
 team modify blue seeFriendlyInvisibles true 
 team modify yellow seeFriendlyInvisibles true 
 team modify green seeFriendlyInvisibles true
+
+#solo/team battle
+scoreboard players set mode deathswap.setting 1
 
 #bossbar
 bossbar add deathswap:swap_countdown ""
 bossbar set deathswap:swap_countdown color white
 bossbar add deathswap:wait ""
 bossbar set deathswap:wait color pink
-bossbar set deathswap:wait max 200
+bossbar set deathswap:wait max 300
 bossbar add deathswap:gmchange ""
 bossbar add deathswap:arena ""
 bossbar set deathswap:arena color yellow
@@ -84,7 +101,7 @@ bossbar add deathswap:random_effect ""
 bossbar set deathswap:random_effect color purple
 
 #player
-scoreboard players set @a deathswap.join_game 1
+scoreboard players set @a deathswap.leave_game 1
 tag @a add notadmin
 
 #for install player give admin
@@ -95,7 +112,7 @@ function deathswap:setting/default_all
 
 #install
 data modify storage deathswap:status install set value 1b
-data modify storage deathswap:status version set value "v3.3"
+data modify storage deathswap:status version set value "v3.4"
 data modify storage deathswap:status install_stage set value 1b
 
 #reinstall

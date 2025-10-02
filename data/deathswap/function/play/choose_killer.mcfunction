@@ -3,6 +3,7 @@ tag @a remove killer
 execute if score killer.quantity deathswap.setting matches 0 run tag @a[tag=player,sort=random,limit=1] add killer
 
 #one per team
+execute if score killer.quantity deathswap.setting matches 1 run tag @a[team=solo,tag=player,sort=random,limit=1] add killer 
 execute if score killer.quantity deathswap.setting matches 1 run tag @a[team=red,tag=player,sort=random,limit=1] add killer 
 execute if score killer.quantity deathswap.setting matches 1 run tag @a[team=blue,tag=player,sort=random,limit=1] add killer 
 execute if score killer.quantity deathswap.setting matches 1 run tag @a[team=yellow,tag=player,sort=random,limit=1] add killer 

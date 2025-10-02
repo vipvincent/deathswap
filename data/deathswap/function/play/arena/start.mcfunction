@@ -4,6 +4,7 @@ bossbar set deathswap:swap_countdown visible true
 execute if score gmchange deathswap.setting matches 1 run bossbar set deathswap:gmchange visible true
 
 #collisionrule
+team modify solo collisionRule always
 execute if score team_collisionrule deathswap.setting matches 0 run team modify red collisionRule always
 execute if score team_collisionrule deathswap.setting matches 0 run team modify blue collisionRule always
 execute if score team_collisionrule deathswap.setting matches 0 run team modify yellow collisionRule always

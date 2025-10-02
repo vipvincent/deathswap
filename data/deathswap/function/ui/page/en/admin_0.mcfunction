@@ -12,6 +12,6 @@ item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=0}] inv
 #info
 item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=0}] inventory.26 with player_head[custom_data={ui:1b},custom_name={"text":"§eAbout Death Swap"},profile={name:vipvincent}]
 #reset win scores
-item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=0}] inventory.0 with nether_star[custom_data={ui:1b},custom_name={"text":"§eReset wins score"},lore=['§7Clear wins score for all players']]
+item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=0}] inventory.0 with nether_star[custom_data={ui:1b},custom_name={"text":"§eReset wins score"},lore=['§7Clear wins score for All Players']]
 #ui_win
 item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=0}] inventory.8 with ghast_tear[custom_data={ui:1b},custom_name={"text":"§eScore calculation rules"}]

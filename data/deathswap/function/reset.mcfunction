@@ -2,14 +2,18 @@
 scoreboard players set game deathswap.status -1
 
 #worldborder
-worldborder center 0 0
-worldborder set 59999968 0
+execute in minecraft:overworld run worldborder center 0 0
+execute in minecraft:the_nether run worldborder center 0 0
+execute in minecraft:the_end run worldborder center 0 0
+execute in minecraft:overworld run worldborder set 59999968 0 
+execute in minecraft:the_nether run worldborder set 59999968 0 
+execute in minecraft:the_end run worldborder set 59999968 0 
 
 #team/tag
 team leave *
 tag @a remove player
 tag @a remove killer
-tag @a remove died
+tag @a remove eliminated
 tag @a remove win
 tag @a remove spectator
 
@@ -51,6 +55,7 @@ execute if score weather deathswap.setting matches 1 run weather rain
 execute if score weather deathswap.setting matches 2 run weather thunder
 
 #team
+team modify solo collisionRule always
 team modify red collisionRule always
 team modify blue collisionRule always
 team modify yellow collisionRule always
@@ -61,7 +66,7 @@ team modify blue friendlyFire true
 team modify yellow friendlyFire true
 team modify green friendlyFire true
 
-#scoreboard
+#scoreboard timer
 scoreboard players set tick deathswap.timer 0
 scoreboard players set round_time deathswap.timer 0
 scoreboard players set swap_countdown deathswap.timer 0
@@ -76,34 +81,37 @@ scoreboard players set tick deathswap.timer 0
 scoreboard players set round_time deathswap.timer 0
 scoreboard players set swap_countdown deathswap.timer 0
 
+#scoreboard reset
 scoreboard players reset @a deathswap.hurt
 scoreboard players reset @a deathswap.death
 scoreboard players reset @a deathswap.health
+scoreboard players set @a deathswap.carrot_right_click 0
+scoreboard players reset * deathswap.swap_original
+scoreboard players reset * deathswap.swap_calculated
 
+#scoreboard status
 scoreboard players set team_red deathswap.status 0
 scoreboard players set team_blue deathswap.status 0
 scoreboard players set team_yellow deathswap.status 0
 scoreboard players set team_green deathswap.status 0
 scoreboard players set swap_time deathswap.status 0
-scoreboard players set win deathswap.status -1
+scoreboard players set end deathswap.status -1
 scoreboard players set gmchange deathswap.status 0
 scoreboard players set arena deathswap.status -1
 scoreboard players set random_effect.effect deathswap.status 0
 scoreboard players set arena.shrink deathswap.status -1
 scoreboard players set arena.border deathswap.status -1
 
-scoreboard players set player_count deathswap.count 0
+#scoreboard count
+scoreboard players set solo_count deathswap.count 0
 scoreboard players set red_count deathswap.count 0
 scoreboard players set blue_count deathswap.count 0
 scoreboard players set yellow_count deathswap.count 0
 scoreboard players set green_count deathswap.count 0
-scoreboard players set swap_count deathswap.count 0
+
+scoreboard players set player_count deathswap.count 0
 scoreboard players set team_count deathswap.count 0
-
-scoreboard players set @a deathswap.carrot_right_click 0
-
-scoreboard objectives setdisplay list deathswap.win_score
-scoreboard objectives setdisplay sidebar deathswap.win_score
+scoreboard players set swap_count deathswap.count 0
 
 #hp_adj
 execute if score hp_adj deathswap.setting matches 1 as @a run attribute @s minecraft:max_health base set 1
@@ -126,7 +134,7 @@ bossbar set deathswap:swap_countdown visible false
 bossbar set deathswap:arena visible false
 bossbar set deathswap:random_effect visible false
 bossbar set deathswap:wait visible true
-bossbar set deathswap:wait value 200
+bossbar set deathswap:wait value 300
 
 #end
 scoreboard players set game deathswap.status 0

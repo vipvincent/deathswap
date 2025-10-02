@@ -2,9 +2,15 @@ scoreboard players set arena.shrink deathswap.status 1
 scoreboard players set arena deathswap.timer 0
 
 #100..
-execute if score arena.border deathswap.status matches 25 run worldborder set 25 30
-execute if score arena.border deathswap.status matches 50 run worldborder set 50 30
-execute if score arena.border deathswap.status matches 100.. run worldborder add -100 30
+execute if score arena.border deathswap.status matches 25 in minecraft:overworld run worldborder set 25 30
+execute if score arena.border deathswap.status matches 25 in minecraft:the_nether run worldborder set 25 30
+execute if score arena.border deathswap.status matches 25 in minecraft:the_end run worldborder set 25 30
+execute if score arena.border deathswap.status matches 50 in minecraft:overworld run worldborder set 50 30
+execute if score arena.border deathswap.status matches 50 in minecraft:the_nether run worldborder set 50 30
+execute if score arena.border deathswap.status matches 50 in minecraft:the_end run worldborder set 50 30
+execute if score arena.border deathswap.status matches 100.. in minecraft:overworld run worldborder add -100 30
+execute if score arena.border deathswap.status matches 100.. in minecraft:the_nether run worldborder add -100 30
+execute if score arena.border deathswap.status matches 100.. in minecraft:the_end run worldborder add -100 30
 
 
 #text

@@ -1,15 +1,15 @@
 #special_gameplay/killer
 
 #reset killer setting
-item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.26 with nautilus_shell[custom_data={ui:1b},custom_name={"text":"§eReset Killer Mode setting"}]
+item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.26 with nautilus_shell[custom_data={ui:1b},custom_name={"text":"§eReset Killer Mode Setting"}]
 
 #killer.quantity
-execute if score killer.quantity deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.13 with player_head[custom_data={ui:1b},custom_name={"text":"§eNumber of killers: Only one"},lore=['§7The winning conditions for each killer are independent and not a team.'],profile={name:"MHF_Herobrine"}]
-execute if score killer.quantity deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.13 with player_head[custom_data={ui:1b},custom_name={"text":"§eNumber of killers: One per team"},lore=['§7The winning conditions for each killer are independent and not a team.'],profile={name:"MHF_Steve"}]
+execute if score killer.quantity deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.13 with player_head[custom_data={ui:1b},custom_name={"text":"§eNumber of Killers: Only one"},lore=['§7The winning conditions for each killer are independent and not a team.'],profile={name:"MHF_Herobrine"}]
+execute if score killer.quantity deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.13 with player_head[custom_data={ui:1b},custom_name={"text":"§eNumber of Killers: One per team"},lore=['§7The winning conditions for each killer are independent and not a team.'],profile={name:"MHF_Steve"}]
 
 #killer.identity
-execute if score killer.identity deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.12 with paper[custom_data={ui:1b},custom_name={"text":"§cKiller eliminated, show identity: Disabled"}]
-execute if score killer.identity deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.12 with paper[custom_data={ui:1b},custom_name={"text":"§aKiller eliminated, show identity: Enabled"},enchantment_glint_override=true]
+execute if score killer.identity deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.12 with paper[custom_data={ui:1b},custom_name={"text":"§cKiller Eliminated, Show Identity: Disabled"}]
+execute if score killer.identity deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.12 with paper[custom_data={ui:1b},custom_name={"text":"§aKiller Eliminated, Show Identity: Enabled"},enchantment_glint_override=true]
 
 #killer.weapon
 execute if score killer.weapon deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with stick[custom_data={ui:1b},custom_name={"text":"§cKiller Weapon: None"},lore=['§7Killer\'s starting weapon']]

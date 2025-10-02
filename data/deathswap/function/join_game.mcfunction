@@ -1,29 +1,9 @@
-#spawnpoint
+#join_game
 execute at @e[type=marker,tag=lobby,limit=1] run spawnpoint @s ~ ~ ~
-
-#status 0
-execute if score game deathswap.status matches 0 run effect clear @a
-execute if score game deathswap.status matches 0 run clear @s
-execute if score game deathswap.status matches 0 run xp set @a 0 points
-execute if score game deathswap.status matches 0 run xp set @a 0 levels
-execute if score game deathswap.status matches 0 run tp @s @e[type=marker,tag=lobby,limit=1]
-execute if score game deathswap.status matches 0 run gamemode survival @s
-execute if score game deathswap.status matches 0 run team leave @s
-execute if score game deathswap.status matches 0 run tag @s remove player
-execute if score game deathswap.status matches 0 run tag @s remove spectator
-execute if score game deathswap.status matches 0 run tag @s remove died
-execute if score game deathswap.status matches 0 run tag @s remove win
-execute if score game deathswap.status matches 0 run tag @s remove killer
-
-execute if score game deathswap.status matches 0 run attribute @s minecraft:jump_strength base set 0.41999998688697815
-execute if score game deathswap.status matches 0 run attribute @s minecraft:movement_speed base set 0.10000000149011612
-execute if score game deathswap.status matches 0 run attribute @s minecraft:block_interaction_range base set 4.5
-execute if score game deathswap.status matches 0 run attribute @s minecraft:entity_interaction_range base set 3.0
-
 execute as @s[tag=!notadmin,tag=!admin] run tag @s add notadmin
-execute if score game deathswap.status matches 0 run function deathswap:ui/page/update
-execute if score game deathswap.status matches 0 run scoreboard players set @s deathswap.ui_page 0
 
+#lang
+execute unless score language deathswap.setting matches 1.. run function deathswap:ui/language
 
 #hp_adj
 execute if score hp_adj deathswap.setting matches 1 as @s run attribute @s minecraft:max_health base set 1
@@ -33,9 +13,6 @@ execute if score hp_adj deathswap.setting matches 30 as @s run attribute @s mine
 execute if score hp_adj deathswap.setting matches 40 as @s run attribute @s minecraft:max_health base set 40
 execute if score hp_adj deathswap.setting matches 50 as @s run attribute @s minecraft:max_health base set 50
 execute if score hp_adj deathswap.setting matches 60 as @s run attribute @s minecraft:max_health base set 60
-
-#lang
-execute unless score language deathswap.setting matches 1.. run function deathswap:ui/language
 
 #en
 execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fWelcome "},{"selector":"@s"},{"text": " §fto §6Death Swap"}]
@@ -50,6 +27,28 @@ execute if score language deathswap.setting matches 2 run title @s subtitle {"te
 execute if score language deathswap.setting matches 1.. run execute as @a at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~
 execute if score language deathswap.setting matches 1.. run function deathswap:ui/info
 execute if score language deathswap.setting matches 1.. if score game deathswap.status matches 0 run function deathswap:ui/click_admin
+
+#status 0
+execute if score game deathswap.status matches 0 run effect clear @a
+execute if score game deathswap.status matches 0 run clear @s
+execute if score game deathswap.status matches 0 run xp set @a 0 points
+execute if score game deathswap.status matches 0 run xp set @a 0 levels
+execute if score game deathswap.status matches 0 run tp @s @e[type=marker,tag=lobby,limit=1]
+execute if score game deathswap.status matches 0 run gamemode survival @s
+execute if score game deathswap.status matches 0 run team leave @s
+execute if score game deathswap.status matches 0 run tag @s remove player
+execute if score game deathswap.status matches 0 run tag @s remove spectator
+execute if score game deathswap.status matches 0 run tag @s remove eliminated
+execute if score game deathswap.status matches 0 run tag @s remove win
+execute if score game deathswap.status matches 0 run tag @s remove killer
+
+execute if score game deathswap.status matches 0 run attribute @s minecraft:jump_strength base set 0.41999998688697815
+execute if score game deathswap.status matches 0 run attribute @s minecraft:movement_speed base set 0.10000000149011612
+execute if score game deathswap.status matches 0 run attribute @s minecraft:block_interaction_range base set 4.5
+execute if score game deathswap.status matches 0 run attribute @s minecraft:entity_interaction_range base set 3.0
+
+execute if score game deathswap.status matches 0 run function deathswap:ui/page/update
+execute if score game deathswap.status matches 0 run scoreboard players set @s deathswap.ui_page 0
 
 #status 2 play join
 execute if score language deathswap.setting matches 1 if score game deathswap.status matches 2 as @s[tag=player] run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§dTo prevent position errors,"}]

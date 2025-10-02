@@ -1,4 +1,4 @@
-#execute if score random_effect deathswap.timer matches 11.. run function deathswap:play/random_effect/effect
+#play/random_effect/main
 
 #bossbar
 function deathswap:play/random_effect/bossbar with storage deathswap:status random_effect

@@ -5,5 +5,5 @@ item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=104}] i
 
 #time
 item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=104}] inventory.4 with player_head[custom_data={ui:1b},custom_name={"text": "§a+5秒"},profile={name:MHF_ArrowUp},tooltip_display={hidden_components:["profile"]}] 5
-loot replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=104}] inventory.13 loot deathswap:ui_page/tw/random_effect.time
+loot replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=104}] inventory.13 loot deathswap:ui/page/tw/random_effect.time
 item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=104}] inventory.22 with player_head[custom_data={ui:1b},custom_name={"text": "§c-5秒"},profile={name:MHF_ArrowDown},tooltip_display={hidden_components:["profile"]}] 5

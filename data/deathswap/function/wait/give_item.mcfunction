@@ -49,35 +49,41 @@ execute if score armor deathswap.setting matches 1 as @a[tag=player] run item mo
 execute if score armor deathswap.setting matches 1 as @a[tag=player] run item modify entity @s armor.legs deathswap:leather_color
 execute if score armor deathswap.setting matches 1 as @a[tag=player] run item modify entity @s armor.feet deathswap:leather_color
 
-#2 chainmail
-execute if score armor deathswap.setting matches 2 run item replace entity @a[tag=player] armor.head with chainmail_helmet
-execute if score armor deathswap.setting matches 2 run item replace entity @a[tag=player] armor.chest with chainmail_chestplate
-execute if score armor deathswap.setting matches 2 run item replace entity @a[tag=player] armor.legs with chainmail_leggings
-execute if score armor deathswap.setting matches 2 run item replace entity @a[tag=player] armor.feet with chainmail_boots
+#2 copprt
+execute if score armor deathswap.setting matches 2 run item replace entity @a[tag=player] armor.head with copper_helmet
+execute if score armor deathswap.setting matches 2 run item replace entity @a[tag=player] armor.chest with copper_chestplate
+execute if score armor deathswap.setting matches 2 run item replace entity @a[tag=player] armor.legs with copper_leggings
+execute if score armor deathswap.setting matches 2 run item replace entity @a[tag=player] armor.feet with copper_boots
 
-#3 iron
-execute if score armor deathswap.setting matches 3 run item replace entity @a[tag=player] armor.head with iron_helmet
-execute if score armor deathswap.setting matches 3 run item replace entity @a[tag=player] armor.chest with iron_chestplate
-execute if score armor deathswap.setting matches 3 run item replace entity @a[tag=player] armor.legs with iron_leggings
-execute if score armor deathswap.setting matches 3 run item replace entity @a[tag=player] armor.feet with iron_boots
+#3 chainmail
+execute if score armor deathswap.setting matches 3 run item replace entity @a[tag=player] armor.head with chainmail_helmet
+execute if score armor deathswap.setting matches 3 run item replace entity @a[tag=player] armor.chest with chainmail_chestplate
+execute if score armor deathswap.setting matches 3 run item replace entity @a[tag=player] armor.legs with chainmail_leggings
+execute if score armor deathswap.setting matches 3 run item replace entity @a[tag=player] armor.feet with chainmail_boots
 
-#4 gold
-execute if score armor deathswap.setting matches 4 run item replace entity @a[tag=player] armor.head with golden_helmet
-execute if score armor deathswap.setting matches 4 run item replace entity @a[tag=player] armor.chest with golden_chestplate
-execute if score armor deathswap.setting matches 4 run item replace entity @a[tag=player] armor.legs with golden_leggings
-execute if score armor deathswap.setting matches 4 run item replace entity @a[tag=player] armor.feet with golden_boots
+#4 iron
+execute if score armor deathswap.setting matches 4 run item replace entity @a[tag=player] armor.head with iron_helmet
+execute if score armor deathswap.setting matches 4 run item replace entity @a[tag=player] armor.chest with iron_chestplate
+execute if score armor deathswap.setting matches 4 run item replace entity @a[tag=player] armor.legs with iron_leggings
+execute if score armor deathswap.setting matches 4 run item replace entity @a[tag=player] armor.feet with iron_boots
 
-#5 diamond
-execute if score armor deathswap.setting matches 5 run item replace entity @a[tag=player] armor.head with diamond_helmet
-execute if score armor deathswap.setting matches 5 run item replace entity @a[tag=player] armor.chest with diamond_chestplate
-execute if score armor deathswap.setting matches 5 run item replace entity @a[tag=player] armor.legs with diamond_leggings
+#5 gold
+execute if score armor deathswap.setting matches 5 run item replace entity @a[tag=player] armor.head with golden_helmet
+execute if score armor deathswap.setting matches 5 run item replace entity @a[tag=player] armor.chest with golden_chestplate
+execute if score armor deathswap.setting matches 5 run item replace entity @a[tag=player] armor.legs with golden_leggings
+execute if score armor deathswap.setting matches 5 run item replace entity @a[tag=player] armor.feet with golden_boots
+
+#6 diamond
+execute if score armor deathswap.setting matches 6 run item replace entity @a[tag=player] armor.head with diamond_helmet
+execute if score armor deathswap.setting matches 6 run item replace entity @a[tag=player] armor.chest with diamond_chestplate
+execute if score armor deathswap.setting matches 6 run item replace entity @a[tag=player] armor.legs with diamond_leggings
 execute if score armor deathswap.setting matches 5 run item replace entity @a[tag=player] armor.feet with diamond_boots
 
-#6 netherite
-execute if score armor deathswap.setting matches 6 run item replace entity @a[tag=player] armor.head with netherite_helmet
-execute if score armor deathswap.setting matches 6 run item replace entity @a[tag=player] armor.chest with netherite_chestplate
-execute if score armor deathswap.setting matches 6 run item replace entity @a[tag=player] armor.legs with netherite_leggings
-execute if score armor deathswap.setting matches 6 run item replace entity @a[tag=player] armor.feet with netherite_boots
+#7 netherite
+execute if score armor deathswap.setting matches 7 run item replace entity @a[tag=player] armor.head with netherite_helmet
+execute if score armor deathswap.setting matches 7 run item replace entity @a[tag=player] armor.chest with netherite_chestplate
+execute if score armor deathswap.setting matches 7 run item replace entity @a[tag=player] armor.legs with netherite_leggings
+execute if score armor deathswap.setting matches 7 run item replace entity @a[tag=player] armor.feet with netherite_boots
 
 #template
 execute if score armor deathswap.setting matches 1.. as @a[tag=player] run item modify entity @s armor.head deathswap:template

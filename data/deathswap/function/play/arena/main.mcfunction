@@ -18,14 +18,18 @@ execute if score arena deathswap.status matches 1 run scoreboard players add are
 execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches 60 run function deathswap:play/arena/tp_border
 
 #wait text
-execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches ..100 if score language deathswap.setting matches 1 run bossbar set deathswap:arena name {"text":"§bThe arena is being prepared"}
-execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches ..100 if score language deathswap.setting matches 2 run bossbar set deathswap:arena name {"text":"§b競技場正在準備"}
-execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches 101.. if score language deathswap.setting matches 1 run bossbar set deathswap:arena name {"text":"§eThe arena is about to begin"}
-execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches 101.. if score language deathswap.setting matches 2 run bossbar set deathswap:arena name {"text":"§e競技場即將開始"}
-execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches 10..100 if score language deathswap.setting matches 1 run title @a title {"text": "§6Death Swap"}
-execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches 10..100 if score language deathswap.setting matches 2 run title @a title {"text": "§6死亡交換"}
-execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches 10 if score language deathswap.setting matches 1 run title @a subtitle {"text": "§bThe arena is being prepared"}
-execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches 10 if score language deathswap.setting matches 2 run title @a subtitle {"text": "§b競技場正在準備"}
+execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches ..99 if score language deathswap.setting matches 1 run bossbar set deathswap:arena name {"text":"§bThe arena is being prepared"}
+execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches ..99 if score language deathswap.setting matches 2 run bossbar set deathswap:arena name {"text":"§b競技場正在準備"}
+
+execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches 100.. if score language deathswap.setting matches 1 run bossbar set deathswap:arena name {"text":"§eThe arena is about to begin"}
+execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches 100.. if score language deathswap.setting matches 2 run bossbar set deathswap:arena name {"text":"§e競技場即將開始"}
+
+execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches 10 run title @a times 0t 5s 1s
+execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches 10..200 if score language deathswap.setting matches 1 run title @a title {"text": "§6Death Swap"}
+execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches 10..200 if score language deathswap.setting matches 2 run title @a title {"text": "§6死亡交換"}
+
+execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches 10..99 if score language deathswap.setting matches 1 run title @a subtitle {"text": "§bThe arena is being prepared"}
+execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches 10..99 if score language deathswap.setting matches 2 run title @a subtitle {"text": "§b競技場正在準備"}
 execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches 100 if score language deathswap.setting matches 1 run title @a subtitle {"text": "§eArena Start in 5s"}
 execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches 100 if score language deathswap.setting matches 2 run title @a subtitle {"text": "§e競技場即將開始於5秒"}
 execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches 120 if score language deathswap.setting matches 1 run title @a subtitle {"text": "§eArena Start in 4s"}
@@ -48,7 +52,7 @@ execute if score arena deathswap.status matches 1 if score arena deathswap.timer
 execute if score arena deathswap.status matches 1 if score arena deathswap.timer matches 200 run function deathswap:play/arena/start
 
 #glowing
-execute if score arena.shrink deathswap.status matches 2 run effect give @a[tag=player] glowing 1 255 true
+execute if score arena.shrink deathswap.status matches 2 run effect give @a[tag=player] glowing infinite 255 true
 
 
 #shrink 

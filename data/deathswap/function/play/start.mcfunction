@@ -6,7 +6,19 @@ execute as @a[tag=player] run attribute @s minecraft:movement_speed base set 0.1
 execute as @a[tag=player] run attribute @s minecraft:block_interaction_range base set 4.5
 execute as @a[tag=player] run attribute @s minecraft:entity_interaction_range base set 3.0
 
+#friendlyfire
+execute if score team_friendlyfire deathswap.setting matches 0 run team modify red friendlyFire true
+execute if score team_friendlyfire deathswap.setting matches 0 run team modify blue friendlyFire true
+execute if score team_friendlyfire deathswap.setting matches 0 run team modify yellow friendlyFire true
+execute if score team_friendlyfire deathswap.setting matches 0 run team modify green friendlyFire true
+
+execute if score team_friendlyfire deathswap.setting matches 1 run team modify red friendlyFire false
+execute if score team_friendlyfire deathswap.setting matches 1 run team modify blue friendlyFire false
+execute if score team_friendlyfire deathswap.setting matches 1 run team modify yellow friendlyFire false
+execute if score team_friendlyfire deathswap.setting matches 1 run team modify green friendlyFire false
+
 #collisionrule
+team modify solo collisionRule always
 execute if score team_collisionrule deathswap.setting matches 0 run team modify red collisionRule always
 execute if score team_collisionrule deathswap.setting matches 0 run team modify blue collisionRule always
 execute if score team_collisionrule deathswap.setting matches 0 run team modify yellow collisionRule always
@@ -26,7 +38,6 @@ execute if score arena deathswap.setting matches 1 if score arena.start deathswa
 execute if score gmchange deathswap.setting matches 1 run bossbar set deathswap:gmchange visible true
 execute if score random_effect deathswap.setting matches 1 run bossbar set deathswap:random_effect visible true
 
-
 #scoreboard
 scoreboard players reset @a deathswap.hurt
 scoreboard players reset @a deathswap.death
@@ -37,6 +48,12 @@ scoreboard players set game deathswap.status 2
 
 #play_count
 scoreboard players add play_count deathswap.count 1
+
+#title
+execute if score language deathswap.setting matches 1 run title @a title {"text": "§6Death Swap"}
+execute if score language deathswap.setting matches 2 run title @a title {"text": "§6死亡交換"}
+execute if score language deathswap.setting matches 1 run title @a subtitle {"text": "§aGame Started!"}
+execute if score language deathswap.setting matches 2 run title @a subtitle {"text": "§a遊戲開始！"}
 
 #text
 #start
@@ -51,8 +68,8 @@ execute if score language deathswap.setting matches 2 run tellraw @a[tag=admin] 
 ]
 
 #/tm
-execute if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fYou can use /tm to chat with teammates","click_event": {"action": "suggest_command","command": "/tm "},"hover_event": {"action": "show_text","value": "/tm <message>"}}]
-execute if score language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f你可以使用 /tm 與隊友聊天","click_event": {"action": "suggest_command","command": "/tm "},"hover_event": {"action": "show_text","value": "/tm <訊息>"}}]
+execute if score mode deathswap.setting matches 2 if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fYou can use /tm to chat with teammates","click_event": {"action": "suggest_command","command": "/tm "},"hover_event": {"action": "show_text","value": "/tm <message>"}}]
+execute if score mode deathswap.setting matches 2 if score language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f你可以使用 /tm 與隊友聊天","click_event": {"action": "suggest_command","command": "/tm "},"hover_event": {"action": "show_text","value": "/tm <訊息>"}}]
 
 #inventory_limit
 execute if score inventory_limit deathswap.setting matches ..36 if score language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§d§lNote: §r§fDo not put items into locked inventory!"}]

@@ -1,10 +1,10 @@
+#team/random_main
 function deathswap:ui/page/update
-
 #check
 $execute unless score player_count deathswap.count matches $(random).. if score language deathswap.setting matches 1 run tellraw @s [{"text": "§cThere are not enough people to divide into teams!"}]
 $execute unless score player_count deathswap.count matches $(random).. if score language deathswap.setting matches 2 run tellraw @s [{"text": "§c人數不足，無法分隊！"}]
 $execute unless score player_count deathswap.count matches $(random).. at @s run playsound entity.villager.no master @s ~ ~ ~
-$execute unless score player_count deathswap.count matches $(random).. run return fail
+$execute unless score player_count deathswap.count matches $(random).. run return run function deathswap:ui/page/update
 
 function deathswap:ui/team/reset_team_non-spectator
 $function deathswap:ui/team/random_$(random)

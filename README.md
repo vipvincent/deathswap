@@ -1,3 +1,6 @@
+![Modrinth Downloads](https://img.shields.io/modrinth/dt/irff3j1Z?style=flat&logo=modrinth&label=Modrinth)
+![CurseForge Downloads](https://img.shields.io/curseforge/dt/997754?style=flat&logo=curseforge&label=CurseForge)
+
 [Modrinth](https://modrinth.com/datapack/deathswap) | 
 [CurseForge](https://www.curseforge.com/minecraft/data-packs/deathswap) | 
 [Planet Minecraft](https://www.planetminecraft.com/data-pack/deathswap-6145205/) | 

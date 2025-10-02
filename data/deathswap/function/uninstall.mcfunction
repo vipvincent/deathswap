@@ -41,6 +41,7 @@ data remove storage deathswap:status install
 data remove storage deathswap:status install_stage
 data remove storage deathswap:status version
 data remove storage deathswap:status random_effect
+data remove storage deathswap:status actionbar
 
 #bossbar
 bossbar remove deathswap:swap_countdown
@@ -53,7 +54,7 @@ bossbar remove deathswap:random_effect
 tag @a remove player
 tag @a remove creative
 tag @a remove spectator
-tag @a remove died
+tag @a remove eliminated
 tag @a remove win
 tag @a remove admin
 tag @a remove notadmin
@@ -71,11 +72,17 @@ scoreboard objectives remove deathswap
 scoreboard objectives remove deathswap.win_score
 scoreboard objectives remove deathswap.setting
 scoreboard objectives remove deathswap.ui_page
-scoreboard objectives remove deathswap.join_game
+scoreboard objectives remove deathswap.leave_game
+scoreboard objectives remove deathswap.swap_original
+scoreboard objectives remove deathswap.swap_calculated
 
 #worldborder
-worldborder center 0 0
-worldborder set 59999968 0
+execute in minecraft:overworld run worldborder center 0 0
+execute in minecraft:the_nether run worldborder center 0 0
+execute in minecraft:the_end run worldborder center 0 0
+execute in minecraft:overworld run worldborder set 59999968 0 
+execute in minecraft:the_nether run worldborder set 59999968 0 
+execute in minecraft:the_end run worldborder set 59999968 0 
 worldborder damage buffer 5
 
 #team
@@ -92,6 +99,8 @@ gamerule doDaylightCycle true
 gamerule doWeatherCycle true 
 gamerule naturalRegeneration true
 gamerule doMobSpawning true
+gamerule spawnMonsters true
+gamerule spawnerBlocksEnabled true
 gamerule reducedDebugInfo false
 gamerule announceAdvancements true
 gamerule showDeathMessages true
