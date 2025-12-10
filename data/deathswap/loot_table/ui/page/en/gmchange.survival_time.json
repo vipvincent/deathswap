@@ -19,7 +19,11 @@
                     "function": "set_name",
                     "entity": "this",
                     "target": "custom_name",
-                    "name": [{"text":"Survival Time: ","color": "yellow","italic": false},{"score": {"name": "gmchange.survival_time","objective": "deathswap.setting"}},"s"]
+                    "name": [
+                        {"text":"Survival Time: ","color": "yellow","italic": false},
+                        {"score": {"name": "*gmchange.survival_time","objective": "deathswap.setting"}},
+                        {"text":"s"}
+                    ]
                 }
             ]
         }

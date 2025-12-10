@@ -7,7 +7,7 @@ execute as @e[tag=pos] run scoreboard players operation @s deathswap.swap_calcul
 scoreboard players remove @e[tag=pos] deathswap.swap_calculated 1
 
 # reset | calculated = 0 --> count
-execute as @e[tag=pos] if score @s deathswap.swap_calculated matches 0 run scoreboard players operation @s deathswap.swap_calculated = count deathswap.swap_original
+execute as @e[tag=pos] if score @s deathswap.swap_calculated matches 0 run scoreboard players operation @s deathswap.swap_calculated = *count deathswap.swap_original
 
 # calculated - original = 0 --> swap
 scoreboard players operation @e[tag=pos] deathswap.swap_calculated -= @s deathswap.swap_original

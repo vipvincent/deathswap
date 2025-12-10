@@ -19,7 +19,11 @@
                     "function": "set_name",
                     "entity": "this",
                     "target": "custom_name",
-                    "name": [{"text":"競技場開始：交換","color": "yellow","italic": false},{"score": {"name": "arena.start","objective": "deathswap.setting"}},"回合後"]
+                    "name": [
+                        {"text":"競技場開始：交換","color": "yellow","italic": false},
+                        {"score": {"name": "*arena.start","objective": "deathswap.setting"}},
+                        {"text":"回合後"}
+                    ]
                 }
             ]
         }

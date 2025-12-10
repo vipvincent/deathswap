@@ -19,7 +19,11 @@
                     "function": "set_name",
                     "entity": "this",
                     "target": "custom_name",
-                    "name": [{"text":"Random Effect interval: ","color": "yellow","italic": false},{"score": {"name": "random_effect.time","objective": "deathswap.setting"}},"s"]
+                    "name": [
+                        {"text":"Random Effect interval: ","color": "yellow","italic": false},
+                        {"score": {"name": "*random_effect.time","objective": "deathswap.setting"}},
+                        {"text":"s"}
+                    ]
                 }
             ]
         }

@@ -16,7 +16,7 @@ execute as @a[tag=player] run function deathswap:play/swap/solo/pos
 # (player) original --> calculated
 execute as @a[tag=player] run scoreboard players operation @s deathswap.swap_calculated = @s deathswap.swap_original
 # player = count --> 0
-execute as @a[tag=player] if score @s deathswap.swap_calculated = count deathswap.swap_original run scoreboard players set @s deathswap.swap_calculated 0
+execute as @a[tag=player] if score @s deathswap.swap_calculated = *count deathswap.swap_original run scoreboard players set @s deathswap.swap_calculated 0
 
 #tp
 execute as @a[tag=player] run function deathswap:play/swap/solo/tp

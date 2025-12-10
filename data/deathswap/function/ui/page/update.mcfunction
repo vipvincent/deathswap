@@ -18,7 +18,7 @@
 # admin_104 - admin special gameplay/random_effect
 
 #fail
-execute unless score game deathswap.status matches 0 run return fail
+execute unless score *game deathswap.status matches 0 run return fail
 
 #admin_air
 function deathswap:ui/page/admin_air
@@ -27,5 +27,5 @@ function deathswap:ui/page/admin_air
 function deathswap:ui/page/armor_display
 
 #lang
-execute if score language deathswap.setting matches 1 run function #deathswap:ui/page/en
-execute if score language deathswap.setting matches 2 run function #deathswap:ui/page/tw
+execute if score *language deathswap.setting matches 1 run function #deathswap:ui/page/en
+execute if score *language deathswap.setting matches 2 run function #deathswap:ui/page/tw

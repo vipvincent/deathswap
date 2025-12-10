@@ -1,5 +1,5 @@
-![Modrinth Downloads](https://img.shields.io/modrinth/dt/irff3j1Z?style=flat&logo=modrinth&label=Modrinth)
-![CurseForge Downloads](https://img.shields.io/curseforge/dt/997754?style=flat&logo=curseforge&label=CurseForge)
+[![Modrinth Downloads](https://img.shields.io/modrinth/dt/irff3j1Z?style=flat&logo=modrinth&label=Modrinth)](https://modrinth.com/datapack/deathswap)
+[![CurseForge Downloads](https://img.shields.io/curseforge/dt/997754?style=flat&logo=curseforge&label=CurseForge)](https://www.curseforge.com/minecraft/data-packs/deathswap)
 
 [Modrinth](https://modrinth.com/datapack/deathswap) | 
 [CurseForge](https://www.curseforge.com/minecraft/data-packs/deathswap) | 
@@ -18,9 +18,10 @@ Death Swap is a thrilling competitive game where teams are scattered across diff
 - Starting tools and armor
 - Auto furnace
 - Swap warning and invincibility
+- Arena
 - Special gameplay: Game mode auto switch
-- **New** Special gameplay: Killer mode
-- **New** Special gameplay: Arena
+- Special gameplay: Killer mode
+- **New** Special gameplay: Random Effect
 - Language support for English and Chinese 
 - Four Teams/At least two player/Unlimited player
 
@@ -66,9 +67,10 @@ Death Swap is an original concept proposed by [SethBling](https://www.youtube.co
 - 起始工具、裝備
 - 物品免燒
 - 交換警告、無敵
+- 競技場
 - 特殊玩法：遊戲模式自動切換
-- **新** 特殊玩法：殺手模式
-- **新** 特殊玩法：競技場
+- 特殊玩法：殺手模式
+- **新** 特殊玩法：隨機藥水效果
 - 語言支持中文、英文
 - 最多可有四隊同時參與遊戲，兩人以上即可開始，且無人數上限。
       

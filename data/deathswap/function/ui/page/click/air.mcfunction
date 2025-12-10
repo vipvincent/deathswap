@@ -82,8 +82,6 @@ execute as @a[tag=notadmin] if items entity @s inventory.8 *[custom_data={ui:1b}
 execute as @a[tag=notadmin] if items entity @s inventory.9 *[custom_data={ui:1b}] run item replace entity @s inventory.9 with air
 execute as @a[tag=notadmin] if items entity @s inventory.10 *[custom_data={ui:1b}] run item replace entity @s inventory.10 with air
 execute as @a[tag=notadmin] if items entity @s inventory.11 *[custom_data={ui:1b}] run item replace entity @s inventory.11 with air
-execute as @a[tag=notadmin] if items entity @s inventory.12 *[custom_data={ui:1b}] run item replace entity @s inventory.12 with air
-execute as @a[tag=notadmin] if items entity @s inventory.14 *[custom_data={ui:1b}] run item replace entity @s inventory.14 with air
 execute as @a[tag=notadmin] if items entity @s inventory.15 *[custom_data={ui:1b}] run item replace entity @s inventory.15 with air
 execute as @a[tag=notadmin] if items entity @s inventory.16 *[custom_data={ui:1b}] run item replace entity @s inventory.16 with air
 execute as @a[tag=notadmin] if items entity @s inventory.17 *[custom_data={ui:1b}] run item replace entity @s inventory.17 with air

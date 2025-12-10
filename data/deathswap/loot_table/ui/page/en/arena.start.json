@@ -19,7 +19,11 @@
                     "function": "set_name",
                     "entity": "this",
                     "target": "custom_name",
-                    "name": [{"text":"Arena Start: After ","color": "yellow","italic": false},{"score": {"name": "arena.start","objective": "deathswap.setting"}}," rounds of swap"]
+                    "name": [
+                        {"text":"Arena Start: After ","color": "yellow","italic": false},
+                        {"score": {"name": "*arena.start","objective": "deathswap.setting"}},
+                        {"text":" rounds of swap"}
+                    ]
                 }
             ]
         }

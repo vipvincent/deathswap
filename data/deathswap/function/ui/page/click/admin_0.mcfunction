@@ -11,5 +11,5 @@ execute as @a[tag=admin,tag=!creative,scores={deathswap.ui_page=0}] unless items
 execute as @a[tag=admin,tag=!creative,scores={deathswap.ui_page=0}] unless items entity @s inventory.26 *[custom_data={ui:1b}] run function deathswap:ui/info
 #reset_win
 execute as @a[tag=admin,tag=!creative,scores={deathswap.ui_page=0}] unless items entity @s inventory.0 *[custom_data={ui:1b}] run function deathswap:prepare/reset_wins
-#ui_win
-execute as @a[tag=admin,tag=!creative,scores={deathswap.ui_page=0}] unless items entity @s inventory.8 *[custom_data={ui:1b}] run function deathswap:ui/win_score
+#score calculation
+execute as @a[tag=admin,tag=!creative,scores={deathswap.ui_page=0}] unless items entity @s inventory.8 *[custom_data={ui:1b}] run function deathswap:ui/score_calculation

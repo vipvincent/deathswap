@@ -1,6 +1,6 @@
 #special_gameplay/arena
 
-execute if score arena deathswap.setting matches 0 run execute as @a[scores={deathswap.ui_page=103}] run function deathswap:ui/page/change {ui_page:100}
+execute if score *arena deathswap.setting matches 0 run execute as @a[scores={deathswap.ui_page=103}] run function deathswap:ui/page/change {ui_page:100}
 
 #reset arena setting
 execute as @a[tag=admin,tag=!creative,scores={deathswap.ui_page=103}] unless items entity @s inventory.26 *[custom_data={ui:1b}] run function deathswap:setting/arena/default

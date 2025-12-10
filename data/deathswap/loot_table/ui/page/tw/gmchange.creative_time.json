@@ -19,7 +19,11 @@
                     "function": "set_name",
                     "entity": "this",
                     "target": "custom_name",
-                    "name": [{"text":"創造模式時長：","color": "yellow","italic": false},{"score": {"name": "gmchange.creative_time","objective": "deathswap.setting"}},"秒"]
+                    "name": [
+                        {"text":"創造模式時長：","color": "yellow","italic": false},
+                        {"score": {"name": "*gmchange.creative_time","objective": "deathswap.setting"}},
+                        {"text":"秒"}
+                    ]
                 }
             ]
         }

@@ -1,1 +1,1 @@
-scoreboard players set gmchange_wait deathswap.timer 5
+scoreboard players set *gmchange.pause deathswap.timer 5

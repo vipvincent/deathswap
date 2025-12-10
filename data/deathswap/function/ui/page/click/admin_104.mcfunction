@@ -1,6 +1,6 @@
 #special_gameplay/random_effect
 
-execute if score random_effect deathswap.setting matches 0 run execute as @a[scores={deathswap.ui_page=104}] run function deathswap:ui/page/change {ui_page:100}
+execute if score *random_effect deathswap.setting matches 0 run execute as @a[scores={deathswap.ui_page=104}] run function deathswap:ui/page/change {ui_page:100}
 
 #reset arena setting
 

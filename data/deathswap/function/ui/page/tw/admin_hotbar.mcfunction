@@ -4,7 +4,7 @@
 item replace entity @a[tag=admin,tag=!creative] hotbar.7 with armor_stand[custom_data={ui:1b},item_model="lectern",custom_name=[{"text":"設置遊戲大廳(","color":"yellow","italic":false},{"keybind":"key.use"},{"text":")"}],entity_data={id:"armor_stand",Tags:["setlobby"],"Invisible":true}]
 
 #hotbar-tp
-item replace entity @a[tag=admin,tag=!creative] hotbar.1 with carrot_on_a_stick[custom_data={ui:1b},item_model="ender_pearl",custom_name=[{"text":"傳送所有玩家到這裡(","color":"yellow","italic":false},{"keybind":"key.use"},{"text":")"}]]
+item replace entity @a[tag=admin,tag=!creative] hotbar.1 with carrot_on_a_stick[custom_data={ui:1b},item_model="ender_pearl",custom_name=[{"text":"傳送所有玩家到這裡(","color":"yellow","italic":false},{"keybind":"key.use"},{"text":")"}],lore=[[{"keybind":"key.sneak","color":"gray","italic":false}," + ",{"keybind":"key.use"}],'§7傳送所有玩家至遊戲大廳','§7(物品欄介面中無效)']]
 
 #survival-creative
 item replace entity @a[tag=admin,tag=!creative] hotbar.0 with carrot_on_a_stick[custom_data={ui:1b},item_model="feather",custom_name=[{"text":"切換至創造模式(","color":"yellow","italic":false},{"keybind":"key.use"},{"text":")"}]]

@@ -19,7 +19,12 @@
                     "function": "set_name",
                     "entity": "this",
                     "target": "custom_name",
-                    "name": [{"text":"Arena Border: ","color": "yellow","italic": false},{"score":{"name": "arena.border","objective": "deathswap.setting"}},{"text": "x"},{"score":{"name": "arena.border","objective": "deathswap.setting"}}]
+                    "name": [
+                        {"text":"Arena Border: ","color": "yellow","italic": false},
+                        {"score":{"name": "*arena.border","objective": "deathswap.setting"}},
+                        {"text": "x"},
+                        {"score":{"name": "*arena.border","objective": "deathswap.setting"}}
+                    ]
                 }
             ]
         }

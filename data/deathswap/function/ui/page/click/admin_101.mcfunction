@@ -1,6 +1,6 @@
 #special_gameplay/gmchange
 
-execute if score gmchange deathswap.setting matches 0 run execute as @a[scores={deathswap.ui_page=101}] run function deathswap:ui/page/change {ui_page:100}
+execute if score *gmchange deathswap.setting matches 0 run execute as @a[scores={deathswap.ui_page=101}] run function deathswap:ui/page/change {ui_page:100}
 
 #reset gmchange setting
 execute as @a[tag=admin,tag=!creative,scores={deathswap.ui_page=101}] unless items entity @s inventory.26 *[custom_data={ui:1b}] run function deathswap:setting/gmchange/default
