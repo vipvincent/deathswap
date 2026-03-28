@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "spectator":{
+            "trigger": "impossible"
+        }
+    },
+    "rewards": {
+        "function": "deathswap:advancement/main/spectator"
+    }
+}

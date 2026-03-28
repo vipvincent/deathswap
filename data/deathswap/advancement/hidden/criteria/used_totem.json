@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "used_totem":{
+            "trigger": "used_totem"
+        }
+    },
+    "rewards": {
+        "function": "deathswap:advancement/hidden/used_totem"
+    }
+}

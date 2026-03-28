@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "get_furnace":{
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "minecraft:furnace"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "deathswap:advancement/hidden/get_furnace"
+    }
+}

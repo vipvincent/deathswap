@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:cooked_chicken",
+        "title": "La-la-la-lava ch-ch-ch-chicken",
+        "description": "Now that we've reached this advancement, it's time to sing!"
+    },
+    "parent": "deathswap:hidden/en/root",
+    "criteria": {
+        "get_cooked_chicken":{
+            "trigger": "impossible"
+        }
+    }
+}

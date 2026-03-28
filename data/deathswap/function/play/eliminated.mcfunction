@@ -6,15 +6,18 @@ tag @s remove player
 tag @s add eliminated
 tag @s add spectator
 
+#gamemode
+gamemode spectator @s
+
 #still_off
 function deathswap:lib/still/off
 
-#back to last death
+#last death
 function deathswap:lib/last_death/main
 
 #update count
 function deathswap:lib/count
-scoreboard players operation *play_count_update deathswap.status = *player_count deathswap.status
+scoreboard players operation *player_count_update deathswap.status = *player_count deathswap.status
 
 #text
 title @a title ""
@@ -31,4 +34,7 @@ execute if score *language deathswap.setting matches 2 run tellraw @a [{"text": 
 execute if entity @s[tag=killer] if score *killer.eliminated_alert deathswap.setting matches 1 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "The §4§lkiller§r named "},{"selector":"@s","color":"dark_red"},{"text": " has been eliminated!"}]
 execute if entity @s[tag=killer] if score *killer.eliminated_alert deathswap.setting matches 1 if score *language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "名為 "},{"selector":"@s","color":"dark_red"},{"text": " 的§4§l殺手§r已被淘汰！"}]
 
-execute as @a at @s run playsound entity.wither.break_block master @s ~ ~ ~ 99999999999999999999999999999999999999 1 1
+execute as @a at @s run playsound entity.wither.break_block master @s ~ ~ ~
+
+#adv
+advancement grant @s only deathswap:main/criteria/eliminated

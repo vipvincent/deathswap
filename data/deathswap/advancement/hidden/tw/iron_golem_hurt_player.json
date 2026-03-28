@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:iron_block",
+        "title": "對不起，鐵哥別打我啊！",
+        "description": "鐵哥可是用於保護玩家和村民，就這麼讓你欺負了？"
+    },
+    "parent": "deathswap:hidden/tw/hurt_iron_golem",
+    "criteria": {
+        "iron_golem_hurt_player":{
+            "trigger": "impossible"
+        }
+    }
+}

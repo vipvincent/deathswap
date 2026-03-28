@@ -1,0 +1,20 @@
+{
+    "values": [
+        "deathswap:advancement/hidden/bee_hurt_player",
+        "deathswap:advancement/hidden/eat_apple",
+        "deathswap:advancement/hidden/eat_enchanted_golden_apple",
+        "deathswap:advancement/hidden/enter_cobweb",
+        "deathswap:advancement/hidden/explosion",
+        "deathswap:advancement/hidden/fall",
+        "deathswap:advancement/hidden/get_cooked_chicken",
+        "deathswap:advancement/hidden/get_furnace",
+        "deathswap:advancement/hidden/get_log",
+        "deathswap:advancement/hidden/hurt_iron_golem",
+        "deathswap:advancement/hidden/hurt_villager",
+        "deathswap:advancement/hidden/iron_golem_hurt_player",
+        "deathswap:advancement/hidden/polar_bear_hurt_player",
+        "deathswap:advancement/hidden/swim_lava",
+        "deathswap:advancement/hidden/used_totem",
+        "deathswap:advancement/hidden/visit_village"
+    ]
+}

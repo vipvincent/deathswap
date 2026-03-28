@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:bee_spawn_egg",
+        "title": "我被蜜蜂叮了",
+        "description": "中毒了"
+    },
+    "parent": "deathswap:hidden/tw/root",
+    "criteria": {
+        "bee_hurt_player":{
+            "trigger": "impossible"
+        }
+    }
+}

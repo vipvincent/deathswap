@@ -9,18 +9,16 @@ execute if score *gmchange deathswap.setting matches 1 run scoreboard players se
 execute if score *gmchange deathswap.setting matches 1 run scoreboard players operation *gmchange.time deathswap.timer = *gmchange.survival_time deathswap.setting
 
 #collisionrule
-team modify solo collisionRule always
-execute if score *team_collisionrule deathswap.setting matches 0 run team modify red collisionRule always
-execute if score *team_collisionrule deathswap.setting matches 0 run team modify blue collisionRule always
-execute if score *team_collisionrule deathswap.setting matches 0 run team modify yellow collisionRule always
-execute if score *team_collisionrule deathswap.setting matches 0 run team modify green collisionRule always
+function deathswap:team/collisionrule/use_setting
 
-execute if score *team_collisionrule deathswap.setting matches 1 run team modify red collisionRule pushOwnTeam
-execute if score *team_collisionrule deathswap.setting matches 1 run team modify blue collisionRule pushOwnTeam
-execute if score *team_collisionrule deathswap.setting matches 1 run team modify yellow collisionRule pushOwnTeam
-execute if score *team_collisionrule deathswap.setting matches 1 run team modify green collisionRule pushOwnTeam
-
+#gamerule
 gamerule minecraft:max_entity_cramming 24
+
+#still_off
+execute as @a run function deathswap:lib/still/off
+
+#gamemode
+gamemode survival @a[tag=player]
 
 #text
 execute if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fThe arena begins now!"}]
@@ -28,8 +26,6 @@ execute if score *language deathswap.setting matches 2 run tellraw @a [{"text": 
 
 execute as @a at @s run playsound entity.ender_dragon.growl master @s ~ ~ ~
 
-#still_off
-execute as @a run function deathswap:lib/still/off
 #status
 scoreboard players set *arena deathswap.status 2
 

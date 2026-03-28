@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:emerald",
+        "title": "Unscrupulous Merchants",
+        "description": "Is it right for prices to keep rising as they are sold?"
+    },
+    "parent": "deathswap:hidden/en/visit_village",
+    "criteria": {
+        "hurt_villager":{
+            "trigger": "impossible"
+        }
+    }
+}

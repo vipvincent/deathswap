@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:barrier",
+        "title": "任務失敗！",
+        "description": "下次一定要達成殺手任務"
+    },
+    "parent": "deathswap:main/tw/lose",
+    "criteria": {
+        "killer_lose":{
+            "trigger": "impossible"
+        }
+    }
+}

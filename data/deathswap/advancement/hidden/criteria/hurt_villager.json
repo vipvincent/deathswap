@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "hurt_villager":{
+            "trigger": "player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:villager"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "deathswap:advancement/hidden/hurt_villager"
+    }
+}

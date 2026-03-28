@@ -1,46 +1,25 @@
 #tool
 #1 wood
-execute if score *tool deathswap.setting matches 1 run give @a[tag=player] wooden_sword
 execute if score *tool deathswap.setting matches 1 run give @a[tag=player] wooden_axe
 execute if score *tool deathswap.setting matches 1 run give @a[tag=player] wooden_pickaxe
-execute if score *tool deathswap.setting matches 1 run give @a[tag=player] wooden_shovel
-execute if score *tool deathswap.setting matches 1 run give @a[tag=player] wooden_hoe
 #2 stone
-execute if score *tool deathswap.setting matches 2 run give @a[tag=player] stone_sword
 execute if score *tool deathswap.setting matches 2 run give @a[tag=player] stone_axe
 execute if score *tool deathswap.setting matches 2 run give @a[tag=player] stone_pickaxe
-execute if score *tool deathswap.setting matches 2 run give @a[tag=player] stone_shovel
-execute if score *tool deathswap.setting matches 2 run give @a[tag=player] stone_hoe
 #4 copper
-execute if score *tool deathswap.setting matches 3 run give @a[tag=player] copper_sword
 execute if score *tool deathswap.setting matches 3 run give @a[tag=player] copper_axe
 execute if score *tool deathswap.setting matches 3 run give @a[tag=player] copper_pickaxe
-execute if score *tool deathswap.setting matches 3 run give @a[tag=player] copper_shovel
-execute if score *tool deathswap.setting matches 3 run give @a[tag=player] copper_hoe
 #4 iron
-execute if score *tool deathswap.setting matches 4 run give @a[tag=player] iron_sword
 execute if score *tool deathswap.setting matches 4 run give @a[tag=player] iron_axe
 execute if score *tool deathswap.setting matches 4 run give @a[tag=player] iron_pickaxe
-execute if score *tool deathswap.setting matches 4 run give @a[tag=player] iron_shovel
-execute if score *tool deathswap.setting matches 4 run give @a[tag=player] iron_hoe
 #5 golden
-execute if score *tool deathswap.setting matches 5 run give @a[tag=player] golden_sword
 execute if score *tool deathswap.setting matches 5 run give @a[tag=player] golden_axe
 execute if score *tool deathswap.setting matches 5 run give @a[tag=player] golden_pickaxe
-execute if score *tool deathswap.setting matches 5 run give @a[tag=player] golden_shovel
-execute if score *tool deathswap.setting matches 5 run give @a[tag=player] golden_hoe
 #6 diamond
-execute if score *tool deathswap.setting matches 6 run give @a[tag=player] diamond_sword
 execute if score *tool deathswap.setting matches 6 run give @a[tag=player] diamond_axe
 execute if score *tool deathswap.setting matches 6 run give @a[tag=player] diamond_pickaxe
-execute if score *tool deathswap.setting matches 6 run give @a[tag=player] diamond_shovel
-execute if score *tool deathswap.setting matches 6 run give @a[tag=player] diamond_hoe
 #7 netherite
-execute if score *tool deathswap.setting matches 7 run give @a[tag=player] netherite_sword
 execute if score *tool deathswap.setting matches 7 run give @a[tag=player] netherite_axe
 execute if score *tool deathswap.setting matches 7 run give @a[tag=player] netherite_pickaxe
-execute if score *tool deathswap.setting matches 7 run give @a[tag=player] netherite_shovel
-execute if score *tool deathswap.setting matches 7 run give @a[tag=player] netherite_hoe
 
 #armor
 #1 leather
@@ -48,12 +27,6 @@ execute if score *armor deathswap.setting matches 1 run item replace entity @a[t
 execute if score *armor deathswap.setting matches 1 run item replace entity @a[tag=player] armor.chest with leather_chestplate
 execute if score *armor deathswap.setting matches 1 run item replace entity @a[tag=player] armor.legs with leather_leggings
 execute if score *armor deathswap.setting matches 1 run item replace entity @a[tag=player] armor.feet with leather_boots
-
-#color
-execute if score *armor deathswap.setting matches 1 as @a[tag=player] run item modify entity @s armor.head deathswap:leather_color
-execute if score *armor deathswap.setting matches 1 as @a[tag=player] run item modify entity @s armor.chest deathswap:leather_color
-execute if score *armor deathswap.setting matches 1 as @a[tag=player] run item modify entity @s armor.legs deathswap:leather_color
-execute if score *armor deathswap.setting matches 1 as @a[tag=player] run item modify entity @s armor.feet deathswap:leather_color
 
 #2 copprt
 execute if score *armor deathswap.setting matches 2 run item replace entity @a[tag=player] armor.head with copper_helmet
@@ -90,6 +63,12 @@ execute if score *armor deathswap.setting matches 7 run item replace entity @a[t
 execute if score *armor deathswap.setting matches 7 run item replace entity @a[tag=player] armor.chest with netherite_chestplate
 execute if score *armor deathswap.setting matches 7 run item replace entity @a[tag=player] armor.legs with netherite_leggings
 execute if score *armor deathswap.setting matches 7 run item replace entity @a[tag=player] armor.feet with netherite_boots
+
+#leather color
+execute if score *armor deathswap.setting matches 1 as @a[tag=player] run item modify entity @s armor.head deathswap:leather_color
+execute if score *armor deathswap.setting matches 1 as @a[tag=player] run item modify entity @s armor.chest deathswap:leather_color
+execute if score *armor deathswap.setting matches 1 as @a[tag=player] run item modify entity @s armor.legs deathswap:leather_color
+execute if score *armor deathswap.setting matches 1 as @a[tag=player] run item modify entity @s armor.feet deathswap:leather_color
 
 #template
 execute if score *armor deathswap.setting matches 1.. as @a[tag=player] run item modify entity @s armor.head deathswap:template

@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:cobweb",
+        "title": "Slow and Sticky",
+        "description": "Let me get out of the Cobweb."
+    },
+    "parent": "deathswap:hidden/en/root",
+    "criteria": {
+        "enter_cobweb":{
+            "trigger": "impossible"
+        }
+    }
+}

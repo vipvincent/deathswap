@@ -1,11 +1,11 @@
 scoreboard players add *team_choose deathswap.setting 1
 execute if score *team_choose deathswap.setting matches 2 run scoreboard players set *team_choose deathswap.setting 0
 
-execute if score *language deathswap.setting matches 1 if score *team_choose deathswap.setting matches 0 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fTeam Selection Permission is §cDisable"}]
-execute if score *language deathswap.setting matches 1 if score *team_choose deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fTeam Selection Permission is §aEnabled"}]
+execute if score *language deathswap.setting matches 1 if score *team_choose deathswap.setting matches 0 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fTeam Selection is §cDisable"}]
+execute if score *language deathswap.setting matches 1 if score *team_choose deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fTeam Selection is §aEnabled"}]
 
-execute if score *language deathswap.setting matches 2 if score *team_choose deathswap.setting matches 0 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f選隊權限已§c關閉"}]
-execute if score *language deathswap.setting matches 2 if score *team_choose deathswap.setting matches 1 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f選隊權限已§a開啟"}]
+execute if score *language deathswap.setting matches 2 if score *team_choose deathswap.setting matches 0 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f自由選隊已§c關閉"}]
+execute if score *language deathswap.setting matches 2 if score *team_choose deathswap.setting matches 1 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f自由選隊已§a開啟"}]
 
 execute as @a at @s run playsound ui.button.click master @s ~ ~ ~
 

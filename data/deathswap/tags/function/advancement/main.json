@@ -1,0 +1,12 @@
+{
+    "values": [
+        "deathswap:advancement/main/eliminated",
+        "deathswap:advancement/main/lose",
+        "deathswap:advancement/main/spectator",
+        "deathswap:advancement/main/start",
+        "deathswap:advancement/main/swap",
+        "deathswap:advancement/main/want_play",
+        "deathswap:advancement/main/win",
+        "deathswap:advancement/main/wiped_out"
+    ]
+}

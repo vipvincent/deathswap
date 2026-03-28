@@ -1,0 +1,14 @@
+{
+    "display": {
+        "announce_to_chat": false,
+        "icon": "minecraft:gray_stained_glass",
+        "title": "旁觀",
+        "description": "成為當場遊戲旁觀者"
+    },
+    "parent": "deathswap:main/tw/root",
+    "criteria": {
+        "spectator":{
+            "trigger": "impossible"
+        }
+    }
+}

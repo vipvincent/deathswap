@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:villager_spawn_egg",
+        "title": "Collect supplies from the village",
+        "description": "There are so many things in the village!"
+    },
+    "parent": "deathswap:hidden/en/root",
+    "criteria": {
+        "visit_village":{
+            "trigger": "impossible"
+        }
+    }
+}

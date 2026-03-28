@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:bee_spawn_egg",
+        "title": "I was stung by a bee",
+        "description": "Poisoned"
+    },
+    "parent": "deathswap:hidden/en/root",
+    "criteria": {
+        "bee_hurt_player":{
+            "trigger": "impossible"
+        }
+    }
+}

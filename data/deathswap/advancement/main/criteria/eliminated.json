@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "eliminated":{
+            "trigger": "impossible"
+        }
+    },
+    "rewards": {
+        "function": "deathswap:advancement/main/eliminated"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:lava_bucket",
+        "title": "Swimming in lava feels so good!",
+        "description": "So comfortable it hurts"
+    },
+    "parent": "deathswap:hidden/en/root",
+    "criteria": {
+        "swim_lava":{
+            "trigger": "impossible"
+        }
+    }
+}

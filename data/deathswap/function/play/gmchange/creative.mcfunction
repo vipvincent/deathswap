@@ -1,6 +1,8 @@
 scoreboard players set *gmchange deathswap.status 1
 scoreboard players operation *gmchange.time deathswap.timer = *gmchange.creative_time deathswap.setting
 
+gamemode creative @a[tag=player]
+
 title @a title ""
 execute if score *language deathswap.setting matches 1 run title @a subtitle {"text": "§cCreative"}
 execute if score *language deathswap.setting matches 2 run title @a subtitle {"text": "§c創造模式"}

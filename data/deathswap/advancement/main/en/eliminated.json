@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:skeleton_skull",
+        "title": "I was eliminated...",
+        "description": "My teammate, you'd better do your best!"
+    },
+    "parent": "deathswap:main/en/start",
+    "criteria": {
+        "eliminated":{
+            "trigger": "impossible"
+        }
+    }
+}

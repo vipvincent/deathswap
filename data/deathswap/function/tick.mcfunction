@@ -8,50 +8,45 @@ execute if data storage deathswap:storage_main {install_stage:1b} run return fai
 execute as @a unless score @s deathswap.leave_game matches 0 run function deathswap:lib/join_game
 scoreboard players set @a deathswap.leave_game 0
 
-# game status
-# -1 reset
-#  0 prepare 
-#  1 wait 
-#  2 play 
-#  3 win 
-execute if score *game deathswap.status matches -1 run gamemode survival @a
-execute if score *game deathswap.status matches 0 run function deathswap:prepare/prepare_time
-execute if score *game deathswap.status matches 1 run function deathswap:wait/wait_time
-execute if score *game deathswap.status matches 2 run function deathswap:play/play_time
-execute if score *game deathswap.status matches 3 run function deathswap:end/end_time
-execute as @a if score @s deathswap.death matches 1 run scoreboard players reset @s deathswap.death
-
-#trigger
-function deathswap:lib/trigger
-
-#count
-function deathswap:lib/count
-
-#actionbar
-function deathswap:ui/actionbar/main
-
-#display sidebar
-function deathswap:ui/display_sidebar
-
-#team name
-function deathswap:team/team_name
-
-#hp_adj
-execute as @a run function deathswap:lib/hp_adj
-
 #admin
 execute as @a[tag=admin,tag=notadmin] run function deathswap:lib/admin
 execute if score *game deathswap.status matches 0 as @a[gamemode=creative,tag=notadmin] run function deathswap:lib/admin
 execute as @a[tag=!notadmin,tag=!admin] run function deathswap:lib/notadmin
 tag @a[gamemode=!creative,tag=!admin,tag=creative] remove creative
 
-#ui_lick
-execute if score *game deathswap.status matches 0 run function #deathswap:ui/page/click
-scoreboard players reset @a deathswap.carrot_right_click
-scoreboard players reset @a deathswap.sneak
+# game status
+# 0 prepare 
+# 1 wait 
+# 2 play 
+# 3 win 
+execute if score *game deathswap.status matches 0 run function deathswap:prepare/prepare_time
+execute if score *game deathswap.status matches 1 run function deathswap:wait/wait_time
+execute if score *game deathswap.status matches 2 run function deathswap:play/play_time
+execute if score *game deathswap.status matches 3 run function deathswap:end/end_time
+scoreboard players reset @a deathswap.death
+
+#hp_adj
+function deathswap:lib/hp_adj
+
+#count
+function deathswap:lib/count
+
+#trigger
+function deathswap:lib/trigger
+
+#actionbar
+function deathswap:ui/actionbar/main
+
+#display sidebar
+function #deathswap:ui/sidebar
+
+#team_name
+function deathswap:team/team_name
+
+#adv
+function deathswap:advancement/root
 
 #lobby
-execute as @e[type=marker,tag=lobby] at @s run spawnpoint @a ~ ~ ~
 execute as @e[type=marker,tag=lobby] at @s run setworldspawn ~ ~ ~
 kill @e[tag=setlobby]
 function deathswap:ui/text_display
@@ -59,6 +54,8 @@ function deathswap:ui/particle_circle
 
 #win score
 execute as @a unless score @s deathswap.win_score matches 1.. run scoreboard players set @s deathswap.win_score 0
+execute if score *language deathswap.setting matches 1 run scoreboard objectives modify deathswap.win_score displayname {text:"Win Score",color:yellow}
+execute if score *language deathswap.setting matches 2 run scoreboard objectives modify deathswap.win_score displayname {text:"獲勝分數",color:yellow}
 
 #play_count
 execute unless score *play_count deathswap.status matches 1.. run scoreboard players set *play_count deathswap.status 0
@@ -82,12 +79,3 @@ execute as @a if items entity @s player.crafting.2 *[custom_data={inventory_limi
 execute as @a if items entity @s player.crafting.3 *[custom_data={inventory_limit:1b}] run item replace entity @s player.crafting.3 with air
 kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{inventory_limit:1b}}}}]
 kill @e[tag=inventory_limit]
-
-#bossbar players
-bossbar set deathswap:wait players @a
-execute if score *swap_bossbar deathswap.setting matches 0 run bossbar set deathswap:swap_countdown players @a[tag=spectator]
-execute if score *swap_bossbar deathswap.setting matches 1 run bossbar set deathswap:swap_countdown players @a
-bossbar set deathswap:gmchange players @a
-bossbar set deathswap:arena players @a
-bossbar set deathswap:random_effect players @a
-

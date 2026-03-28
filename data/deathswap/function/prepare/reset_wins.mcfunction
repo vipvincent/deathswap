@@ -1,4 +1,5 @@
 scoreboard players reset * deathswap.win_score
+scoreboard players reset * deathswap.display.rank
 
 execute if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fSuccessfully clear all player §eWins Score"}]
 execute if score *language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f成功清除所有玩家的§e獲勝分數"}]

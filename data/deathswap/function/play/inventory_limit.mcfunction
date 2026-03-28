@@ -1,4 +1,6 @@
 #main
+
+#invenotry
 execute if score *inventory_limit deathswap.setting matches ..36 run item replace entity @a[tag=player] inventory.0 with armor_stand[custom_data={inventory_limit:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},custom_name="",item_model="barrier",entity_data={id:"armor_stand",Tags:["inventory_limit"],"Invisible":true}]
 execute if score *inventory_limit deathswap.setting matches ..35 run item replace entity @a[tag=player] inventory.1 with armor_stand[custom_data={inventory_limit:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},custom_name="",item_model="barrier",entity_data={id:"armor_stand",Tags:["inventory_limit"],"Invisible":true}]
 execute if score *inventory_limit deathswap.setting matches ..34 run item replace entity @a[tag=player] inventory.2 with armor_stand[custom_data={inventory_limit:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},custom_name="",item_model="barrier",entity_data={id:"armor_stand",Tags:["inventory_limit"],"Invisible":true}]
@@ -26,6 +28,7 @@ execute if score *inventory_limit deathswap.setting matches ..13 run item replac
 execute if score *inventory_limit deathswap.setting matches ..12 run item replace entity @a[tag=player] inventory.24 with armor_stand[custom_data={inventory_limit:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},custom_name="",item_model="barrier",entity_data={id:"armor_stand",Tags:["inventory_limit"],"Invisible":true}]
 execute if score *inventory_limit deathswap.setting matches ..11 run item replace entity @a[tag=player] inventory.25 with armor_stand[custom_data={inventory_limit:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},custom_name="",item_model="barrier",entity_data={id:"armor_stand",Tags:["inventory_limit"],"Invisible":true}]
 execute if score *inventory_limit deathswap.setting matches ..10 run item replace entity @a[tag=player] inventory.26 with armor_stand[custom_data={inventory_limit:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},custom_name="",item_model="barrier",entity_data={id:"armor_stand",Tags:["inventory_limit"],"Invisible":true}]
+#hotbar
 execute if score *inventory_limit deathswap.setting matches ..9 run item replace entity @a[tag=player] hotbar.8 with armor_stand[custom_data={inventory_limit:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},custom_name="",item_model="barrier",entity_data={id:"armor_stand",Tags:["inventory_limit"],"Invisible":true}]
 execute if score *inventory_limit deathswap.setting matches ..8 run item replace entity @a[tag=player] hotbar.7 with armor_stand[custom_data={inventory_limit:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},custom_name="",item_model="barrier",entity_data={id:"armor_stand",Tags:["inventory_limit"],"Invisible":true}]
 execute if score *inventory_limit deathswap.setting matches ..7 run item replace entity @a[tag=player] hotbar.6 with armor_stand[custom_data={inventory_limit:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},custom_name="",item_model="barrier",entity_data={id:"armor_stand",Tags:["inventory_limit"],"Invisible":true}]
@@ -34,11 +37,14 @@ execute if score *inventory_limit deathswap.setting matches ..5 run item replace
 execute if score *inventory_limit deathswap.setting matches ..4 run item replace entity @a[tag=player] hotbar.3 with armor_stand[custom_data={inventory_limit:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},custom_name="",item_model="barrier",entity_data={id:"armor_stand",Tags:["inventory_limit"],"Invisible":true}]
 execute if score *inventory_limit deathswap.setting matches ..3 run item replace entity @a[tag=player] hotbar.2 with armor_stand[custom_data={inventory_limit:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},custom_name="",item_model="barrier",entity_data={id:"armor_stand",Tags:["inventory_limit"],"Invisible":true}]
 execute if score *inventory_limit deathswap.setting matches ..2 run item replace entity @a[tag=player] hotbar.1 with armor_stand[custom_data={inventory_limit:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},custom_name="",item_model="barrier",entity_data={id:"armor_stand",Tags:["inventory_limit"],"Invisible":true}]
-#test
-execute if score *inventory_limit deathswap.setting matches ..1 run item replace entity @a[tag=player] weapon.offhand with armor_stand[custom_data={inventory_limit:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},custom_name="",item_model="barrier",entity_data={id:"armor_stand",Tags:["inventory_limit"],"Invisible":true}]
 execute if score *inventory_limit deathswap.setting matches ..0 run item replace entity @a[tag=player] hotbar.0 with armor_stand[custom_data={inventory_limit:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},custom_name="",item_model="barrier",entity_data={id:"armor_stand",Tags:["inventory_limit"],"Invisible":true}]
+#offhand
+execute if score *inventory_limit deathswap.setting matches ..1 run item replace entity @a[tag=player] weapon.offhand with armor_stand[custom_data={inventory_limit:1b},max_stack_size=1,tooltip_display={hide_tooltip:true},custom_name="",item_model="barrier",entity_data={id:"armor_stand",Tags:["inventory_limit"],"Invisible":true}]
 
-#shift
+#---
+#no_limit
+
+#invenotry
 execute unless score *inventory_limit deathswap.setting matches ..36 as @a[tag=player] if items entity @s inventory.0 *[custom_data={inventory_limit:1b}] run item replace entity @s inventory.0 with air
 execute unless score *inventory_limit deathswap.setting matches ..35 as @a[tag=player] if items entity @s inventory.1 *[custom_data={inventory_limit:1b}] run item replace entity @s inventory.1 with air
 execute unless score *inventory_limit deathswap.setting matches ..34 as @a[tag=player] if items entity @s inventory.2 *[custom_data={inventory_limit:1b}] run item replace entity @s inventory.2 with air
@@ -66,6 +72,7 @@ execute unless score *inventory_limit deathswap.setting matches ..13 as @a[tag=p
 execute unless score *inventory_limit deathswap.setting matches ..12 as @a[tag=player] if items entity @s inventory.24 *[custom_data={inventory_limit:1b}] run item replace entity @s inventory.24 with air
 execute unless score *inventory_limit deathswap.setting matches ..11 as @a[tag=player] if items entity @s inventory.25 *[custom_data={inventory_limit:1b}] run item replace entity @s inventory.25 with air
 execute unless score *inventory_limit deathswap.setting matches ..10 as @a[tag=player] if items entity @s inventory.26 *[custom_data={inventory_limit:1b}] run item replace entity @s inventory.26 with air
+#hotbar
 execute unless score *inventory_limit deathswap.setting matches ..9 as @a[tag=player] if items entity @s hotbar.8 *[custom_data={inventory_limit:1b}] run item replace entity @s hotbar.8 with air
 execute unless score *inventory_limit deathswap.setting matches ..8 as @a[tag=player] if items entity @s hotbar.7 *[custom_data={inventory_limit:1b}] run item replace entity @s hotbar.7 with air
 execute unless score *inventory_limit deathswap.setting matches ..7 as @a[tag=player] if items entity @s hotbar.6 *[custom_data={inventory_limit:1b}] run item replace entity @s hotbar.6 with air
@@ -74,6 +81,7 @@ execute unless score *inventory_limit deathswap.setting matches ..5 as @a[tag=pl
 execute unless score *inventory_limit deathswap.setting matches ..4 as @a[tag=player] if items entity @s hotbar.3 *[custom_data={inventory_limit:1b}] run item replace entity @s hotbar.3 with air
 execute unless score *inventory_limit deathswap.setting matches ..3 as @a[tag=player] if items entity @s hotbar.2 *[custom_data={inventory_limit:1b}] run item replace entity @s hotbar.2 with air
 execute unless score *inventory_limit deathswap.setting matches ..2 as @a[tag=player] if items entity @s hotbar.1 *[custom_data={inventory_limit:1b}] run item replace entity @s hotbar.1 with air
-#test shift
-execute unless score *inventory_limit deathswap.setting matches ..1 as @a[tag=player] if items entity @s weapon.offhand *[custom_data={inventory_limit:1b}] run item replace entity @s weapon.offhand with air
 execute unless score *inventory_limit deathswap.setting matches ..0 as @a[tag=player] if items entity @s hotbar.0 *[custom_data={inventory_limit:1b}] run item replace entity @s hotbar.0 with air
+#offhand
+execute unless score *inventory_limit deathswap.setting matches ..1 as @a[tag=player] if items entity @s weapon.offhand *[custom_data={inventory_limit:1b}] run item replace entity @s weapon.offhand with air
+

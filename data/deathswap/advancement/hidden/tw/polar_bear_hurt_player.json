@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:polar_bear_spawn_egg",
+        "title": "北極熊幹嘛打我啦！",
+        "description": "無緣無故就打我，是對我有什麼意見？"
+    },
+    "parent": "deathswap:hidden/tw/root",
+    "criteria": {
+        "polar_bear_hurt_player":{
+            "trigger": "impossible"
+        }
+    }
+}

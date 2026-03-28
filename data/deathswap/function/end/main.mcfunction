@@ -4,6 +4,11 @@ $scoreboard players set *end deathswap.status $(end)
 scoreboard players set *end deathswap.timer 0
 scoreboard players set *game deathswap.status 3
 
+#display_sidebar
+scoreboard objectives setdisplay list deathswap.win_score
+scoreboard objectives setdisplay below_name deathswap.win_score
+scoreboard objectives setdisplay sidebar deathswap.display.rank
+
 #bpssbar
 bossbar set deathswap:swap_countdown visible false
 bossbar set deathswap:arena visible false
@@ -19,7 +24,7 @@ bossbar set deathswap:random_effect visible false
 #  4 green team win
 #  5 killer win
 
-tellraw @a {"text": "-----------------------------------------------------"}
+tellraw @a "-----------------------------------------------------"
 
 #all fail
 execute if score *end deathswap.status matches -1 if score *language deathswap.setting matches 1 run title @a title {"text": "§dNo one survived!"}
@@ -63,7 +68,7 @@ execute if score *end deathswap.status matches 1 if score *language deathswap.se
 execute if score *end deathswap.status matches 1 run title @a subtitle [{"selector":"@a[tag=win]"}]
 
 execute if score *end deathswap.status matches 1 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§c================================"}]
-execute if score *end deathswap.status matches 1 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§cCongratulations! The Red Team Wins!"}]
+execute if score *end deathswap.status matches 1 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§cCongratulations! Red Team Wins!"}]
 execute if score *end deathswap.status matches 1 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"selector":"@a[tag=win]","color": "red"}]
 execute if score *end deathswap.status matches 1 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§c================================"}]
 execute if score *end deathswap.status matches 1 if score *language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§c================================"}]
@@ -81,7 +86,7 @@ execute if score *end deathswap.status matches 2 if score *language deathswap.se
 execute if score *end deathswap.status matches 2 run title @a subtitle [{"selector":"@a[tag=win]"}]
 
 execute if score *end deathswap.status matches 2 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§9================================"}]
-execute if score *end deathswap.status matches 2 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§9Congratulations! The Blue Team wins!"}]
+execute if score *end deathswap.status matches 2 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§9Congratulations! Blue Team Wins!"}]
 execute if score *end deathswap.status matches 2 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"selector":"@a[tag=win]","color": "blue"}]
 execute if score *end deathswap.status matches 2 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§9================================"}]
 execute if score *end deathswap.status matches 2 if score *language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§9================================"}]
@@ -99,7 +104,7 @@ execute if score *end deathswap.status matches 3 if score *language deathswap.se
 execute if score *end deathswap.status matches 3 run title @a subtitle [{"selector":"@a[tag=win]"}]
 
 execute if score *end deathswap.status matches 3 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§e================================"}]
-execute if score *end deathswap.status matches 3 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§eCongratulations! The yellow Team Wins!"}]
+execute if score *end deathswap.status matches 3 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§eCongratulations! Yellow Team Wins!"}]
 execute if score *end deathswap.status matches 3 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"selector":"@a[tag=win]","color": "yellow"}]
 execute if score *end deathswap.status matches 3 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§e================================"}]
 execute if score *end deathswap.status matches 3 if score *language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§e================================"}]
@@ -117,7 +122,7 @@ execute if score *end deathswap.status matches 4 if score *language deathswap.se
 execute if score *end deathswap.status matches 4 run title @a subtitle [{"selector":"@a[tag=win]"}]
 
 execute if score *end deathswap.status matches 4 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§a================================"}]
-execute if score *end deathswap.status matches 4 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§aCongratulations! The Green Team Wins!"}]
+execute if score *end deathswap.status matches 4 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§aCongratulations! Green Team Wins!"}]
 execute if score *end deathswap.status matches 4 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"selector":"@a[tag=win]","color": "green"}]
 execute if score *end deathswap.status matches 4 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§a================================"}]
 execute if score *end deathswap.status matches 4 if score *language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§a================================"}]
@@ -141,11 +146,6 @@ execute if score *end deathswap.status matches 5 if score *language deathswap.se
 execute if score *end deathswap.status matches 5 if score *language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§4恭喜！殺手 "},{"selector":"@a[tag=win]","color": "dark_red"},{"text":" §4獲勝！"}]
 execute if score *end deathswap.status matches 5 if score *language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§4================================"}]
 
-#sound & pqrticle
-execute as @a[tag=!win] at @s run playsound entity.wither.death master @s ~ ~ ~ 99999999999999999999999999999999999999 1 1
-execute as @a[tag=win] at @s run playsound ui.toast.challenge_complete master @s ~ ~ ~ 99999999999999999999999999999999999999 1 1
-execute as @a[tag=win] at @s run particle end_rod ~ ~1 ~ 0 0 0 0.25 40 force
-
 #add_score
 scoreboard players add @a[tag=win,tag=!player] deathswap.win_score 1
 scoreboard players add @a[tag=win,tag=player,tag=!killer] deathswap.win_score 2
@@ -162,4 +162,14 @@ execute if score *language deathswap.setting matches 2 as @a[tag=win,tag=player,
 execute if score *language deathswap.setting matches 2 as @a[tag=win,tag=player,tag=!killer] run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"selector":"@s"},{"text":" +2"}]
 execute if score *language deathswap.setting matches 2 as @a[tag=win,tag=!player] run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"selector":"@s"},{"text":" +1"}]
 
-tellraw @a {"text": "-----------------------------------------------------"}
+tellraw @a "-----------------------------------------------------"
+
+#particle & sound
+execute as @a[tag=win] at @s run particle end_rod ~ ~1 ~ 0 0 0 0.25 40 force
+execute as @a[tag=win] at @s run playsound ui.toast.challenge_complete master @s ~ ~ ~
+execute as @a[tag=!win,team=!spectator] at @s run playsound entity.wither.death master @s ~ ~ ~
+
+#adv
+advancement grant @a[tag=!win,team=!spectator] only deathswap:main/criteria/lose
+advancement grant @a[tag=win] only deathswap:main/criteria/win
+advancement grant @a[team=spectator] only deathswap:main/criteria/want_play

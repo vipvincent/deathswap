@@ -1,0 +1,20 @@
+{
+    "display": {
+        "announce_to_chat": false,
+        "show_toast": false,
+        "background": "minecraft:block/cherry_planks",
+        "icon": "minecraft:ender_pearl",
+        "title": "死亡交換",
+        "description": [
+            {
+                "text": "製作：vipvincent",
+                "color": "aqua"
+            }
+        ]
+    },
+    "criteria": {
+        "root":{
+            "trigger": "impossible"
+        }
+    }
+}

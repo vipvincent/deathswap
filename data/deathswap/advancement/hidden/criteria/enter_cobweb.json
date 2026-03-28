@@ -1,0 +1,13 @@
+{
+    "criteria": {
+        "enter_cobweb":{
+            "trigger": "enter_block",
+            "conditions": {
+                "block": "minecraft:cobweb"
+            }
+        }
+    },
+    "rewards": {
+        "function": "deathswap:advancement/hidden/enter_cobweb"
+    }
+}

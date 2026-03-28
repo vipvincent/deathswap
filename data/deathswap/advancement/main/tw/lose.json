@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:magma_block",
+        "title": "太難過了，居然輸了...",
+        "description": "下次一定要獲勝！"
+    },
+    "parent": "deathswap:main/tw/start",
+    "criteria": {
+        "lose":{
+            "trigger": "impossible"
+        }
+    }
+}

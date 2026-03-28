@@ -1,0 +1,21 @@
+{
+    "display": {
+        "hidden": true,
+        "announce_to_chat": false,
+        "icon": "minecraft:bell",
+        "title": [
+            "我也想玩",
+            {
+                "text": "死亡交換",
+                "color": "gold"
+            }
+        ],
+        "description": "趕快來玩吧！"
+    },
+    "parent": "deathswap:main/tw/spectator",
+    "criteria": {
+        "want_play":{
+            "trigger": "impossible"
+        }
+    }
+}

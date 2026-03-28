@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:lava_bucket",
+        "title": "在岩漿裡游泳的感覺真棒！",
+        "description": "舒服到都受傷了"
+    },
+    "parent": "deathswap:hidden/tw/root",
+    "criteria": {
+        "swim_lava":{
+            "trigger": "impossible"
+        }
+    }
+}

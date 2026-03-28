@@ -1,0 +1,15 @@
+{
+    "display": {
+        "hidden": true,
+        "announce_to_chat": false,
+        "icon": "minecraft:ender_eye",
+        "title": "Swap!",
+        "description": "Wow, they switched so quickly! I wasn't ready at all!"
+    },
+    "parent": "deathswap:main/en/start",
+    "criteria": {
+        "swap":{
+            "trigger": "impossible"
+        }
+    }
+}

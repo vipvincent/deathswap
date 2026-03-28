@@ -1,0 +1,15 @@
+{
+    "display": {
+        "hidden": true,
+        "frame": "goal",
+        "icon": "minecraft:totem_of_undying",
+        "title": "想讓我死，可沒那麼簡單！",
+        "description": "別想弄我了，不可能的！"
+    },
+    "parent": "deathswap:hidden/tw/root",
+    "criteria": {
+        "used_totem":{
+            "trigger": "impossible"
+        }
+    }
+}

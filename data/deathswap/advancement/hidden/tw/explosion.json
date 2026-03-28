@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:tnt",
+        "title": "蹦機勒按呢金大聲拉",
+        "description": "遭受到爆炸了是吧"
+    },
+    "parent": "deathswap:hidden/tw/root",
+    "criteria": {
+        "explosion":{
+            "trigger": "impossible"
+        }
+    }
+}

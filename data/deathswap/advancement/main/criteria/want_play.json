@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "want_play":{
+            "trigger": "impossible"
+        }
+    },
+    "rewards": {
+        "function": "deathswap:advancement/main/want_play"
+    }
+}

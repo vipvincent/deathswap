@@ -1,0 +1,15 @@
+{
+    "display": {
+        "announce_to_chat": false,
+        "show_toast": false,
+        "background": "minecraft:block/acacia_planks",
+        "icon": "minecraft:dragon_egg",
+        "title": "死亡交換：隱藏成就",
+        "description": "一個遊戲還需要有隱藏成就？"
+    },
+    "criteria": {
+        "root":{
+            "trigger": "impossible"
+        }
+    }
+}

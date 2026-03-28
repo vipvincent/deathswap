@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "swap":{
+            "trigger": "impossible"
+        }
+    },
+    "rewards": {
+        "function": "deathswap:advancement/main/swap"
+    }
+}

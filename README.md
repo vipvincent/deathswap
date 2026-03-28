@@ -1,33 +1,38 @@
-[![Modrinth Downloads](https://img.shields.io/modrinth/dt/irff3j1Z?style=flat&logo=modrinth&label=Modrinth)](https://modrinth.com/datapack/deathswap)
+[![Modrinth Downloads](https://img.shields.io/modrinth/dt/irff3j1Z?style=flat&logo=modrinth&label=Modrinth)](https://modrinth.com/project/irff3j1Z)
 [![CurseForge Downloads](https://img.shields.io/curseforge/dt/997754?style=flat&logo=curseforge&label=CurseForge)](https://www.curseforge.com/minecraft/data-packs/deathswap)
 
-[Modrinth](https://modrinth.com/datapack/deathswap) | 
+[Modrinth](https://modrinth.com/project/irff3j1Z) | 
 [CurseForge](https://www.curseforge.com/minecraft/data-packs/deathswap) | 
 [Planet Minecraft](https://www.planetminecraft.com/data-pack/deathswap-6145205/) | 
 [GitHub](https://github.com/vipvincent/deathswap) | 
-[Docs](https://vipvincent.github.io/docs/en/deathswap) | 
+[Wiki](https://vipvincent.github.io/wiki/en/deathswap) | 
 [Discord](https://discord.gg/3BKAydVfDk) | 
 [YouTube](https://www.youtube.com/@vipvincentgame) 
 
 # Death Swap
 
-Death Swap is a thrilling competitive game where teams are scattered across different parts of the world. Every 30 to 200 seconds, they randomly swap positions with other teams. The swap order is completely random. The player's only goal is to design traps so that the next team member teleported to that location won't survive. Through careful planning and layout, players must ensure their team is the last one standing, enjoying a heart-pounding survival challenge.
+Death Swap is an intense competitive game where players are scattered across different corners of the world and swap positions with each other within a set time limit. 
+The only objective is simple: before the swap happens, use traps or other methods to make your opponent take massive damage when the swap occurs.
 
-- Simple inventory setting interface
-- Adjustable health
-- Starting tools and armor
-- Auto furnace
-- Swap warning and invincibility
-- Arena
-- Special gameplay: Game mode auto switch
-- Special gameplay: Killer mode
-- **New** Special gameplay: Random Effect
-- Language support for English and Chinese 
-- Four Teams/At least two player/Unlimited player
+The original concept of Death Swap was created by SethBling, and this datapack was independently developed by vipvincent.
 
-![setting](https://cdn.modrinth.com/data/irff3j1Z/images/085b7826c4c333bdb7b5a6984621d11ad624615b.png)
+## Features
+- Configurable swap intervals: fixed 1–5 minutes or random 30 seconds to 1–5 minutes
+- Swap countdown bar, warning alerts, and temporary invincibility
+- Intuitive and easy-to-use inventory-based settings interface
+- Adjustable maximum health
+- Configurable starting tools and equipment
+- Auto Furnace for faster preparation
+- Supports both solo and team modes
+    - Up to 4 teams simultaneously
+    - Minimum 2 players to start, No player limit
+- Currently supports English and Traditional Chinese
 
-Death Swap is an original concept proposed by [SethBling](https://www.youtube.com/watch?v=r5rEaHPt6mw)   
+## Special Modes
+- **Auto Gamemode Switching**: Automatically changes gamemodes at specified times
+- **Arena Mode**: In the late game, players can be teleported to a designated area where the border gradually shrinks
+- **Random Effects**: Grants random positive or negative status effects
+- **Killer Mode**: A hidden killer infiltrates a team and must eliminate all players to win alone 
 
 ## Download
 
@@ -50,33 +55,44 @@ Death Swap is an original concept proposed by [SethBling](https://www.youtube.co
 
 ## Installation
 
-> Death Swap installation is generally similar to installing regular data pack or mod. If you need an installation guide, please refer to the documentation below.
+Place the data pack or mod into the folder, then use the command `/reload`.   
+In the chat window, select "Install" or type `/function deathswap:install`, choosing your language.   
+You can then configure the game and start the game through your inventory.
 
-- [English Installation Documentation](https://vipvincent.github.io/docs/en/deathswap/install)
+For more installation instructions, please see the following document.
 
+- [Installation Guide](https://vipvincent.github.io/wiki/en/deathswap/install)
 
-<details>
-<summary>中文</summary>
+---
+
+## 繁體中文
 
 # 死亡交換
  
-死亡交換是一款刺激的對抗遊戲，各隊伍分散在世界不同角落，每隔30至200秒之間會隨機與其他隊伍交換位置，交換的順序是完全隨機的。玩家的唯一目標是精心設計陷阱，讓下一個被傳送到該地點的敵隊成員無法存活。通過精密的計劃與佈局，玩家要設法讓自己的隊伍成為最後一個站立的勝利者，享受驚心動魄的生存挑戰。
+死亡交換是一款刺激的對抗遊戲，玩家將分散在世界不同角落，並在一定的時間內與其他玩家交換位置。   
+玩家的唯一目標是：在交換前設法透過陷阱或其他方式，讓敵人在交換時受到大量傷害。
 
-- 簡易的物品欄設定介面
-- 可調整的血量
-- 起始工具、裝備
-- 物品免燒
-- 交換警告、無敵
-- 競技場
-- 特殊玩法：遊戲模式自動切換
-- 特殊玩法：殺手模式
-- **新** 特殊玩法：隨機藥水效果
-- 語言支持中文、英文
-- 最多可有四隊同時參與遊戲，兩人以上即可開始，且無人數上限。
-      
+死亡交換的原始概念是由SethBling提出的，此資料包由vipvicent獨自製作。
+
+## 核心功能
+- 可供設定的固定1~5分鐘或隨機30秒到1~5分鐘的交換時間
+- 提供交換倒數條、交換警告與無敵
+- 直覺簡易的物品欄設定介面
+- 可供設定的血量上限
+- 可設定遊戲開始給於的工具及裝備
+- 擁有自動熔爐(物品免燒)，提供更加快速的準備
+- 支援個人戰、團隊戰
+    - 最多支援4隊同時遊玩
+    - 2人即可開始遊戲，且人數無上限。
+- 目前語言支援英文與繁體中文
+
+## 特殊玩法
+- **遊戲模式自動切換**：提供在指定的時間，自動切換遊戲模式
+- **競技場**：在遊戲後期，可直接進行傳送到指定地點，並進行縮圈。
+- **隨機效果**：隨機提供正面或負面的狀態效果。
+- **殺手模式**；殺手潛伏於隊伍內，目標要擊殺所有玩家，獨自獲勝。
+
 ![setting](https://cdn.modrinth.com/data/irff3j1Z/images/085b7826c4c333bdb7b5a6984621d11ad624615b.png)
-
-死亡交換是由[SethBling](https://www.youtube.com/watch?v=r5rEaHPt6mw)所提出的原創概念  
 
 ## 下載
 
@@ -98,9 +114,10 @@ Death Swap is an original concept proposed by [SethBling](https://www.youtube.co
 ● [資料包](https://www.curseforge.com/minecraft/data-packs/deathswap/files)  
 
 ## 安裝
-  
-> 死亡交換安裝通常與一般的資料包或模組差不多，如果你需要安裝教學，請查看以下文檔。
 
-- [中文安裝文檔](https://vipvincent.github.io/docs/deathswap/install)
+將資料包或模組放入對應資料夾，然後使用‵/reload‵指令。   
+在聊天畫面點選安裝或者輸入‵/function deathswap:install‵，接者選擇你的語言，即可透過物品欄進行設定與開始遊戲。
 
-</details>
+如需要更多安裝教學，請查看以下教學。
+
+- [安裝教學](https://vipvincent.github.io/wiki/deathswap/install)

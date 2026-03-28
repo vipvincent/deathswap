@@ -1,4 +1,6 @@
-#stop timer
+#play/timer
+
+#stop timer(arena wait)
 execute if score *arena deathswap.status matches 1 run return fail
 
 #tick
@@ -11,6 +13,7 @@ execute if score *tick deathswap.timer matches 20 unless score *arena deathswap.
 #play_time
 execute if score *tick deathswap.timer matches 20 run scoreboard players add *play_time deathswap.timer 1
 
+#---
 #gmchange
 execute if score *tick deathswap.timer matches 20 if score *gmchange deathswap.setting matches 1 if score *gmchange.pause deathswap.timer matches ..0 run scoreboard players remove *gmchange.time deathswap.timer 1
 execute if score *tick deathswap.timer matches 20 if score *gmchange deathswap.setting matches 1 if score *gmchange.pause deathswap.timer matches 1.. run scoreboard players remove *gmchange.pause deathswap.timer 1
@@ -23,5 +26,6 @@ execute if score *tick deathswap.timer matches 20 if score *arena deathswap.stat
 execute if score *tick deathswap.timer matches 20 if score *arena deathswap.status matches 2 if score *arena.shrink deathswap.status matches 0 run scoreboard players remove *arena deathswap.timer 1
 execute if score *tick deathswap.timer matches 20 if score *arena deathswap.status matches 2 if score *arena.shrink deathswap.status matches 1 run scoreboard players add *arena deathswap.timer 1
 
+#---
 #end
 execute if score *tick deathswap.timer matches 20 run scoreboard players set *tick deathswap.timer 0

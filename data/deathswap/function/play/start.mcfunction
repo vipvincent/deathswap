@@ -1,4 +1,11 @@
+#play/play_time
+
+#reset timer
 function deathswap:play/swap/swap_time
+
+#gamemode
+gamemode survival @a[tag=player]
+gamemode spectator @a[tag=spectator]
 
 #still_off
 execute as @a run function deathswap:lib/still/off
@@ -10,29 +17,11 @@ execute if score *time_cycle deathswap.setting matches 1 run gamerule minecraft:
 execute if score *weather_cycle deathswap.setting matches 0 run gamerule minecraft:advance_weather true
 execute if score *weather_cycle deathswap.setting matches 1 run gamerule minecraft:advance_weather false
 
-#friendlyfire
-execute if score *team_friendlyfire deathswap.setting matches 0 run team modify red friendlyFire true
-execute if score *team_friendlyfire deathswap.setting matches 0 run team modify blue friendlyFire true
-execute if score *team_friendlyfire deathswap.setting matches 0 run team modify yellow friendlyFire true
-execute if score *team_friendlyfire deathswap.setting matches 0 run team modify green friendlyFire true
+#team
+function deathswap:team/friendlyfire/use_setting
+function deathswap:team/collisionrule/use_setting
 
-execute if score *team_friendlyfire deathswap.setting matches 1 run team modify red friendlyFire false
-execute if score *team_friendlyfire deathswap.setting matches 1 run team modify blue friendlyFire false
-execute if score *team_friendlyfire deathswap.setting matches 1 run team modify yellow friendlyFire false
-execute if score *team_friendlyfire deathswap.setting matches 1 run team modify green friendlyFire false
-
-#collisionrule
-team modify solo collisionRule always
-execute if score *team_collisionrule deathswap.setting matches 0 run team modify red collisionRule always
-execute if score *team_collisionrule deathswap.setting matches 0 run team modify blue collisionRule always
-execute if score *team_collisionrule deathswap.setting matches 0 run team modify yellow collisionRule always
-execute if score *team_collisionrule deathswap.setting matches 0 run team modify green collisionRule always
-
-execute if score *team_collisionrule deathswap.setting matches 1 run team modify red collisionRule pushOwnTeam
-execute if score *team_collisionrule deathswap.setting matches 1 run team modify blue collisionRule pushOwnTeam
-execute if score *team_collisionrule deathswap.setting matches 1 run team modify yellow collisionRule pushOwnTeam
-execute if score *team_collisionrule deathswap.setting matches 1 run team modify green collisionRule pushOwnTeam
-
+#gamerule
 gamerule minecraft:max_entity_cramming 24
 
 #bossbar 
@@ -45,14 +34,22 @@ execute if score *random_effect deathswap.setting matches 1 run bossbar set deat
 #reset death
 scoreboard players reset @a deathswap.death
 
-#update play_count_update
-scoreboard players operation *play_count_update deathswap.status = *player_count deathswap.status
+#update player_count_update
+scoreboard players operation *player_count_update deathswap.status = *player_count deathswap.status
 
 #status
 scoreboard players set *game deathswap.status 2
 
 #play_count
 scoreboard players add *play_count deathswap.status 1
+
+#reset adv
+gamerule minecraft:show_advancement_messages true
+advancement revoke @a everything
+
+#give_item
+function deathswap:play/inventory_limit
+function deathswap:wait/give_item
 
 #title
 execute if score *language deathswap.setting matches 1 run title @a title {"text": "§6Death Swap"}
@@ -66,10 +63,10 @@ execute if score *language deathswap.setting matches 1 run tellraw @a[tag=!admin
 execute if score *language deathswap.setting matches 2 run tellraw @a[tag=!admin] [{"text": "§6死亡交換§7 | §r"},{"text": "§f遊戲開始！"}]
 
 execute if score *language deathswap.setting matches 1 run tellraw @a[tag=admin] [{"text": "§6Death Swap§7 | §r"},{"text": "§fGame Started! "},\
-{"text": "§b[Reset Game]","click_event": {"action": "run_command","command": "/trigger deathswap set 5"},"hover_event": {"action": "show_text","value": "§eClick here or type command\n§d/trigger deathswap set 5 §a[Admin]\n§d/function deathswap:reset §c[OP players]"}}\
+{"text": "§b[Reset Game]","click_event": {"action": "run_command","command": "/trigger reset"},"hover_event": {"action": "show_text","value": "§eClick here or type command\n§d/trigger reset §a[Admin]\n§d/function deathswap:reset §c[OP]"}}\
 ]
 execute if score *language deathswap.setting matches 2 run tellraw @a[tag=admin] [{"text": "§6死亡交換§7 | §r"},{"text": "§f遊戲開始！"},\
-{"text": "§b[重製遊戲]","click_event": {"action": "run_command","command": "/trigger deathswap set 5"},"hover_event": {"action": "show_text","value": "§e點此或輸入以下指令\n§d/trigger deathswap set 5 §a[管理員權限]\n§d/function deathswap:reset §c[OP 玩家]"}}\
+{"text": "§b[重製遊戲]","click_event": {"action": "run_command","command": "/trigger reset"},"hover_event": {"action": "show_text","value": "§e點此或輸入以下指令\n§d/trigger reset §a[管理員權限]\n§d/function deathswap:reset §c[OP 玩家]"}}\
 ]
 
 #/tm
@@ -89,3 +86,7 @@ execute if score *arena deathswap.setting matches 1 if score *arena.start deaths
 
 #random_effect
 execute if score *random_effect deathswap.setting matches 1 run function deathswap:play/random_effect/random
+
+#adv
+advancement grant @a[tag=player] only deathswap:main/criteria/start
+advancement grant @a[team=spectator] only deathswap:main/criteria/spectator

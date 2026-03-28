@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:magma_block",
+        "title": "I'm so sad, I actually lost...",
+        "description": "Must win next time!"
+    },
+    "parent": "deathswap:main/en/start",
+    "criteria": {
+        "lose":{
+            "trigger": "impossible"
+        }
+    }
+}

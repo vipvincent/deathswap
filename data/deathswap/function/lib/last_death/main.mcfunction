@@ -1,5 +1,8 @@
 #lib/last_death/main
 
+#data clear
+data remove storage deathswap:storage_main last_death
+
 #data to storage
 data modify storage deathswap:storage_main last_death.dimension set from entity @s LastDeathLocation.dimension
 data modify storage deathswap:storage_main last_death.pos_x set from entity @s LastDeathLocation.pos[0]

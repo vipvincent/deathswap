@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:skeleton_skull",
+        "title": "我被淘汰了...",
+        "description": "我的隊友，你可要好好加油喔！"
+    },
+    "parent": "deathswap:main/tw/start",
+    "criteria": {
+        "eliminated":{
+            "trigger": "impossible"
+        }
+    }
+}

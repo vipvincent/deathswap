@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:tnt",
+        "title": "How did it get bombed?",
+        "description": "It was bombed, right?"
+    },
+    "parent": "deathswap:hidden/en/root",
+    "criteria": {
+        "explosion":{
+            "trigger": "impossible"
+        }
+    }
+}

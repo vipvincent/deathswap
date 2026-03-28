@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:villager_spawn_egg",
+        "title": "來村莊收集物資了",
+        "description": "村莊的東西真多啊"
+    },
+    "parent": "deathswap:hidden/tw/root",
+    "criteria": {
+        "visit_village":{
+            "trigger": "impossible"
+        }
+    }
+}

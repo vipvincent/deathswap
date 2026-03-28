@@ -13,10 +13,10 @@ kill @e[tag=pos]
 scoreboard players reset * deathswap.swap_original
 scoreboard players reset * deathswap.swap_calculated
 
-#solo battle
+#solo
 execute if score *mode deathswap.setting matches 1 run function deathswap:play/swap/solo/main
 
-#team battle
+#team
 execute if score *mode deathswap.setting matches 2 run function deathswap:play/swap/team/main
 
 #end kill_pos
@@ -37,6 +37,9 @@ execute if score *language deathswap.setting matches 1 run tellraw @a [{"text": 
 execute if score *language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f交換！"},[{"text": "第","bold": true,"color": "white"},{"score":{"name": "*swap_count","objective": "deathswap.status"}},{"text": "回合"},{"score":{"name": "*round_time","objective": "deathswap.timer"}},{"text": "秒"}]]
 
 execute as @a at @s run playsound minecraft:entity.enderman.teleport master @s ~ ~ ~
+
+#adv
+advancement grant @a[tag=player] only deathswap:main/criteria/swap
 
 #end
 function deathswap:play/swap/swap_time

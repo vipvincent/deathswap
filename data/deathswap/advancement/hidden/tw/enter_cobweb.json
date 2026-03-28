@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:cobweb",
+        "title": "又慢又黏",
+        "description": "快讓我離開蜘蛛網"
+    },
+    "parent": "deathswap:hidden/tw/root",
+    "criteria": {
+        "enter_cobweb":{
+            "trigger": "impossible"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "display": {
+        "announce_to_chat": false,
+        "show_toast": false,
+        "background": "minecraft:block/acacia_planks",
+        "icon": "minecraft:dragon_egg",
+        "title": "Death Swap: Hidden Advancements",
+        "description": "Does a game really need hidden advancements?"
+    },
+    "criteria": {
+        "root":{
+            "trigger": "impossible"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "display": {
+        "hidden": true,
+        "frame": "challenge",
+        "icon": "minecraft:enchanted_golden_apple",
+        "title": "太強大",
+        "description": "吃下一顆附魔金蘋果"
+    },
+    "parent": "deathswap:hidden/tw/eat_apple",
+    "criteria": {
+        "eat_enchanted_golden_apple":{
+            "trigger": "impossible"
+        }
+    }
+}

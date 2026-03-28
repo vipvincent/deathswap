@@ -8,10 +8,11 @@ execute unless entity @s[type=armor_stand,tag=setlobby] run return fail
 kill @e[tag=setlobby]
 
 execute as @e[type=marker,tag=lobby] at @s run forceload remove ~ ~
-
 kill @e[type=marker,tag=lobby]
-summon marker ~ ~ ~ {Tags:["lobby"]}
+
+summon marker ~ ~0.1 ~ {Tags:["lobby"]}
 execute as @e[type=marker,tag=lobby] at @s run forceload add ~ ~
+
 tp @a @e[type=marker,tag=lobby,limit=1]
 
 execute as @a at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~

@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "hurt_iron_golem":{
+            "trigger": "player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:iron_golem"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "deathswap:advancement/hidden/hurt_iron_golem"
+    }
+}

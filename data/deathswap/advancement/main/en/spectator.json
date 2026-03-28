@@ -1,0 +1,14 @@
+{
+    "display": {
+        "announce_to_chat": false,
+        "icon": "minecraft:gray_stained_glass",
+        "title": "Spectator",
+        "description": "Become a spectator in the game"
+    },
+    "parent": "deathswap:main/en/root",
+    "criteria": {
+        "spectator":{
+            "trigger": "impossible"
+        }
+    }
+}

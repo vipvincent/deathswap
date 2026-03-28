@@ -1,6 +1,6 @@
 #lib/admin
-tag @s add admin
 tag @s remove notadmin
+tag @s add admin
 scoreboard players set @s deathswap.ui_page 0
 
 #text
@@ -11,6 +11,9 @@ execute as @s at @s run playsound entity.player.levelup master @s ~ ~ ~
 
 #prepare stage
 execute unless score *game deathswap.status matches 0 run return fail
+
+#creative tag
+tag @s[gamemode=creative] add creative
 
 #ui
 clear @s

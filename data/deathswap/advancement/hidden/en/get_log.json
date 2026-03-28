@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:oak_log",
+        "title": "Before getting rich, go rub some trees first!",
+        "description": "Logs are the starting point for everything."
+    },
+    "parent": "deathswap:hidden/en/root",
+    "criteria": {
+        "get_log":{
+            "trigger": "impossible"
+        }
+    }
+}

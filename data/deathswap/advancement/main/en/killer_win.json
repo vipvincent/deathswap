@@ -1,0 +1,15 @@
+{
+    "display": {
+        "hidden": true,
+        "frame": "goal",
+        "icon": "minecraft:flow_banner_pattern",
+        "title": "KIller mission successful",
+        "description": "I never expected to be able to complete the killer mission."
+    },
+    "parent": "deathswap:main/en/win",
+    "criteria": {
+        "killer_win":{
+            "trigger": "impossible"
+        }
+    }
+}

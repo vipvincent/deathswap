@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "wiped_out":{
+            "trigger": "impossible"
+        }
+    },
+    "rewards": {
+        "function": "deathswap:advancement/main/wiped_out"
+    }
+}

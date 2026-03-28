@@ -5,3 +5,6 @@ execute if score *language deathswap.setting matches 2 run tellraw @a [{"text": 
 execute as @a at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~
 
 scoreboard players set *team_red deathswap.status 0
+
+#adv
+advancement grant @a[team=red] only deathswap:main/criteria/wiped_out

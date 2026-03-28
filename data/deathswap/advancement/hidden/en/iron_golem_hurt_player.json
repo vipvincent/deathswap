@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:iron_block",
+        "title": "Sorry, Iron Golem, please don't hit me!",
+        "description": "The Iron Golem is meant to protect players and villagers, and you're just going to bully it like that?"
+    },
+    "parent": "deathswap:hidden/en/hurt_iron_golem",
+    "criteria": {
+        "iron_golem_hurt_player":{
+            "trigger": "impossible"
+        }
+    }
+}

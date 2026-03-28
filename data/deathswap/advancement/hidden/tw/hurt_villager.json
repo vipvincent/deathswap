@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:emerald",
+        "title": "奸商",
+        "description": "越賣越貴，這樣對嗎？"
+    },
+    "parent": "deathswap:hidden/tw/visit_village",
+    "criteria": {
+        "hurt_villager":{
+            "trigger": "impossible"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "eat_apple":{
+            "trigger": "consume_item",
+            "conditions": {
+                "item": {
+                    "items": "minecraft:apple"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "deathswap:advancement/hidden/eat_apple"
+    }
+}

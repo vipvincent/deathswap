@@ -1,0 +1,7 @@
+{
+    "values": [
+        "deathswap:ui/sidebar/shared_object",
+        "deathswap:ui/sidebar/rank",
+        "deathswap:ui/sidebar/play_status"
+    ]
+}

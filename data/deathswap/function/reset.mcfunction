@@ -10,7 +10,7 @@ execute in minecraft:the_nether run worldborder set 59999968 0
 execute in minecraft:the_end run worldborder set 59999968 0 
 
 #team/tag
-team leave *
+team leave @a[team=!spectator]
 tag @a remove player
 tag @a remove killer
 tag @a remove eliminated
@@ -30,16 +30,21 @@ gamerule minecraft:show_death_messages false
 
 difficulty peaceful
 
+#spawnpoint
+execute at @e[tag=lobby,limit=1] run spawnpoint @a ~ ~ ~
+
 #other
 effect clear @a
 clear @a
 function deathswap:lib/clear_ender_chest
 xp set @a 0 points
 xp set @a 0 levels
-kill @e[type=marker,tag=pos]
+
+kill @e[tag=pos]
 kill @a
 gamemode survival @a 
 tp @a @e[type=marker,tag=lobby,limit=1]
+
 advancement revoke @a everything
 recipe take @a *
 title @a reset
@@ -67,28 +72,18 @@ bossbar set deathswap:wait visible true
 bossbar set deathswap:wait value 400
 
 #team
-team modify solo collisionRule always
-team modify red collisionRule always
-team modify blue collisionRule always
-team modify yellow collisionRule always
-team modify green collisionRule always
-
-team modify solo friendlyFire true
-team modify red friendlyFire true
-team modify blue friendlyFire true
-team modify yellow friendlyFire true
-team modify green friendlyFire true
+function deathswap:team/collisionrule/always
+function deathswap:team/friendlyfire/true
 
 #scoreboard reset
-scoreboard players reset @a deathswap.death
-scoreboard players reset @a deathswap.health
-scoreboard players reset @a deathswap.carrot_right_click
-scoreboard players reset @a deathswap.damage_taken
-scoreboard players reset @a deathswap.damage_taken.integer
-scoreboard players reset @a deathswap.damage_taken.decimals
+scoreboard players reset * deathswap.death
+scoreboard players reset * deathswap.health
+scoreboard players reset * deathswap.carrot_right_click
+scoreboard players reset * deathswap.damage_taken
+scoreboard players reset * deathswap.damage_taken.integer
+scoreboard players reset * deathswap.damage_taken.decimals
 scoreboard players reset * deathswap.swap_original
 scoreboard players reset * deathswap.swap_calculated
-scoreboard players reset * deathswap.display_sidebar
 
 #scoreboard timer
 scoreboard players set *tick deathswap.timer 0
@@ -129,31 +124,51 @@ scoreboard players set *player_count deathswap.status 0
 scoreboard players set *team_count deathswap.status 0
 scoreboard players set *swap_count deathswap.status 0
 
-#reset play_count_update
-scoreboard players operation *play_count_update deathswap.status = *player_count deathswap.status
+#reset player_count_update
+scoreboard players operation *player_count_update deathswap.status = *player_count deathswap.status
 
 #end game status
 scoreboard players set *game deathswap.status 0
 
 #ui
-function deathswap:ui/page/update
 scoreboard players set @a[tag=admin] deathswap.ui_page 0
+function deathswap:ui/page/update
+
+#display_sidebar
+scoreboard objectives setdisplay list deathswap.win_score
+scoreboard objectives setdisplay below_name deathswap.win_score
+scoreboard objectives setdisplay sidebar deathswap.display.rank
 
 #text
-tellraw @a {"text": "-----------------------------------------------------"}
+tellraw @a "-----------------------------------------------------"
 #en
-execute if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§2Successfully reset §6Death Swap"}]
-execute if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§6Death Swap §fMade by §bvipvincent"}]
-execute if score *language deathswap.setting matches 1 run title @a title {"text": "§6Death Swap"}
-execute if score *language deathswap.setting matches 1 run title @a subtitle {"text": "§bMade by vipvincent"}
+execute if score *language deathswap.setting matches 1 run tellraw @a [\
+    "",{text: "Death Swap",color:gold},{text:" | ",color:gray},\
+    {"text": "Successfully Reset Game",color:green}\
+]
+execute if score *language deathswap.setting matches 1 run tellraw @a [\
+    "",{text: "Death Swap",color:gold},{text:" | ",color:gray},\
+    {text: "Death Swap",color:gold}," Made by ",{text:"vipvincent",color:aqua}\
+]
+execute if score *language deathswap.setting matches 1 run title @a title {text: "Death Swap",color:gold}
+execute if score *language deathswap.setting matches 1 run title @a subtitle {text: "Made by vipvincent",color:aqua}
+
 #中文
-execute if score *language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§2已成功重製§6死亡交換"}]
-execute if score *language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§6死亡交換§f是由§b早安豆江 vipvincent§f製作"}]
-execute if score *language deathswap.setting matches 2 run title @a title {"text": "§6死亡交換"}
-execute if score *language deathswap.setting matches 2 run title @a subtitle {"text": "§b製作：早安豆江 vipvincent"}
+execute if score *language deathswap.setting matches 2 run tellraw @a [\
+    "",{text: "死亡交換",color:gold},{text:" | ",color:gray},\
+    {"text": "遊戲重製完成",color:green}\
+]
+execute if score *language deathswap.setting matches 2 run tellraw @a [\
+    "",{text: "死亡交換",color:gold},{text:" | ",color:gray},\
+    {text: "死亡交換",color:gold},"是由",{text:"vipvincent",color:aqua},"製作"\
+]
+
+#title
+execute if score *language deathswap.setting matches 2 run title @a title {text: "死亡交換",color:gold}
+execute if score *language deathswap.setting matches 2 run title @a subtitle {text: "製作：vipvincent",color:aqua}
+
 #sound
 execute as @a at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~
 
 #link&info
-execute as @a run function deathswap:ui/link
 execute as @a run function deathswap:ui/click_admin

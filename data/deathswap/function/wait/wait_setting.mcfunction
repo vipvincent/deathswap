@@ -1,9 +1,11 @@
+#wait/wait_setting
 kill @e[type=marker,tag=pos]
 
 tag @a remove player
 tag @a remove eliminated
 tag @a remove win
 tag @a remove spectator
+tag @a remove killer
 
 tag @a[team=blue] add player
 tag @a[team=red] add player
@@ -22,9 +24,9 @@ xp set @a 0 levels
 advancement revoke @a everything
 recipe take @a *
 
+#gamerule
 gamerule minecraft:reduced_debug_info true
 gamerule minecraft:keep_inventory false
-gamerule minecraft:show_advancement_messages true
 
 #status
 execute as @a[team=red] run scoreboard players set *team_red deathswap.status 1
@@ -72,12 +74,10 @@ execute if score *spawn_monsters deathswap.setting matches 1 run gamerule minecr
 execute if score *hp_natural deathswap.setting matches 0 run gamerule minecraft:natural_health_regeneration true
 execute if score *hp_natural deathswap.setting matches 1 run gamerule minecraft:natural_health_regeneration false
 
-#still_on
-execute as @a[tag=player] run function deathswap:lib/still/on
-
 #effect
-effect give @a[tag=player] water_breathing 20 255 true
-effect give @a[tag=player] saturation 400 255 true 
-effect give @a[tag=player] instant_health 400 31 true 
-effect give @a[tag=player] regeneration 30 255 true
-effect give @a[tag=player] resistance 30 255 true 
+effect give @a[tag=player] invisibility 18 255 true
+effect give @a[tag=player] water_breathing 18 255 true
+effect give @a[tag=player] saturation 360 255 true 
+effect give @a[tag=player] instant_health 360 31 true 
+effect give @a[tag=player] regeneration 28 255 true
+effect give @a[tag=player] resistance 28 255 true 

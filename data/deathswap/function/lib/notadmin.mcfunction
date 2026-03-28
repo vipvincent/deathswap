@@ -1,5 +1,6 @@
 #lib/notadmin
 tag @s remove admin
+tag @s remove creative
 tag @s add notadmin
 
 #text
@@ -12,8 +13,8 @@ execute as @a at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~
 execute unless score *game deathswap.status matches 0 run return fail
 
 #reset
-gamemode survival @s
 clear @s
+gamemode survival @s
 function deathswap:ui/page/update
 
 #tip

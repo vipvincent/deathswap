@@ -1,0 +1,13 @@
+{
+    "criteria": {
+        "swim_lava":{
+            "trigger": "enter_block",
+            "conditions": {
+                "block": "minecraft:lava"
+            }
+        }
+    },
+    "rewards": {
+        "function": "deathswap:advancement/hidden/swim_lava"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:iron_ingot",
+        "title": "Come borrow some iron from Iron Golem",
+        "description": "It's just borrowing a piece of iron!"
+    },
+    "parent": "deathswap:hidden/en/visit_village",
+    "criteria": {
+        "hurt_iron_golem":{
+            "trigger": "impossible"
+        }
+    }
+}

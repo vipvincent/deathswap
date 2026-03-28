@@ -1,0 +1,15 @@
+{
+    "display": {
+        "hidden": true,
+        "frame": "challenge",
+        "icon": "minecraft:enchanted_golden_apple",
+        "title": "Overpowered",
+        "description": "Eat an enchanted golden apple"
+    },
+    "parent": "deathswap:hidden/en/eat_apple",
+    "criteria": {
+        "eat_enchanted_golden_apple":{
+            "trigger": "impossible"
+        }
+    }
+}

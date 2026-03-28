@@ -1,0 +1,19 @@
+{
+    "criteria": {
+        "bee_hurt_player":{
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "source_entity": {
+                            "type": "minecraft:bee"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "deathswap:advancement/hidden/bee_hurt_player"
+    }
+}

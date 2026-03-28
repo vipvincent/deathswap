@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "get_log":{
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "#minecraft:logs"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "deathswap:advancement/hidden/get_log"
+    }
+}

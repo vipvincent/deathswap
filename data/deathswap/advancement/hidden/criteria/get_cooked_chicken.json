@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "get_cooked_chicken":{
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "minecraft:cooked_chicken"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "deathswap:advancement/hidden/get_cooked_chicken"
+    }
+}

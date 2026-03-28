@@ -1,0 +1,15 @@
+{
+    "display": {
+        "hidden": true,
+        "frame": "goal",
+        "icon": "minecraft:totem_of_undying",
+        "title": "You want me dead? It's not that simple!",
+        "description": "Don't even think about messing with me, it's impossible!"
+    },
+    "parent": "deathswap:hidden/en/root",
+    "criteria": {
+        "used_totem":{
+            "trigger": "impossible"
+        }
+    }
+}

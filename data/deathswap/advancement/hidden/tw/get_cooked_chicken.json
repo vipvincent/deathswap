@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:cooked_chicken",
+        "title": "La-la-la-lava ch-ch-ch-chicken",
+        "description": "既然都達成這個成就了，該唱歌了吧！"
+    },
+    "parent": "deathswap:hidden/tw/root",
+    "criteria": {
+        "get_cooked_chicken":{
+            "trigger": "impossible"
+        }
+    }
+}

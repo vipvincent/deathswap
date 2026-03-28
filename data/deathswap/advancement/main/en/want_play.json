@@ -1,0 +1,21 @@
+{
+    "display": {
+        "hidden": true,
+        "announce_to_chat": false,
+        "icon": "minecraft:bell",
+        "title": [
+            "I also want to play ",
+            {
+                "text": "Death Swap",
+                "color": "gold"
+            }
+        ],
+        "description": "Come and play!"
+    },
+    "parent": "deathswap:main/en/spectator",
+    "criteria": {
+        "want_play":{
+            "trigger": "impossible"
+        }
+    }
+}

@@ -1,27 +1,26 @@
 #team_choose
 
-#team
-execute if score *team_choose deathswap.setting matches 1 if score *mode deathswap.setting matches 1 as @a[tag=!creative] unless items entity @s hotbar.2 *[custom_data={ui:1b}] run function deathswap:team/join/solo
-execute if score *team_choose deathswap.setting matches 1 if score *mode deathswap.setting matches 1 as @a[tag=!creative] unless items entity @s hotbar.3 *[custom_data={ui:1b}] run function deathswap:team/join/solo
-execute if score *team_choose deathswap.setting matches 1 if score *mode deathswap.setting matches 1 as @a[tag=!creative] unless items entity @s hotbar.5 *[custom_data={ui:1b}] run function deathswap:team/join/solo
-execute if score *team_choose deathswap.setting matches 1 if score *mode deathswap.setting matches 1 as @a[tag=!creative] unless items entity @s hotbar.6 *[custom_data={ui:1b}] run function deathswap:team/join/solo
+#click
+execute if score *team_choose deathswap.setting matches 1 as @a[tag=!creative] unless items entity @s hotbar.4 *[custom_data={ui:1b},item_name="team_spectator"] run function deathswap:team/join/spectator
 
-execute if score *team_choose deathswap.setting matches 1 if score *mode deathswap.setting matches 2 as @a[tag=!creative] unless items entity @s hotbar.2 *[custom_data={ui:1b}] run function deathswap:team/join/red
-execute if score *team_choose deathswap.setting matches 1 if score *mode deathswap.setting matches 2 as @a[tag=!creative] unless items entity @s hotbar.3 *[custom_data={ui:1b}] run function deathswap:team/join/blue
-execute if score *team_choose deathswap.setting matches 1 if score *mode deathswap.setting matches 2 as @a[tag=!creative] unless items entity @s hotbar.5 *[custom_data={ui:1b}] run function deathswap:team/join/yellow
-execute if score *team_choose deathswap.setting matches 1 if score *mode deathswap.setting matches 2 as @a[tag=!creative] unless items entity @s hotbar.6 *[custom_data={ui:1b}] run function deathswap:team/join/green
+execute if score *team_choose deathswap.setting matches 1 if score *mode deathswap.setting matches 1 as @a[tag=!creative] unless items entity @s hotbar.2 *[custom_data={ui:1b},item_name="team_solo"] run function deathswap:team/join/solo
+execute if score *team_choose deathswap.setting matches 1 if score *mode deathswap.setting matches 1 as @a[tag=!creative] unless items entity @s hotbar.3 *[custom_data={ui:1b},item_name="team_solo"] run function deathswap:team/join/solo
+execute if score *team_choose deathswap.setting matches 1 if score *mode deathswap.setting matches 1 as @a[tag=!creative] unless items entity @s hotbar.5 *[custom_data={ui:1b},item_name="team_solo"] run function deathswap:team/join/solo
+execute if score *team_choose deathswap.setting matches 1 if score *mode deathswap.setting matches 1 as @a[tag=!creative] unless items entity @s hotbar.6 *[custom_data={ui:1b},item_name="team_solo"] run function deathswap:team/join/solo
 
-execute if score *team_choose deathswap.setting matches 1 as @a[tag=!creative] unless items entity @s hotbar.4 *[custom_data={ui:1b}] run function deathswap:team/join/spectator
+execute if score *team_choose deathswap.setting matches 1 if score *mode deathswap.setting matches 2 as @a[tag=!creative] unless items entity @s hotbar.2 *[custom_data={ui:1b},item_name="team_red"] run function deathswap:team/join/red
+execute if score *team_choose deathswap.setting matches 1 if score *mode deathswap.setting matches 2 as @a[tag=!creative] unless items entity @s hotbar.3 *[custom_data={ui:1b},item_name="team_blue"] run function deathswap:team/join/blue
+execute if score *team_choose deathswap.setting matches 1 if score *mode deathswap.setting matches 2 as @a[tag=!creative] unless items entity @s hotbar.5 *[custom_data={ui:1b},item_name="team_yellow"] run function deathswap:team/join/yellow
+execute if score *team_choose deathswap.setting matches 1 if score *mode deathswap.setting matches 2 as @a[tag=!creative] unless items entity @s hotbar.6 *[custom_data={ui:1b},item_name="team_green"] run function deathswap:team/join/green
 
 #right
-execute as @a[tag=!creative,scores={deathswap.carrot_right_click=1}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={ui:1b},item_model="potion",potion_contents={custom_color:43520}] run function deathswap:team/join/solo
+execute as @a[tag=!creative,scores={deathswap.carrot_right_click=1}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={ui:1b},item_model="potion",item_name="team_spectator"] run function deathswap:team/join/spectator
+execute as @a[tag=!creative,scores={deathswap.carrot_right_click=1}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={ui:1b},item_model="potion",item_name="team_solo"] run function deathswap:team/join/solo
 
-execute as @a[tag=!creative,scores={deathswap.carrot_right_click=1}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={ui:1b},item_model="potion",potion_contents={custom_color:16711680}] run function deathswap:team/join/red
-execute as @a[tag=!creative,scores={deathswap.carrot_right_click=1}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={ui:1b},item_model="potion",potion_contents={custom_color:255}] run function deathswap:team/join/blue
-execute as @a[tag=!creative,scores={deathswap.carrot_right_click=1}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={ui:1b},item_model="potion",potion_contents={custom_color:16776960}] run function deathswap:team/join/yellow
-execute as @a[tag=!creative,scores={deathswap.carrot_right_click=1}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={ui:1b},item_model="potion",potion_contents={custom_color:65280}] run function deathswap:team/join/green
-
-execute as @a[tag=!creative,scores={deathswap.carrot_right_click=1}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={ui:1b},item_model="potion",potion_contents={custom_color:8421504}] run function deathswap:team/join/spectator
+execute as @a[tag=!creative,scores={deathswap.carrot_right_click=1}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={ui:1b},item_model="potion",item_name="team_red"] run function deathswap:team/join/red
+execute as @a[tag=!creative,scores={deathswap.carrot_right_click=1}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={ui:1b},item_model="potion",item_name="team_blue"] run function deathswap:team/join/blue
+execute as @a[tag=!creative,scores={deathswap.carrot_right_click=1}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={ui:1b},item_model="potion",item_name="team_yellow"] run function deathswap:team/join/yellow
+execute as @a[tag=!creative,scores={deathswap.carrot_right_click=1}] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data={ui:1b},item_model="potion",item_name="team_green"] run function deathswap:team/join/green
 
 #team_choose disable
 execute if score *team_choose deathswap.setting matches 0 as @a[tag=admin,tag=!creative] unless items entity @s hotbar.2 *[custom_data={ui:1b}] run function deathswap:team/choose_disable

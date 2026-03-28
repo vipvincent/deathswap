@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "lose":{
+            "trigger": "impossible"
+        }
+    },
+    "rewards": {
+        "function": "deathswap:advancement/main/lose"
+    }
+}

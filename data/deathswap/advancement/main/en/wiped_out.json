@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:tnt",
+        "title": "The entire team was wiped out...",
+        "description": "Since that's the case, I guess I'll just have to try harder next time..."
+    },
+    "parent": "deathswap:main/en/eliminated",
+    "criteria": {
+        "wiped_out":{
+            "trigger": "impossible"
+        }
+    }
+}

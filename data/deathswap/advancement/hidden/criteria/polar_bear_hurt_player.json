@@ -1,0 +1,19 @@
+{
+    "criteria": {
+        "polar_bear_hurt_player":{
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "source_entity": {
+                            "type": "minecraft:polar_bear"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "deathswap:advancement/hidden/polar_bear_hurt_player"
+    }
+}

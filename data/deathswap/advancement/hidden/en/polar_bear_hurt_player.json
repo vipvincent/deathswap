@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:polar_bear_spawn_egg",
+        "title": "Why did the polar bear hit me?",
+        "description": "What’s the problem? Hitting me for no reason?"
+    },
+    "parent": "deathswap:hidden/en/root",
+    "criteria": {
+        "polar_bear_hurt_player":{
+            "trigger": "impossible"
+        }
+    }
+}

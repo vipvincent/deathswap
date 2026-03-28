@@ -1,0 +1,15 @@
+{
+    "display": {
+        "hidden": true,
+        "frame": "goal",
+        "icon": "minecraft:apple",
+        "title": "一天一蘋果，醫生遠離我",
+        "description": "醫生真的會遠離我嗎？"
+    },
+    "parent": "deathswap:hidden/tw/root",
+    "criteria": {
+        "eat_apple":{
+            "trigger": "impossible"
+        }
+    }
+}

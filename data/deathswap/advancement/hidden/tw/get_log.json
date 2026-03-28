@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:oak_log",
+        "title": "想致富，先嚕樹！",
+        "description": "原木是一切的起點"
+    },
+    "parent": "deathswap:hidden/tw/root",
+    "criteria": {
+        "get_log":{
+            "trigger": "impossible"
+        }
+    }
+}

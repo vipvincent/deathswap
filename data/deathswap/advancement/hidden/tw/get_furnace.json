@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:furnace",
+        "title": "『熱』門『焦』點",
+        "description": "將八塊鵝卵石合成一個熔爐\n懷念舊版成就嗎？"
+    },
+    "parent": "deathswap:hidden/tw/get_log",
+    "criteria": {
+        "get_furnace":{
+            "trigger": "impossible"
+        }
+    }
+}

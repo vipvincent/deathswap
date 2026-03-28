@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:iron_ingot",
+        "title": "來跟鐵哥借點鐵",
+        "description": "借一下鐵而已啦！"
+    },
+    "parent": "deathswap:hidden/tw/visit_village",
+    "criteria": {
+        "hurt_iron_golem":{
+            "trigger": "impossible"
+        }
+    }
+}

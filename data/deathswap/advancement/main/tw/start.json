@@ -1,0 +1,14 @@
+{
+    "display": {
+        "announce_to_chat": false,
+        "icon": "minecraft:iron_sword",
+        "title": "遊戲開始！",
+        "description": "\"死亡交換\"現正開始！"
+    },
+    "parent": "deathswap:main/tw/root",
+    "criteria": {
+        "start":{
+            "trigger": "impossible"
+        }
+    }
+}

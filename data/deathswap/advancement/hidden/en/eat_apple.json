@@ -1,0 +1,15 @@
+{
+    "display": {
+        "hidden": true,
+        "frame": "goal",
+        "icon": "minecraft:apple",
+        "title": "An apple a day keeps the doctor away.",
+        "description": "Will doctors really stay away from me?"
+    },
+    "parent": "deathswap:hidden/en/root",
+    "criteria": {
+        "eat_apple":{
+            "trigger": "impossible"
+        }
+    }
+}

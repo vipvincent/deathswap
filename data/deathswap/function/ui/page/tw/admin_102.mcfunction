@@ -12,10 +12,19 @@ execute if score *killer.eliminated_alert deathswap.setting matches 0 run item r
 execute if score *killer.eliminated_alert deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.12 with paper[custom_data={ui:1b},custom_name={"text":"§a殺手淘汰提示：開啟"},enchantment_glint_override=true]
 
 #killer.weapon
-execute if score *killer.weapon deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with stick[custom_data={ui:1b},custom_name={"text":"§c殺手武器：無"},lore=['§7殺手的起始武器']]
-execute if score *killer.weapon deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with wooden_sword[custom_data={ui:1b},custom_name={"text":"§a殺手武器：木劍"},lore=['§7殺手的起始武器'],enchantment_glint_override=true]
-execute if score *killer.weapon deathswap.setting matches 2 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with stone_sword[custom_data={ui:1b},custom_name={"text":"§a殺手武器：石劍"},lore=['§7殺手的起始武器'],enchantment_glint_override=true]
-execute if score *killer.weapon deathswap.setting matches 3 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with iron_sword[custom_data={ui:1b},custom_name={"text":"§a殺手武器：鐵劍"},lore=['§7殺手的起始武器'],enchantment_glint_override=true]
-execute if score *killer.weapon deathswap.setting matches 4 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with golden_sword[custom_data={ui:1b},custom_name={"text":"§a殺手武器：金劍"},lore=['§7殺手的起始武器'],enchantment_glint_override=true]
-execute if score *killer.weapon deathswap.setting matches 5 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with diamond_sword[custom_data={ui:1b},custom_name={"text":"§a殺手武器：鑽石劍"},lore=['§7殺手的起始武器'],enchantment_glint_override=true]
-execute if score *killer.weapon deathswap.setting matches 6 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with netherite_sword[custom_data={ui:1b},custom_name={"text":"§a殺手武器：獄髓劍"},lore=['§7殺手的起始武器'],enchantment_glint_override=true]
+execute if score *killer.weapon deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with \
+stick[custom_data={ui:1b},custom_name={"text":"§c殺手武器：無"},lore=['§7殺手的起始武器']]
+execute if score *killer.weapon deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with \
+wooden_sword[custom_data={ui:1b},custom_name={"text":"§a殺手武器：木劍"},lore=['§7殺手的起始武器'],enchantment_glint_override=true]
+execute if score *killer.weapon deathswap.setting matches 2 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with \
+stone_sword[custom_data={ui:1b},custom_name={"text":"§a殺手武器：石劍"},lore=['§7殺手的起始武器'],enchantment_glint_override=true]
+execute if score *killer.weapon deathswap.setting matches 3 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with \
+copper_sword[custom_data={ui:1b},custom_name={"text":"§a殺手武器：銅劍"},lore=['§7殺手的起始武器'],enchantment_glint_override=true]
+execute if score *killer.weapon deathswap.setting matches 4 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with \
+iron_sword[custom_data={ui:1b},custom_name={"text":"§a殺手武器：鐵劍"},lore=['§7殺手的起始武器'],enchantment_glint_override=true]
+execute if score *killer.weapon deathswap.setting matches 5 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with \
+golden_sword[custom_data={ui:1b},custom_name={"text":"§a殺手武器：金劍"},lore=['§7殺手的起始武器'],enchantment_glint_override=true]
+execute if score *killer.weapon deathswap.setting matches 6 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with \
+diamond_sword[custom_data={ui:1b},custom_name={"text":"§a殺手武器：鑽石劍"},lore=['§7殺手的起始武器'],enchantment_glint_override=true]
+execute if score *killer.weapon deathswap.setting matches 7 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with \
+netherite_sword[custom_data={ui:1b},custom_name={"text":"§a殺手武器：獄髓劍"},lore=['§7殺手的起始武器'],enchantment_glint_override=true]

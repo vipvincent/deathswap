@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "visit_village":{
+            "trigger": "location",
+            "conditions": {
+                "player": {
+                    "location":{
+                        "structures": "#minecraft:village"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "deathswap:advancement/hidden/visit_village"
+    }
+}

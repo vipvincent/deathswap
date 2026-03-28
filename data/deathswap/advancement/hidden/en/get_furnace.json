@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:furnace",
+        "title": "Hot Topic",
+        "description": "Construct a furnace out of eight cobblestone blocks\nDo you miss the old achievements?"
+    },
+    "parent": "deathswap:hidden/en/get_log",
+    "criteria": {
+        "get_furnace":{
+            "trigger": "impossible"
+        }
+    }
+}

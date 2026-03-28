@@ -12,10 +12,19 @@ execute if score *killer.eliminated_alert deathswap.setting matches 0 run item r
 execute if score *killer.eliminated_alert deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.12 with paper[custom_data={ui:1b},custom_name={"text":"§aKiller Eliminated Alert: Enabled"},enchantment_glint_override=true]
 
 #killer.weapon
-execute if score *killer.weapon deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with stick[custom_data={ui:1b},custom_name={"text":"§cKiller Weapon: None"},lore=['§7Killer\'s starting weapon']]
-execute if score *killer.weapon deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with wooden_sword[custom_data={ui:1b},custom_name={"text":"§aKiller Weapon: Wooden Sword"},lore=['§7Killer\'s starting weapon'],enchantment_glint_override=true]
-execute if score *killer.weapon deathswap.setting matches 2 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with stone_sword[custom_data={ui:1b},custom_name={"text":"§aKiller Weapon: Stone Sword"},lore=['§7Killer\'s starting weapon'],enchantment_glint_override=true]
-execute if score *killer.weapon deathswap.setting matches 3 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with iron_sword[custom_data={ui:1b},custom_name={"text":"§aKiller Weapon: Iron Sword"},lore=['§7Killer\'s starting weapon'],enchantment_glint_override=true]
-execute if score *killer.weapon deathswap.setting matches 4 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with golden_sword[custom_data={ui:1b},custom_name={"text":"§aKiller Weapon: Golden Sword"},lore=['§7Killer\'s starting weapon'],enchantment_glint_override=true]
-execute if score *killer.weapon deathswap.setting matches 5 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with diamond_sword[custom_data={ui:1b},custom_name={"text":"§aKiller Weapon: Diamond Sword"},lore=['§7Killer\'s starting weapon'],enchantment_glint_override=true]
-execute if score *killer.weapon deathswap.setting matches 6 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with netherite_sword[custom_data={ui:1b},custom_name={"text":"§aKiller Weapon: Netherite Sword"},lore=['§7Killer\'s starting weapon'],enchantment_glint_override=true]
+execute if score *killer.weapon deathswap.setting matches 0 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with \
+stick[custom_data={ui:1b},custom_name={"text":"§cKiller Weapon: None"},lore=['§7Killer\'s starting weapon']]
+execute if score *killer.weapon deathswap.setting matches 1 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with \
+wooden_sword[custom_data={ui:1b},custom_name={"text":"§aKiller Weapon: Wooden Sword"},lore=['§7Killer\'s starting weapon'],enchantment_glint_override=true]
+execute if score *killer.weapon deathswap.setting matches 2 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with \
+stone_sword[custom_data={ui:1b},custom_name={"text":"§aKiller Weapon: Stone Sword"},lore=['§7Killer\'s starting weapon'],enchantment_glint_override=true]
+execute if score *killer.weapon deathswap.setting matches 3 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with \
+copper_sword[custom_data={ui:1b},custom_name={"text":"§aKiller Weapon: Copper Sword"},lore=['§7Killer\'s starting weapon'],enchantment_glint_override=true]
+execute if score *killer.weapon deathswap.setting matches 4 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with \
+iron_sword[custom_data={ui:1b},custom_name={"text":"§aKiller Weapon: Iron Sword"},lore=['§7Killer\'s starting weapon'],enchantment_glint_override=true]
+execute if score *killer.weapon deathswap.setting matches 5 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with \
+golden_sword[custom_data={ui:1b},custom_name={"text":"§aKiller Weapon: Golden Sword"},lore=['§7Killer\'s starting weapon'],enchantment_glint_override=true]
+execute if score *killer.weapon deathswap.setting matches 6 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with \
+diamond_sword[custom_data={ui:1b},custom_name={"text":"§aKiller Weapon: Diamond Sword"},lore=['§7Killer\'s starting weapon'],enchantment_glint_override=true]
+execute if score *killer.weapon deathswap.setting matches 7 run item replace entity @a[tag=admin,tag=!creative,scores={deathswap.ui_page=102}] inventory.14 with \
+netherite_sword[custom_data={ui:1b},custom_name={"text":"§aKiller Weapon: Netherite Sword"},lore=['§7Killer\'s starting weapon'],enchantment_glint_override=true]

@@ -1,0 +1,15 @@
+{
+    "display": {
+        "hidden": true,
+        "frame": "goal",
+        "icon": "minecraft:beacon",
+        "title": "Win!",
+        "description": "I really didn't expect to win!"
+    },
+    "parent": "deathswap:main/en/start",
+    "criteria": {
+        "win":{
+            "trigger": "impossible"
+        }
+    }
+}

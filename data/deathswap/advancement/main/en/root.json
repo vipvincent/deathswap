@@ -1,0 +1,20 @@
+{
+    "display": {
+        "announce_to_chat": false,
+        "show_toast": false,
+        "background": "minecraft:block/cherry_planks",
+        "icon": "minecraft:ender_pearl",
+        "title": "Death Swap",
+        "description": [
+            {
+                "text": "Made by vipvincent",
+                "color": "aqua"
+            }
+        ]
+    },
+    "criteria": {
+        "impossible":{
+            "trigger": "impossible"
+        }
+    }
+}

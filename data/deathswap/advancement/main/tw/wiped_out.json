@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:tnt",
+        "title": "怎麼會？居然整隊被滅了...",
+        "description": "既然如此，只好下次努力了..."
+    },
+    "parent": "deathswap:main/tw/eliminated",
+    "criteria": {
+        "wiped_out":{
+            "trigger": "impossible"
+        }
+    }
+}

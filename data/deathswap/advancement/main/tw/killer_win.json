@@ -1,0 +1,15 @@
+{
+    "display": {
+        "hidden": true,
+        "frame": "goal",
+        "icon": "minecraft:flow_banner_pattern",
+        "title": "殺手任務成功",
+        "description": "實在沒想到居然可以完成殺手任務"
+    },
+    "parent": "deathswap:main/tw/win",
+    "criteria": {
+        "killer_win":{
+            "trigger": "impossible"
+        }
+    }
+}

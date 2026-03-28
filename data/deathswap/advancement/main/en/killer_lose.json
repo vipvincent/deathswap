@@ -1,0 +1,14 @@
+{
+    "display": {
+        "hidden": true,
+        "icon": "minecraft:barrier",
+        "title": "Mission failed!",
+        "description": "Next time, I must complete the killer mission."
+    },
+    "parent": "deathswap:main/en/lose",
+    "criteria": {
+        "killer_lose":{
+            "trigger": "impossible"
+        }
+    }
+}
