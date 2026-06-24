@@ -1,4 +1,9 @@
-#lib/still/on
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/lib/still/on.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #execute as @a
 attribute @s minecraft:jump_strength base set 0.0

@@ -1,3 +1,10 @@
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/ui/link.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
+
 #ui/link
 
 #en

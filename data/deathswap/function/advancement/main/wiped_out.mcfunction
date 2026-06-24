@@ -1,4 +1,9 @@
-#advancement/main/wiped_out
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/advancement/main/wiped_out.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #return
 execute unless entity @s[advancements={deathswap:main/criteria/wiped_out=true}] run return fail

@@ -1,6 +1,7 @@
 {
     "display": {
         "hidden": true,
+        "announce_to_chat": false,
         "frame": "goal",
         "icon": "minecraft:flow_banner_pattern",
         "title": "KIller mission successful",

@@ -1,8 +1,23 @@
-team leave *
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/team/reset_team.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
-execute if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§f§6All Players §fhave been §cremoved from the team"}]
-execute if score *language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f已將§6所有玩家§c移出隊伍"}]
+#team leave
+team leave @a
 
+#text
+execute if score *language deathswap.setting matches 1 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {"text": "All players "},{text:"removed from team",color:"red"}\
+]
+execute if score *language deathswap.setting matches 2 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"已將所有玩家"},{text:"移出隊伍",color:"red"}\
+]
+
+#sound
 execute as @a at @s run playsound ui.button.click master @s ~ ~ ~
 
-function deathswap:ui/page/update

@@ -1,6 +1,7 @@
 {
     "display": {
         "hidden": true,
+        "announce_to_chat": false,
         "icon": "minecraft:skeleton_skull",
         "title": "I was eliminated...",
         "description": "My teammate, you'd better do your best!"

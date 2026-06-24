@@ -1,4 +1,9 @@
-#advancement/hidden/swim_lava
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/advancement/hidden/swim_lava.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #return
 execute unless score *game deathswap.status matches 2 run return fail

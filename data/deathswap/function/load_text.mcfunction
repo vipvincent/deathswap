@@ -1,12 +1,17 @@
-#load_text
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/load_text.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #load_version
-data modify storage deathswap:storage_main load_version set value "v3.6"
+data modify storage vipvincent:install_manager deathswap.load_version set value "v3.7"
 
 #not install
-execute unless data storage deathswap:storage_main {install:1b} run tellraw @a [\
+execute unless data storage vipvincent:install_manager {deathswap:{install:1b}} run tellraw @a [\
     {\
-        text: "Death Swap 死亡交換 ",color:gold,\
+        text: "Death Swap 死亡交換 ",color:"gold",\
         click_event: {\
             "action": "open_url","url": "https://modrinth.com/project/irff3j1Z" \
         },\
@@ -17,12 +22,12 @@ execute unless data storage deathswap:storage_main {install:1b} run tellraw @a [
             ]\
         }\
     },\
-    {storage:"deathswap:storage_main",nbt:"load_version",interpret:true,color:yellow}\
+    {storage:"vipvincent:install_manager",nbt:"deathswap.load_version",interpret:true,color:yellow}\
 ]
-execute unless data storage deathswap:storage_main {install:1b} run tellraw @a [\
-    "- ",\
+execute unless data storage vipvincent:install_manager {deathswap:{install:1b}} run tellraw @a [\
+    "-",\
     {\
-        text: "[Install 安裝] ",\
+        text: " [Install 安裝]",\
         click_event: {\
             action:run_command,command: "/function deathswap:install" \
         },\
@@ -34,7 +39,7 @@ execute unless data storage deathswap:storage_main {install:1b} run tellraw @a [
         }\
     },\
     {\
-        text: "[Installation Guide 安裝指南] ",color:yellow,\
+        text: " [Installation Guide 安裝指南]",color:"yellow",\
         click_event: {\
             action:"open_url",url: "https://vipvincent.github.io/deathswap/install" \
         },\
@@ -49,9 +54,9 @@ execute unless data storage deathswap:storage_main {install:1b} run tellraw @a [
 
 #---
 #install_stage
-execute if data storage deathswap:storage_main {install_stage:1b} run tellraw @a [\
+execute if data storage vipvincent:install_manager {deathswap:{install_stage:1b}} run tellraw @a [\
     {\
-        text: "Death Swap 死亡交換 ",color:gold,\
+        text: "Death Swap 死亡交換 ",color:"gold",\
         click_event: {\
             "action": "open_url","url": "https://modrinth.com/project/irff3j1Z" \
         },\
@@ -62,12 +67,12 @@ execute if data storage deathswap:storage_main {install_stage:1b} run tellraw @a
             ]\
         }\
     },\
-    {storage:"deathswap:storage_main",nbt:"load_version",interpret:true,color:yellow}\
+    {storage:"vipvincent:install_manager",nbt:"deathswap.load_version",interpret:true,color:yellow}\
 ]
-execute if data storage deathswap:storage_main {install_stage:1b} run tellraw @a [\
-    "- ",\  
+execute if data storage vipvincent:install_manager {deathswap:{install_stage:1b}} run tellraw @a [\
+    "-",\  
     {\
-        text: "",extra: ["[",{translate: "narrator.button.language"},"] "],color:yellow,\
+        text: " ",extra: ["[",{translate: "options.language.tooltip"},"]"],color:"yellow",\
         click_event: {\
             action: run_command,command: "/function deathswap:language" \
         },\
@@ -79,7 +84,7 @@ execute if data storage deathswap:storage_main {install_stage:1b} run tellraw @a
         }\
     },\
     {\
-        text: "[Reinstall 重新安裝] ",color:light_purple,\
+        text: " [Reinstall 重新安裝]",color:"light_purple",\
         click_event: {\
             action: run_command,command: "/function deathswap:reinstall" \
         },\
@@ -91,7 +96,7 @@ execute if data storage deathswap:storage_main {install_stage:1b} run tellraw @a
         }\
     },\
     {\
-        text: "[Uninstall 解除安裝] ",color:red,\
+        text: " [Uninstall 解除安裝]",color:"dark_red",\
         click_event: {\
             action: run_command,command: "/function deathswap:uninstall" \
         },\
@@ -108,7 +113,7 @@ execute if data storage deathswap:storage_main {install_stage:1b} run tellraw @a
 #install/en
 execute if score *language deathswap.setting matches 1 run tellraw @a [\
     {\
-        text: "Death Swap ",color:gold,\
+        text: "Death Swap ",color:"gold",\
         click_event: {\
             "action": "open_url","url": "https://modrinth.com/project/irff3j1Z" \
         },\
@@ -118,13 +123,13 @@ execute if score *language deathswap.setting matches 1 run tellraw @a [\
             ]\
         }\
     },\
-    {storage:"deathswap:storage_main",nbt:"load_version",interpret:true,color:yellow}\
+    {storage:"vipvincent:install_manager",nbt:"deathswap.load_version",interpret:true,color:yellow}\
 ]
 #install/en/notadmin
 execute if score *language deathswap.setting matches 1 run tellraw @a[tag=notadmin] [\
-    "- ",\
+    "-",\
     {\
-        text: "[Obtain Admin] ",color: "aqua",\
+        text: " [Obtain Admin]",color: "blue",\
         click_event:{\
             action: run_command,command: "/tag @s add admin" \
         },\
@@ -136,7 +141,7 @@ execute if score *language deathswap.setting matches 1 run tellraw @a[tag=notadm
         }\
     },\
     {\
-        text: "[Reset Game] ",color: blue,\
+        text: " [Reset Game]",color: "aqua",\
         click_event: {\
             action: run_command,command: "/function deathswap:reset" \
         },\
@@ -148,7 +153,7 @@ execute if score *language deathswap.setting matches 1 run tellraw @a[tag=notadm
         }\
     },\
     {\
-        text: "",extra: ["[",{translate: "narrator.button.language"},"] "],color:yellow,\
+        text: " ",extra: ["[",{translate: "options.language.tooltip"},"]"],color:"yellow",\
         click_event: {\
             action: run_command,command: "/function deathswap:language" \
         },\
@@ -158,37 +163,13 @@ execute if score *language deathswap.setting matches 1 run tellraw @a[tag=notadm
                 {text:"/function deathswap:language",color:light_purple},{text:" [OP]",color:red}\
             ]\
         }\
-    },\
-    {\
-        text: "[Reinstall] ",color:light_purple,\
-        click_event: {\
-            action: run_command,command: "/function deathswap:reinstall" \
-        },\
-        hover_event: {\
-            action: show_text,value: [\
-                {text:"Click here or type command",color:yellow},"\n",\
-                {text:"/function deathswap:reinstall",color:light_purple},{text:" [OP]",color:red}\
-            ]\
-        }\
-    },\
-    {\
-        text: "[Uninstall] ",color:red,\
-        click_event: {\
-            action: run_command,command: "/function deathswap:uninstall" \
-        },\
-        hover_event: {\
-            action: show_text,value: [\
-                {text:"Click here or type command",color:yellow},"\n",\
-                {text:"/function deathswap:uninstall",color:light_purple},{text:" [OP]",color:red}\
-            ]\
-        }\
     }\
 ]
 #install/en/admin
 execute if score *language deathswap.setting matches 1 run tellraw @a[tag=admin] [\
-    "- ",\
+    "-",\
     {\
-        text: "[Remove Admin] ",color: "red",\
+        text: " [Remove Admin]",color: "red",\
         click_event:{\
             action: run_command,command: "/tag @s remove admin" \
         },\
@@ -200,7 +181,7 @@ execute if score *language deathswap.setting matches 1 run tellraw @a[tag=admin]
         }\
     },\
     {\
-        text: "[Reset Game] ",color: blue,\
+        text: " [Reset Game]",color: "aqua",\
         click_event: {\
             action: run_command,command: "/trigger reset" \
         },\
@@ -213,7 +194,7 @@ execute if score *language deathswap.setting matches 1 run tellraw @a[tag=admin]
         }\
     },\
     {\
-        text: "",extra: ["[",{translate: "narrator.button.language"},"] "],color:yellow,\
+        text: " ",extra: ["[",{translate: "options.language.tooltip"},"]"],color:"yellow",\
         click_event: {\
             action: run_command,command: "/trigger deathswap set 10" \
         },\
@@ -225,8 +206,12 @@ execute if score *language deathswap.setting matches 1 run tellraw @a[tag=admin]
             ]\
         }\
     },\
+]
+#install/en/all
+execute if score *language deathswap.setting matches 1 run tellraw @a [\
+    "-",\
     {\
-        text: "[Reinstall] ",color:light_purple,\
+        text: " [Reinstall]",color:"light_purple",\
         click_event: {\
             action: run_command,command: "/function deathswap:reinstall" \
         },\
@@ -238,7 +223,7 @@ execute if score *language deathswap.setting matches 1 run tellraw @a[tag=admin]
         }\
     },\
     {\
-        text: "[Uninstall] ",color:red,\
+        text: " [Uninstall]",color:"dark_red",\
         click_event: {\
             action: run_command,command: "/function deathswap:uninstall" \
         },\
@@ -255,7 +240,7 @@ execute if score *language deathswap.setting matches 1 run tellraw @a[tag=admin]
 #install/tw
 execute if score *language deathswap.setting matches 2 run tellraw @a [\
     {\
-        text: "死亡交換 ",color:gold,\
+        text: "死亡交換 ",color:"gold",\
         click_event: {\
             "action": "open_url","url": "https://modrinth.com/datapack/deathswap" \
         },\
@@ -265,13 +250,13 @@ execute if score *language deathswap.setting matches 2 run tellraw @a [\
             ]\
         }\
     },\
-    {storage:"deathswap:storage_main",nbt:"load_version",interpret:true,color:yellow}\
+    {storage:"vipvincent:install_manager",nbt:"deathswap.load_version",interpret:true,color:yellow}\
 ]
 #install/tw/notadmin
 execute if score *language deathswap.setting matches 2 run tellraw @a[tag=notadmin] [\
-    "- ",\
+    "-",\
     {\
-        text: "[獲得管理員] ",color: "aqua",\
+        text: " [獲得管理員]",color: "blue",\
         click_event:{\
             action: run_command,command: "/tag @s add admin" \
         },\
@@ -283,7 +268,7 @@ execute if score *language deathswap.setting matches 2 run tellraw @a[tag=notadm
         }\
     },\
     {\
-        text: "[重製遊戲] ",color: blue,\
+        text: " [重製遊戲]",color: "aqua",\
         click_event: {\
             action: run_command,command: "/function deathswap:reset" \
         },\
@@ -295,7 +280,7 @@ execute if score *language deathswap.setting matches 2 run tellraw @a[tag=notadm
         }\
     },\
     {\
-        text: "",extra: ["[",{translate: "narrator.button.language"},"] "],color:yellow,\
+        text: " ",extra: ["[",{translate: "options.language.tooltip"},"]"],color:"yellow",\
         click_event: {\
             action: run_command,command: "/function deathswap:language" \
         },\
@@ -305,37 +290,13 @@ execute if score *language deathswap.setting matches 2 run tellraw @a[tag=notadm
                 {text:"/function deathswap:language",color:light_purple},{text:" [OP]",color:red}\
             ]\
         }\
-    },\
-    {\
-        text: "[重新安裝] ",color:light_purple,\
-        click_event: {\
-            action: run_command,command: "/function deathswap:reinstall" \
-        },\
-        hover_event: {\
-            action: show_text,value: [\
-                {text:"點此或輸入以下指令",color:yellow},"\n",\
-                {text:"/function deathswap:reinstall",color:light_purple},{text:" [OP]",color:red}\
-            ]\
-        }\
-    },\
-    {\
-        text: "[解除安裝] ",color:red,\
-        click_event: {\
-            action: run_command,command: "/function deathswap:uninstall" \
-        },\
-        hover_event: {\
-            action: show_text,value: [\
-                {text:"點此或輸入以下指令",color:yellow},"\n",\
-                {text:"/function deathswap:uninstall",color:light_purple},{text:" [OP]",color:red}\
-            ]\
-        }\
     }\
 ]
 #install/tw/admin
 execute if score *language deathswap.setting matches 2 run tellraw @a[tag=admin] [\
-    "- ",\
+    "-",\
     {\
-        text: "[移除管理員] ",color: "red",\
+        text: " [移除管理員]",color: "red",\
         click_event:{\
             action: run_command,command: "/tag @s remove admin" \
         },\
@@ -347,7 +308,7 @@ execute if score *language deathswap.setting matches 2 run tellraw @a[tag=admin]
         }\
     },\
     {\
-        text: "[重製遊戲] ",color: blue,\
+        text: " [重製遊戲]",color: "aqua",\
         click_event: {\
             action: run_command,command: "/trigger reset" \
         },\
@@ -360,7 +321,7 @@ execute if score *language deathswap.setting matches 2 run tellraw @a[tag=admin]
         }\
     },\
     {\
-        text: "",extra: ["[",{translate: "narrator.button.language"},"] "],color:yellow,\
+        text: " ",extra: ["[",{translate: "options.language.tooltip"},"]"],color:"yellow",\
         click_event: {\
             action: run_command,command: "/trigger deathswap set 10" \
         },\
@@ -371,9 +332,13 @@ execute if score *language deathswap.setting matches 2 run tellraw @a[tag=admin]
                 {text:"/function deathswap:language",color:light_purple},{text:" [OP]",color:red}\
             ]\
         }\
-    },\
+    }\
+]
+#install/tw/all
+execute if score *language deathswap.setting matches 2 run tellraw @a [\
+    "-",\
     {\
-        text: "[重新安裝] ",color:light_purple,\
+        text: " [重新安裝]",color:"light_purple",\
         click_event: {\
             action: run_command,command: "/function deathswap:reinstall" \
         },\
@@ -385,7 +350,7 @@ execute if score *language deathswap.setting matches 2 run tellraw @a[tag=admin]
         }\
     },\
     {\
-        text: "[解除安裝] ",color:red,\
+        text: " [解除安裝]",color:"dark_red",\
         click_event: {\
             action: run_command,command: "/function deathswap:uninstall" \
         },\
@@ -399,4 +364,4 @@ execute if score *language deathswap.setting matches 2 run tellraw @a[tag=admin]
 ]
 
 #clear load_version
-data remove storage deathswap:storage_main load_version
+data remove storage vipvincent:install_manager deathswap.load_version

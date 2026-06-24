@@ -1,4 +1,9 @@
-#advancement/hidden/get_furnace
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/advancement/hidden/get_furnace.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #return
 execute unless score *game deathswap.status matches 2 run return fail

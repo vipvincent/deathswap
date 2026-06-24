@@ -4,7 +4,7 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "type": "minecraft:villager"
+                    "entity_type": "minecraft:villager"
                 }
             }
         }

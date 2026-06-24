@@ -1,3 +1,10 @@
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/lib/clear_ender_chest.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
+
 #clear ender chest of All Players
 item replace entity @a enderchest.0 with air
 item replace entity @a enderchest.1 with air

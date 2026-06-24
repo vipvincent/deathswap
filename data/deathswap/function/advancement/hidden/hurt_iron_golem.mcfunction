@@ -1,4 +1,9 @@
-#advancement/hidden/hurt_iron_golem
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/advancement/hidden/hurt_iron_golem.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #return
 execute unless score *game deathswap.status matches 2 run return fail

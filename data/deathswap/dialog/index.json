@@ -1,0 +1,75 @@
+{
+    "type": "multi_action",
+    "pause":false,
+    "columns": 2,
+    "title": {"text": "Death Swap","color": "gold"},
+    "external_title": {"text": "Death Swap","color": "gold"},
+    "body": [
+        {
+            "type": "plain_message",
+            "contents": [
+                {"text": "Death Swap","color": "gold"},
+                "\n",
+                {"text": "Made by vipvincent","color": "aqua"}
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "label": {"text":"Discord","color":"aqua"},
+            "action":{
+                "type": "open_url",
+                "url": "https://discord.gg/3BKAydVfDk"
+            }
+        },
+        {
+            "label": {"text":"Youtube","color":"red"},
+            "action":{
+                "type": "open_url",
+                "url": "https://www.youtube.com/@vipvincentgame"
+            }
+        },
+        {
+            "label": {"text":"Modrinth","color":"green"},
+            "action": {
+                "type": "open_url",
+                "url": "https://modrinth.com/project/irff3j1Z"
+            }
+        },
+        {
+            "label": {"text":"CurseForge","color":"gold"},
+            "action":{
+                "type": "open_url",
+                "url": "https://www.curseforge.com/minecraft/data-packs/deathswap"
+            }
+        },
+        {
+            "label": {"text":"Planet Minecraft","color":"blue"},
+            "action":{
+                "type": "open_url",
+                "url": "https://www.planetminecraft.com/data-pack/deathswap-6145205/"
+            }
+        },
+        {
+            "label": {"text":"Wiki","color":"yellow"},
+            "action":{
+                "type": "open_url",
+                "url": "https://vipvincent.github.io/wiki/deathswap"
+            }
+        },
+        {
+            "label": "Github",
+            "action":{
+                "type": "open_url",
+                "url": "https://github.com/vipvincent/deathswap"
+            }
+        },
+        {
+            "label": "Issues",
+            "action":{
+                "type": "open_url",
+                "url": "https://github.com/vipvincent/deathswap/issues"
+            }
+        }
+    ]
+}

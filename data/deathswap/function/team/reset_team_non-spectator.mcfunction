@@ -1,6 +1,22 @@
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/team/reset_team_non-spectator.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
+
+#team leave non-spectator
 team leave @a[team=!spectator]
 
-execute if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§f§7Non-spectator §fplayer §cremoved from team"}]
-execute if score *language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f已將§7旁觀者以外§f的玩家§c移出隊伍"}]
+#text
+execute if score *language deathswap.setting matches 1 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {"text": "Non-spectator players "},{text:"removed from team",color:"red"}\
+]
+execute if score *language deathswap.setting matches 2 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"已將旁觀者以外的玩家"},{text:"移出隊伍",color:"red"}\
+]
 
+#sound
 execute as @a at @s run playsound ui.button.click master @s ~ ~ ~

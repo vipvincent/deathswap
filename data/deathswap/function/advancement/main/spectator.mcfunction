@@ -1,4 +1,9 @@
-#advancement/main/spectator
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/advancement/main/spectator.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #return
 execute unless entity @s[advancements={deathswap:main/criteria/spectator=true}] run return fail

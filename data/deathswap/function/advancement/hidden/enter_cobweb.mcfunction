@@ -1,4 +1,9 @@
-#advancement/hidden/enter_cobweb
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/advancement/hidden/enter_cobweb.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #return
 execute unless score *game deathswap.status matches 2 run return fail

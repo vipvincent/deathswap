@@ -1,6 +1,7 @@
 {
     "display": {
         "hidden": true,
+        "announce_to_chat": false,
         "icon": "minecraft:magma_block",
         "title": "I'm so sad, I actually lost...",
         "description": "Must win next time!"

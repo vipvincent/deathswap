@@ -1,7 +1,25 @@
-$scoreboard players add *arena.start deathswap.setting $(start)
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/setting/arena/start_add.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
-execute if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fArena is set to start §6after "},{"score":{"name": "*arena.start","objective": "deathswap.setting"},"color": "gold"},{"text": " §6rounds of swap"}]
-execute if score *language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f競技場開始設定為§6交換"},{"score":{"name": "*arena.start","objective": "deathswap.setting"},"color": "gold"},{"text": "§6回合後"}]
+$scoreboard players add *arena.start deathswap.setting $(add)
+
+#en
+execute if score *language deathswap.setting matches 1 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"Arena Start"},{text:" is set "},\
+    [{text:"after ",color:"yellow"},{score:{name:"*arena.start",objective:"deathswap.setting"}}," swap"]\
+]
+
+#zhtw
+execute if score *language deathswap.setting matches 2 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"競技場開始"},{text:"設定為"},\
+    [{text:"交換",color:"yellow"},{score:{name:"*arena.start",objective:"deathswap.setting"}},"次後"]\
+]
+
+#sound
 execute as @a at @s run playsound ui.button.click master @s ~ ~ ~
-
-function deathswap:ui/page/update

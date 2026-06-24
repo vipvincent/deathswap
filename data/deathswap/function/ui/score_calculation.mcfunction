@@ -1,3 +1,10 @@
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/ui/score_calculation.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
+
 #en
 execute if score *language deathswap.setting matches 1 run tellraw @s [{"text": ">>>>> Score Calculation Rules <<<<<",color:yellow}]
 execute if score *language deathswap.setting matches 1 run tellraw @s ""
@@ -6,7 +13,7 @@ execute if score *language deathswap.setting matches 1 run tellraw @s [{"text": 
 execute if score *language deathswap.setting matches 1 run tellraw @s [{"text": "+3 - Killer Win",color:gray}]
 execute if score *language deathswap.setting matches 1 run tellraw @s ""
 
-#中文
+#zhtw
 execute if score *language deathswap.setting matches 2 run tellraw @s [{"text": ">>>>> 分數計算規則 <<<<<",color:gray}]
 execute if score *language deathswap.setting matches 2 run tellraw @s ""
 execute if score *language deathswap.setting matches 2 run tellraw @s [{"text": "+1 - 僅獲勝",color:gray}]
@@ -14,7 +21,5 @@ execute if score *language deathswap.setting matches 2 run tellraw @s [{"text": 
 execute if score *language deathswap.setting matches 2 run tellraw @s [{"text": "+3 - 殺手獲勝",color:gray}]
 execute if score *language deathswap.setting matches 2 run tellraw @s ""
 
-
+#sound
 execute as @s at @s run playsound ui.button.click master @s ~ ~ ~ 1
-
-function deathswap:ui/page/update

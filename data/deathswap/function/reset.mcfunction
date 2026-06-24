@@ -1,3 +1,10 @@
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/reset.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
+
 #reset
 scoreboard players set *game deathswap.status -1
 
@@ -25,29 +32,33 @@ gamerule minecraft:natural_health_regeneration true
 gamerule minecraft:advance_time false
 gamerule minecraft:advance_weather false
 
-gamerule minecraft:show_advancement_messages false
-gamerule minecraft:show_death_messages false
-
 difficulty peaceful
 
 #spawnpoint
 execute at @e[tag=lobby,limit=1] run spawnpoint @a ~ ~ ~
 
-#other
+#player
 effect clear @a
 clear @a
 function deathswap:lib/clear_ender_chest
 xp set @a 0 points
 xp set @a 0 levels
 
-kill @e[tag=pos]
+gamerule minecraft:show_death_messages false
 kill @a
-gamemode survival @a 
-tp @a @e[type=marker,tag=lobby,limit=1]
+gamerule minecraft:show_death_messages true
 
+gamemode survival @a 
+tp @a @e[tag=lobby,limit=1]
 advancement revoke @a everything
 recipe take @a *
 title @a reset
+
+execute as @a run function deathswap:lib/still/off
+function deathswap:lib/waypoint/reset
+
+#kill
+kill @e[tag=pos]
 
 #time 
 execute if score *time_set deathswap.setting matches 0 run time set day
@@ -59,9 +70,6 @@ execute if score *time_set deathswap.setting matches 3 run time set midnight
 execute if score *weather deathswap.setting matches 0 run weather clear
 execute if score *weather deathswap.setting matches 1 run weather rain
 execute if score *weather deathswap.setting matches 2 run weather thunder
-
-#still_off
-execute as @a run function deathswap:lib/still/off
 
 #bossbar
 bossbar set deathswap:gmchange visible false
@@ -75,21 +83,24 @@ bossbar set deathswap:wait value 400
 function deathswap:team/collisionrule/always
 function deathswap:team/friendlyfire/true
 
-#scoreboard reset
+#---
+#data temp clear
+data remove storage deathswap:temp end
+data remove storage deathswap:temp random_effect
+
+#---
+##scoreboard reset
+#player
 scoreboard players reset * deathswap.death
 scoreboard players reset * deathswap.health
-scoreboard players reset * deathswap.carrot_right_click
+scoreboard players reset * deathswap.warped_right_click
 scoreboard players reset * deathswap.damage_taken
-scoreboard players reset * deathswap.damage_taken.integer
-scoreboard players reset * deathswap.damage_taken.decimals
-scoreboard players reset * deathswap.swap_original
-scoreboard players reset * deathswap.swap_calculated
 
-#scoreboard timer
+#timer
 scoreboard players set *tick deathswap.timer 0
 scoreboard players set *round_time deathswap.timer 0
 scoreboard players set *swap_countdown deathswap.timer 0
-scoreboard players set *wait deathswap.timer 0
+scoreboard players set *loading deathswap.timer 0
 scoreboard players set *end deathswap.timer 0
 scoreboard players set *play_time deathswap.timer 0
 
@@ -98,11 +109,12 @@ scoreboard players set *gmchange.pause deathswap.timer -1
 scoreboard players set *arena deathswap.timer 0
 scoreboard players set *random_effect deathswap.timer 0
 
-#scoreboard status
+#status
 scoreboard players set *team_red deathswap.status 0
 scoreboard players set *team_blue deathswap.status 0
-scoreboard players set *team_yellow deathswap.status 0
 scoreboard players set *team_green deathswap.status 0
+scoreboard players set *team_yellow deathswap.status 0
+
 scoreboard players set *swap_time deathswap.status 0
 scoreboard players set *end deathswap.status -1
 
@@ -113,62 +125,62 @@ scoreboard players set *arena deathswap.status -1
 scoreboard players set *arena.shrink deathswap.status -1
 scoreboard players set *arena.border deathswap.status -1
 
-#scoreboard count
+#count
 scoreboard players set *solo_count deathswap.status 0
 scoreboard players set *red_count deathswap.status 0
 scoreboard players set *blue_count deathswap.status 0
-scoreboard players set *yellow_count deathswap.status 0
 scoreboard players set *green_count deathswap.status 0
+scoreboard players set *yellow_count deathswap.status 0
 
-scoreboard players set *player_count deathswap.status 0
 scoreboard players set *team_count deathswap.status 0
 scoreboard players set *swap_count deathswap.status 0
 
-#reset player_count_update
-scoreboard players operation *player_count_update deathswap.status = *player_count deathswap.status
+scoreboard players set *player_count deathswap.status 0
+scoreboard players set *player_count_update deathswap.status 0
 
-#end game status
+#swap
+scoreboard players reset * deathswap.swap_original
+scoreboard players reset * deathswap.swap_calculated
+
+#---
+#schedule clear
+schedule clear deathswap:play/killer/choose_killer
+
+#---
+#game status
 scoreboard players set *game deathswap.status 0
 
-#ui
+#ui page 0
 scoreboard players set @a[tag=admin] deathswap.ui_page 0
-function deathswap:ui/page/update
 
-#display_sidebar
+#scoreboard display
 scoreboard objectives setdisplay list deathswap.win_score
 scoreboard objectives setdisplay below_name deathswap.win_score
 scoreboard objectives setdisplay sidebar deathswap.display.rank
 
+#---
 #text
 tellraw @a "-----------------------------------------------------"
-#en
-execute if score *language deathswap.setting matches 1 run tellraw @a [\
-    "",{text: "Death Swap",color:gold},{text:" | ",color:gray},\
-    {"text": "Successfully Reset Game",color:green}\
-]
-execute if score *language deathswap.setting matches 1 run tellraw @a [\
-    "",{text: "Death Swap",color:gold},{text:" | ",color:gray},\
-    {text: "Death Swap",color:gold}," Made by ",{text:"vipvincent",color:aqua}\
-]
-execute if score *language deathswap.setting matches 1 run title @a title {text: "Death Swap",color:gold}
-execute if score *language deathswap.setting matches 1 run title @a subtitle {text: "Made by vipvincent",color:aqua}
 
-#中文
-execute if score *language deathswap.setting matches 2 run tellraw @a [\
-    "",{text: "死亡交換",color:gold},{text:" | ",color:gray},\
-    {"text": "遊戲重製完成",color:green}\
+#text - reset
+execute if score *language deathswap.setting matches 1 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"Successfully Reset Game!",color:"green"}\
 ]
 execute if score *language deathswap.setting matches 2 run tellraw @a [\
-    "",{text: "死亡交換",color:gold},{text:" | ",color:gray},\
-    {text: "死亡交換",color:gold},"是由",{text:"vipvincent",color:aqua},"製作"\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"遊戲重製完成！",color:"green"}\
 ]
+
+#text - get_admin_tip
+execute as @a run function deathswap:ui/admin_tip
 
 #title
-execute if score *language deathswap.setting matches 2 run title @a title {text: "死亡交換",color:gold}
-execute if score *language deathswap.setting matches 2 run title @a subtitle {text: "製作：vipvincent",color:aqua}
+execute if score *language deathswap.setting matches 1 run title @a title {text: "Death Swap",color:"gold"}
+execute if score *language deathswap.setting matches 1 run title @a subtitle {text: "Made by vipvincent",color:"aqua"}
+
+execute if score *language deathswap.setting matches 2 run title @a title {text: "死亡交換",color:"gold"}
+execute if score *language deathswap.setting matches 2 run title @a subtitle {text: "製作：vipvincent",color:"aqua"}
 
 #sound
 execute as @a at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~
-
-#link&info
-execute as @a run function deathswap:ui/click_admin

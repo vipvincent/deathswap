@@ -1,18 +1,38 @@
-#team/mode
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/setting/mode.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
-# 1 solo battle
-# 2 team battle
+# 0 solo battle
+# 1 team battle
 
 scoreboard players add *mode deathswap.setting 1
-execute if score *mode deathswap.setting matches 3 run scoreboard players set *mode deathswap.setting 1
+execute if score *mode deathswap.setting matches 2 run scoreboard players set *mode deathswap.setting 0
 
-execute if score *language deathswap.setting matches 1 if score *mode deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fSwitched to §eSolo Battle"}]
-execute if score *language deathswap.setting matches 1 if score *mode deathswap.setting matches 2 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fSwitched to §eTeam Battle"}]
+#en
+execute if score *language deathswap.setting matches 1 if score *mode deathswap.setting matches 0 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"Mode"},{text:" is set "},{text:"Solo Battle",color:"yellow"}\
+]
+execute if score *language deathswap.setting matches 1 if score *mode deathswap.setting matches 1 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"Mode"},{text:" is set "},{text:"Team Battle",color:"yellow"}\
+]
 
-execute if score *language deathswap.setting matches 2 if score *mode deathswap.setting matches 1 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f已切換為§e個人戰"}]
-execute if score *language deathswap.setting matches 2 if score *mode deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f已切換為§e隊伍戰"}]
+#zhtw
+execute if score *language deathswap.setting matches 2 if score *mode deathswap.setting matches 0 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"模式"},{text:"設定為"},{text:"個人戰",color:"yellow"}\
+]
+execute if score *language deathswap.setting matches 2 if score *mode deathswap.setting matches 1 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"模式"},{text:"設定為"},{text:"隊伍戰",color:"yellow"}\
+]
 
+#sound
 execute as @a at @s run playsound ui.button.click master @s ~ ~ ~
 
-function deathswap:ui/page/update
+#reset team
 function deathswap:team/reset_team_non-spectator

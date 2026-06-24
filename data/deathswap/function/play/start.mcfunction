@@ -1,6 +1,11 @@
-#play/play_time
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/play/start.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
-#reset timer
+#get swap_time
 function deathswap:play/swap/swap_time
 
 #gamemode
@@ -10,13 +15,6 @@ gamemode spectator @a[tag=spectator]
 #still_off
 execute as @a run function deathswap:lib/still/off
 
-#time&weather_cycle
-execute if score *time_cycle deathswap.setting matches 0 run gamerule minecraft:advance_time true
-execute if score *time_cycle deathswap.setting matches 1 run gamerule minecraft:advance_time false
-
-execute if score *weather_cycle deathswap.setting matches 0 run gamerule minecraft:advance_weather true
-execute if score *weather_cycle deathswap.setting matches 1 run gamerule minecraft:advance_weather false
-
 #team
 function deathswap:team/friendlyfire/use_setting
 function deathswap:team/collisionrule/use_setting
@@ -24,10 +22,17 @@ function deathswap:team/collisionrule/use_setting
 #gamerule
 gamerule minecraft:max_entity_cramming 24
 
+#time&weather_cycle
+execute if score *time_cycle deathswap.setting matches 0 run gamerule minecraft:advance_time false
+execute if score *time_cycle deathswap.setting matches 1 run gamerule minecraft:advance_time true
+
+execute if score *weather_cycle deathswap.setting matches 0 run gamerule minecraft:advance_weather false
+execute if score *weather_cycle deathswap.setting matches 1 run gamerule minecraft:advance_weather true
+
 #bossbar 
 bossbar set deathswap:wait visible false
 bossbar set deathswap:swap_countdown visible true
-execute if score *arena deathswap.setting matches 1 if score *arena.start deathswap.setting matches 0 if score *arena.shrink deathswap.setting matches 0 run bossbar set deathswap:arena visible true
+execute if score *arena deathswap.setting matches 1 if score *arena.start deathswap.setting matches 0 if score *arena.shrink deathswap.setting matches 1 run bossbar set deathswap:arena visible true
 execute if score *gmchange deathswap.setting matches 1 run bossbar set deathswap:gmchange visible true
 execute if score *random_effect deathswap.setting matches 1 run bossbar set deathswap:random_effect visible true
 
@@ -48,44 +53,106 @@ gamerule minecraft:show_advancement_messages true
 advancement revoke @a everything
 
 #give_item
-function deathswap:play/inventory_limit
-function deathswap:wait/give_item
+function deathswap:play/start_item
 
+#sidebar
+scoreboard players reset * deathswap.display.play_status
+scoreboard objectives setdisplay sidebar deathswap.display.play_status
+
+#---
 #title
-execute if score *language deathswap.setting matches 1 run title @a title {"text": "§6Death Swap"}
-execute if score *language deathswap.setting matches 2 run title @a title {"text": "§6死亡交換"}
-execute if score *language deathswap.setting matches 1 run title @a subtitle {"text": "§aGame Started!"}
-execute if score *language deathswap.setting matches 2 run title @a subtitle {"text": "§a遊戲開始！"}
+execute if score *language deathswap.setting matches 1 run title @a title {text:"Death Swap",color:"gold"}
+execute if score *language deathswap.setting matches 2 run title @a title {text:"死亡交換",color:"gold"}
+execute if score *language deathswap.setting matches 1 run title @a subtitle {text:"Game Started!",color:"green"}
+execute if score *language deathswap.setting matches 2 run title @a subtitle {text:"遊戲開始！",color:"green"}
 
 #text
-#start
-execute if score *language deathswap.setting matches 1 run tellraw @a[tag=!admin] [{"text": "§6Death Swap§7 | §r"},{"text": "§fGame Started!"}]
-execute if score *language deathswap.setting matches 2 run tellraw @a[tag=!admin] [{"text": "§6死亡交換§7 | §r"},{"text": "§f遊戲開始！"}]
+tellraw @a "-----------------------------------------------------"
 
-execute if score *language deathswap.setting matches 1 run tellraw @a[tag=admin] [{"text": "§6Death Swap§7 | §r"},{"text": "§fGame Started! "},\
-{"text": "§b[Reset Game]","click_event": {"action": "run_command","command": "/trigger reset"},"hover_event": {"action": "show_text","value": "§eClick here or type command\n§d/trigger reset §a[Admin]\n§d/function deathswap:reset §c[OP]"}}\
+#text - start for notadmin
+execute if score *language deathswap.setting matches 1 run tellraw @a[tag=notadmin] [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"Game Started!"}\
 ]
-execute if score *language deathswap.setting matches 2 run tellraw @a[tag=admin] [{"text": "§6死亡交換§7 | §r"},{"text": "§f遊戲開始！"},\
-{"text": "§b[重製遊戲]","click_event": {"action": "run_command","command": "/trigger reset"},"hover_event": {"action": "show_text","value": "§e點此或輸入以下指令\n§d/trigger reset §a[管理員權限]\n§d/function deathswap:reset §c[OP 玩家]"}}\
+execute if score *language deathswap.setting matches 2 run tellraw @a[tag=notadmin] [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"遊戲開始！"}\
+]
+#text - start + reset for admin
+execute if score *language deathswap.setting matches 1 run tellraw @a[tag=admin] [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"Game Started!"},\
+    {\
+        text: " [Reset Game]",color: "aqua",\
+        click_event: {\
+            action: "run_command",command: "/trigger reset" \
+        },\
+        hover_event: {\
+            action: "show_text",value: [\
+                {text:"Click here or type command",color:yellow},"\n",\
+                {text:"/trigger reset",color:light_purple},{text:" [Admin]",color:green},"\n",\
+                {text:"/function deathswap:reset",color:light_purple},{text:" [OP]",color:red}\
+            ]\
+        }\
+    },\
+]
+execute if score *language deathswap.setting matches 2 run tellraw @a[tag=admin] [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"遊戲開始！"},\
+    {\
+        text: " [重製遊戲]",color: "aqua",\
+        click_event: {\
+            action: "run_command",command: "/trigger reset" \
+        },\
+        hover_event: {\
+            action: "show_text",value: [\
+                {text:"點此或輸入以下指令",color:yellow},"\n",\
+                {text:"/trigger reset",color:light_purple},{text:" [管理員]",color:green},"\n",\
+                {text:"/function deathswap:reset",color:light_purple},{text:" [OP]",color:red}\
+            ]\
+        }\
+    },\
+]
+#text - /teammsg
+execute if score *mode deathswap.setting matches 1 if score *language deathswap.setting matches 1 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {\
+        text: "Please use /teammsg to send messages in the team chat",\
+        click_event: {\
+            action: "suggest_command",command: "/teammsg " \
+        },\
+        hover_event: {\
+            action: "show_text",value: "/teammsg <message>" \
+        }\
+    }\
+]
+execute if score *mode deathswap.setting matches 1 if score *language deathswap.setting matches 2 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {\
+        text: "請使用 /teammsg 在隊伍聊天室傳訊息",\
+        click_event: {\
+            action: "suggest_command","command": "/teammsg " \
+        },\
+        hover_event: {\
+            action: "show_text","value": "/teammsg <訊息>" \
+        }\
+    }\
 ]
 
-#/tm
-execute if score *mode deathswap.setting matches 2 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fYou can use /tm to chat with teammates","click_event": {"action": "suggest_command","command": "/tm "},"hover_event": {"action": "show_text","value": "/tm <message>"}}]
-execute if score *mode deathswap.setting matches 2 if score *language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f你可以使用 /tm 與隊友聊天","click_event": {"action": "suggest_command","command": "/tm "},"hover_event": {"action": "show_text","value": "/tm <訊息>"}}]
-
-#inventory_limit
-execute if score *inventory_limit deathswap.setting matches ..36 if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§d§lNote: §r§fDo not put items into locked inventory!"}]
-execute if score *inventory_limit deathswap.setting matches ..36 if score *language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§d§l注意：§r§f請勿將物品放入已鎖定的物品欄！"}]
-
+#sound
 execute as @a at @s run playsound block.end_portal.spawn master @s ~ ~ ~
 
+#---
 #arena
 execute if score *arena deathswap.setting matches 1 if score *arena.start deathswap.setting matches 0 run scoreboard players set *arena deathswap.status 2
-execute if score *arena deathswap.setting matches 1 if score *arena.start deathswap.setting matches 0 run execute store result score *arena.border deathswap.status run scoreboard players get *arena.border deathswap.setting
-execute if score *arena deathswap.setting matches 1 if score *arena.start deathswap.setting matches 0 run execute if score *arena.shrink deathswap.setting matches 0 run function deathswap:play/arena/shrink_wait
+execute if score *arena deathswap.setting matches 1 if score *arena.start deathswap.setting matches 0 store result score *arena.border deathswap.status run scoreboard players get *arena.border deathswap.setting
+execute if score *arena deathswap.setting matches 1 if score *arena.start deathswap.setting matches 0 if score *arena.shrink deathswap.setting matches 1 run function deathswap:play/arena/shrink_wait
 
 #random_effect
 execute if score *random_effect deathswap.setting matches 1 run function deathswap:play/random_effect/random
+
+#killer
+execute if score *mode deathswap.setting matches 1 if score *killer deathswap.setting matches 1 run schedule function deathswap:play/killer/choose_killer 5s
 
 #adv
 advancement grant @a[tag=player] only deathswap:main/criteria/start

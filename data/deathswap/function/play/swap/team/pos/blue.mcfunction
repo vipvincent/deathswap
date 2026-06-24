@@ -1,4 +1,9 @@
-#swap/team/pos/blue
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/play/swap/team/pos/blue.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #summon
 summon marker ~ ~ ~ {Tags:["pos","blue_pos"]}

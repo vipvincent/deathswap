@@ -1,4 +1,9 @@
-#ui/text_display_particle
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/ui/particle_circle.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #lobby
 execute as @e[tag=lobby_text] at @s run tp @s ~ ~ ~ ~10 ~

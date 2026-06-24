@@ -1,4 +1,9 @@
-#advancement/hidden/get_log
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/advancement/hidden/get_log.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #return
 execute unless score *game deathswap.status matches 2 run return fail

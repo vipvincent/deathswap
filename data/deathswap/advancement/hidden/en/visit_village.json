@@ -3,7 +3,7 @@
         "hidden": true,
         "icon": "minecraft:villager_spawn_egg",
         "title": "Collect supplies from the village",
-        "description": "There are so many things in the village!"
+        "description": "Let’s go to the village to collect supplies!"
     },
     "parent": "deathswap:hidden/en/root",
     "criteria": {

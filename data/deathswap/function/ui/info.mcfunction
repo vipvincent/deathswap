@@ -1,5 +1,9 @@
-#ui/info
-function deathswap:ui/page/update
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/ui/info.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 tellraw @s "-----------------------------------------------------"
 
@@ -10,12 +14,12 @@ execute if score *language deathswap.setting matches 1 run tellraw @s [\
     },\
     " ",\
     {\
-        nbt: "install_version",color: yellow,interpret:true,\
-        storage: "deathswap:storage_main",\
+        nbt: "deathswap.install_version",color: yellow,interpret:true,\
+        storage: "vipvincent:install_manager",\
     }\
 ]
 execute if score *language deathswap.setting matches 1 run tellraw @s [\
-    "Made By: ",\
+    "Made by: ",\
     {\   
         text:"vipvincent",color: aqua,\
     },\
@@ -31,15 +35,15 @@ execute if score *language deathswap.setting matches 1 run tellraw @s [\
     }\
 ]
 
-#中文
+#zhtw
 execute if score *language deathswap.setting matches 2 run tellraw @s [\
     {\
         text: "死亡交換",color: gold,\
     },\
     " ",\
     {\
-        nbt: "install_version",color:yellow,interpret:true,\
-        storage: "deathswap:storage_main",\
+        nbt: "deathswap.install_version",color:yellow,interpret:true,\
+        storage: "vipvincent:install_manager",\
     }\
 ]
 execute if score *language deathswap.setting matches 2 run tellraw @s [\

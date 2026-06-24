@@ -1,0 +1,8 @@
+{
+    "values": [
+        "deathswap:ui/text_prefix",
+        "deathswap:ui/text_display",
+        "deathswap:ui/scoreboard_name",
+        "deathswap:team/team_name"
+    ]
+}

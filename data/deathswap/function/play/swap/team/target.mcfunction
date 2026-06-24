@@ -1,4 +1,9 @@
-#swap/team/tp
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/play/swap/team/target.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 # calculated = original
 # calculated -1
@@ -23,7 +28,5 @@ scoreboard players operation @e[tag=pos,tag=calculated] deathswap.swap_calculate
 #tag add target for 0
 execute if entity @s[tag=red_pos] run return run tag @e[tag=pos,scores={deathswap.swap_calculated=0}] add red_target
 execute if entity @s[tag=blue_pos] run return run tag @e[tag=pos,scores={deathswap.swap_calculated=0}] add blue_target
-execute if entity @s[tag=yellow_pos] run return run tag @e[tag=pos,scores={deathswap.swap_calculated=0}] add yellow_target
 execute if entity @s[tag=green_pos] run return run tag @e[tag=pos,scores={deathswap.swap_calculated=0}] add green_target
-
-
+execute if entity @s[tag=yellow_pos] run return run tag @e[tag=pos,scores={deathswap.swap_calculated=0}] add yellow_target

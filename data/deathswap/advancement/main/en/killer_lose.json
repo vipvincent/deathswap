@@ -1,6 +1,7 @@
 {
     "display": {
         "hidden": true,
+        "announce_to_chat": false,
         "icon": "minecraft:barrier",
         "title": "Mission failed!",
         "description": "Next time, I must complete the killer mission."

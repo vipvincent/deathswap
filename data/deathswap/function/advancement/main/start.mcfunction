@@ -1,4 +1,9 @@
-#advancement/main/start
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/advancement/main/start.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #return
 execute unless entity @s[advancements={deathswap:main/criteria/start=true}] run return fail

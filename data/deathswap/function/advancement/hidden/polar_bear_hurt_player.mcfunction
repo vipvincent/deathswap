@@ -1,4 +1,9 @@
-#advancement/hidden/polar_bear_hurt_player
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/advancement/hidden/polar_bear_hurt_player.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #return
 execute unless score *game deathswap.status matches 2 run return fail

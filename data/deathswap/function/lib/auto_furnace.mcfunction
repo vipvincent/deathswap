@@ -1,11 +1,15 @@
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/lib/auto_furnace.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
+
 #mineral
 execute as @e[type=item,nbt={Item:{id:"minecraft:raw_iron"}}] run data modify entity @s Item.id set value "minecraft:iron_ingot"
 execute as @e[type=item,nbt={Item:{id:"minecraft:raw_copper"}}] run data modify entity @s Item.id set value "minecraft:copper_ingot"
 execute as @e[type=item,nbt={Item:{id:"minecraft:raw_gold"}}] run data modify entity @s Item.id set value "minecraft:gold_ingot"
 execute as @e[type=item,nbt={Item:{id:"minecraft:ancient_debris"}}] run data modify entity @s Item.id set value "minecraft:netherite_scrap"
-
-#1.21.4
-execute as @e[type=item,nbt={Item:{id:"minecraft:resin_clump"}}] run data modify entity @s Item.id set value "minecraft:resin_brick"
 
 #food
 execute as @e[type=item,nbt={Item:{id:"minecraft:potato"}}] run data modify entity @s Item.id set value "minecraft:baked_potato"

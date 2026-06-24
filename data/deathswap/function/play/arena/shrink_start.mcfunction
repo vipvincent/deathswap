@@ -1,3 +1,10 @@
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/play/arena/shrink_start.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
+
 scoreboard players set *arena.shrink deathswap.status 1 
 scoreboard players set *arena deathswap.timer 0
 
@@ -16,5 +23,13 @@ execute if score *arena.border deathswap.status matches 100.. in minecraft:the_e
 
 
 #text
-execute if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fThe arena is now starting shrink to "},[{"score": {"name": "*arena.border","objective": "deathswap.status"},"color":"gold"},{"text": "x"},{"score": {"name": "*arena.border","objective": "deathswap.status"}}]]
-execute if score *language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f競技場現在開始縮圈至"},[{"score": {"name": "*arena.border","objective": "deathswap.status"},"color":"gold"},{"text": "x"},{"score": {"name": "*arena.border","objective": "deathswap.status"}}]]
+execute if score *language deathswap.setting matches 1 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"The arena is now starting shrink to "},\
+    {score:{name:"*arena.border",objective:"deathswap.status"},color:"yellow"}\
+]
+execute if score *language deathswap.setting matches 2 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"競技場現在開始縮圈至"},\
+    {score:{name:"*arena.border",objective:"deathswap.status"},color:"yellow"}\
+]

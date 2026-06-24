@@ -1,4 +1,9 @@
-#advancement/hidden/bee_hurt_player
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/advancement/hidden/bee_hurt_player.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #return
 execute unless score *game deathswap.status matches 2 run return fail

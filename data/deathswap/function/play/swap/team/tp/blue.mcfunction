@@ -1,4 +1,9 @@
-#swap/team/tp/blue
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/play/swap/team/tp/blue.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 # if find no tag of already_tp. than clear all already_tp tag
 execute unless entity @e[tag=blue_target,tag=!already_tp] run tag @e[tag=blue_target,tag=already_tp] remove already_tp

@@ -1,4 +1,9 @@
-#swap/team/pos/yellow
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/play/swap/team/pos/yellow.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #summon
 summon marker ~ ~ ~ {Tags:["pos","yellow_pos"]}

@@ -1,17 +1,26 @@
-#play/timer
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/play/timer.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #stop timer(arena wait)
 execute if score *arena deathswap.status matches 1 run return fail
 
+#---
 #tick
 scoreboard players add *tick deathswap.timer 1
 
-#swap
-execute if score *tick deathswap.timer matches 20 unless score *arena deathswap.status matches 0 run scoreboard players add *round_time deathswap.timer 1
-execute if score *tick deathswap.timer matches 20 unless score *arena deathswap.status matches 0 run scoreboard players remove *swap_countdown deathswap.timer 1
-
 #play_time
 execute if score *tick deathswap.timer matches 20 run scoreboard players add *play_time deathswap.timer 1
+
+#---
+#round_time
+execute if score *tick deathswap.timer matches 20 unless score *arena deathswap.status matches 0 run scoreboard players add *round_time deathswap.timer 1
+
+#swap_countdown
+execute if score *tick deathswap.timer matches 20 unless score *arena deathswap.status matches 0 run scoreboard players remove *swap_countdown deathswap.timer 1
 
 #---
 #gmchange

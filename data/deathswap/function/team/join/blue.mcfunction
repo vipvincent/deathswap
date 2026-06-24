@@ -1,11 +1,25 @@
-execute if entity @s[team=blue] if score *language deathswap.setting matches 1 run tellraw @s [{"text":"§cYou are already in the Blue Team!"}]
-execute if entity @s[team=blue] if score *language deathswap.setting matches 2 run tellraw @s [{"text":"§c你已經加入藍隊了！"}]
-execute if entity @s[team=blue] at @s run playsound entity.villager.no master @s ~ ~ ~
-execute if entity @s[team=blue] run return run function deathswap:ui/page/update
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/team/join/blue.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
+#return
+execute if entity @s[team=blue] run return run function deathswap:lib/return/already_joined
+
+#team join
 team join blue
-execute if score *language deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"selector": "@s","color":"white"},{"text": " joined the §9Blue Team"}]
-execute if score *language deathswap.setting matches 2 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"selector": "@s","color":"white"},{"text": " 加入了§9藍隊"}]
-execute as @a at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~
 
-function deathswap:ui/page/update
+#text
+execute if score *language deathswap.setting matches 1 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {selector:"@s",color:"white"},{text:" joined the "},{text:"Team Blue",color:"blue"}\
+]
+execute if score *language deathswap.setting matches 2 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {selector:"@s",color:"white"},{text: " 加入了"},{text:"藍隊",color:"blue"}\
+]
+
+#sound
+execute as @a at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~

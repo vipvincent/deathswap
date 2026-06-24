@@ -1,6 +1,7 @@
 {
     "display": {
         "hidden": true,
+        "announce_to_chat": false,
         "icon": "minecraft:skeleton_skull",
         "title": "我被淘汰了...",
         "description": "我的隊友，你可要好好加油喔！"

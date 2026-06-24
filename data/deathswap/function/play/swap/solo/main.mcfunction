@@ -1,4 +1,9 @@
-#swap/solo/main
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/play/swap/solo/main.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #assign_id
 execute as @a[tag=player,sort=random] run function deathswap:play/swap/assign_id

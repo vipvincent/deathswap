@@ -1,4 +1,9 @@
-#advancement/hidden/eat_enchanted_golden_apple
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/advancement/hidden/eat_enchanted_golden_apple.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #return
 execute unless score *game deathswap.status matches 2 run return fail

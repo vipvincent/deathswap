@@ -1,6 +1,7 @@
 {
     "display": {
         "hidden": true,
+        "announce_to_chat": false,
         "icon": "minecraft:barrier",
         "title": "任務失敗！",
         "description": "下次一定要達成殺手任務"

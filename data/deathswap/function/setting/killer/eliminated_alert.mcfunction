@@ -1,14 +1,32 @@
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/setting/killer/eliminated_alert.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
+
 scoreboard players add *killer.eliminated_alert deathswap.setting 1
 execute if score *killer.eliminated_alert deathswap.setting matches 2 run scoreboard players set *killer.eliminated_alert deathswap.setting 0
 
 #en
-execute if score *language deathswap.setting matches 1 if score *killer.eliminated_alert deathswap.setting matches 0 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fKiller Eliminated Alert is set §cDisable"}]
-execute if score *language deathswap.setting matches 1 if score *killer.eliminated_alert deathswap.setting matches 1 run tellraw @a [{"text": "§6Death Swap§7 | §r"},{"text": "§fKiller Eliminated Alert is set §aEnabled"}]
+execute if score *language deathswap.setting matches 1 if score *killer.eliminated_alert deathswap.setting matches 0 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"Killer Eliminated Alert"},{text:" is set "},{text:"Disable",color:"red"}\
+]
+execute if score *language deathswap.setting matches 1 if score *killer.eliminated_alert deathswap.setting matches 1 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"Killer Eliminated Alert"},{text:" is set "},{text:"Enabled",color:"green"}\
+]
 
-#中文
-execute if score *language deathswap.setting matches 2 if score *killer.eliminated_alert deathswap.setting matches 0 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f殺手淘汰提示已§c關閉"}]
-execute if score *language deathswap.setting matches 2 if score *killer.eliminated_alert deathswap.setting matches 1 run tellraw @a [{"text": "§6死亡交換§7 | §r"},{"text": "§f殺手淘汰提示已§a開啟"}]
+#zhtw
+execute if score *language deathswap.setting matches 2 if score *killer.eliminated_alert deathswap.setting matches 0 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"殺手淘汰提示"},{text:"設定為"},{text:"關閉",color:"red"}\
+]
+execute if score *language deathswap.setting matches 2 if score *killer.eliminated_alert deathswap.setting matches 1 run tellraw @a [\
+    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
+    {text:"殺手淘汰提示"},{text:"設定為"},{text:"開啟",color:"green"}\
+]
 
+#sound
 execute as @a at @s run playsound ui.button.click master @s ~ ~ ~
-
-function deathswap:ui/page/update

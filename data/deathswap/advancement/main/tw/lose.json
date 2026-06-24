@@ -1,6 +1,7 @@
 {
     "display": {
         "hidden": true,
+        "announce_to_chat": false,
         "icon": "minecraft:magma_block",
         "title": "太難過了，居然輸了...",
         "description": "下次一定要獲勝！"

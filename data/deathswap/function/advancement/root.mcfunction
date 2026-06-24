@@ -1,4 +1,9 @@
-#advancement
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/advancement/root.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #main_root
 execute if score *language deathswap.setting matches 1 run advancement grant @a only deathswap:main/en/root

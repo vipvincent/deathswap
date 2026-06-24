@@ -1,7 +1,13 @@
 {
     "pack": {
-        "description": "§6Death swap 死亡交換 §r§ev3.6\n§r§bMade By vipvincent",
-        "min_format": 94,
-        "max_format": 101
+        "description": [
+            "",
+            {"text":"Death Swap 死亡交換 ","color":"gold"},
+            {"text":"v3.7","color":"yellow"},
+            "\n",
+            {"text":"Made by vipvincent","color":"aqua"}
+        ],
+        "min_format": 107,
+        "max_format": 107
     }
 }

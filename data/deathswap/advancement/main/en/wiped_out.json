@@ -1,6 +1,7 @@
 {
     "display": {
         "hidden": true,
+        "announce_to_chat": false,
         "icon": "minecraft:tnt",
         "title": "The entire team was wiped out...",
         "description": "Since that's the case, I guess I'll just have to try harder next time..."

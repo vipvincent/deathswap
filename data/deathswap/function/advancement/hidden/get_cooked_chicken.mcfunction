@@ -1,4 +1,9 @@
-#advancement/hidden/get_cooked_chicken
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/advancement/hidden/get_cooked_chicken.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #return
 execute unless score *game deathswap.status matches 2 run return fail

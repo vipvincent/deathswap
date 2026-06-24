@@ -1,4 +1,9 @@
-#advancement/update
+#--------------------------------------------------
+#Death Swap
+#data/deathswap/function/advancement/update.mcfunction
+#
+#Made by vipvincent
+#--------------------------------------------------
 
 #revoke
 advancement revoke @a from deathswap:main/en/root
