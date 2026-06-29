@@ -17,7 +17,7 @@ The only objective is simple: before the swap happens, use traps or other method
 The original concept of Death Swap was created by SethBling, and this datapack was independently developed by vipvincent.
 
 ## Features
-- Configurable swap intervals: fixed 1–5 minutes or random 30 seconds to 1–5 minutes
+
 - Swap countdown bar, warning alerts, and temporary invincibility
 - Intuitive and easy-to-use inventory-based settings interface
 - Adjustable maximum health
@@ -29,6 +29,7 @@ The original concept of Death Swap was created by SethBling, and this datapack w
 - Currently supports English and Traditional Chinese
 
 ## Special Modes
+
 - **Auto Gamemode Switching**: Automatically changes gamemodes at specified times
 - **Arena Mode**: In the late game, players can be teleported to a designated area where the border gradually shrinks
 - **Random Effects**: Grants random positive or negative status effects
@@ -75,7 +76,7 @@ For more installation instructions, please see the following document.
 死亡交換的原始概念是由SethBling提出的，此資料包由vipvicent獨自製作。
 
 ## 核心功能
-- 可供設定的固定1~5分鐘或隨機30秒到1~5分鐘的交換時間
+
 - 提供交換倒數條、交換警告與無敵
 - 直覺簡易的物品欄設定介面
 - 可供設定的血量上限
@@ -87,6 +88,7 @@ For more installation instructions, please see the following document.
 - 目前語言支援英文與繁體中文
 
 ## 特殊玩法
+
 - **遊戲模式自動切換**：提供在指定的時間，自動切換遊戲模式
 - **競技場**：在遊戲後期，可直接進行傳送到指定地點，並進行縮圈。
 - **隨機效果**：隨機提供正面或負面的狀態效果。
