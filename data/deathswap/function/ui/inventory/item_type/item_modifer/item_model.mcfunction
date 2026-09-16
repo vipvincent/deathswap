@@ -5,10 +5,8 @@
 #Made by vipvincent
 #--------------------------------------------------
 
-#inventory/item_type/item_modifer/item_model
-
 $item modify entity @s $(slot) {\
-    "function":"set_components",\
+    "type":"set_components",\
     "components": {\
         "item_model":"$(item)" \
     }\

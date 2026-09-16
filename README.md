@@ -5,7 +5,7 @@
 [CurseForge](https://www.curseforge.com/minecraft/data-packs/deathswap) | 
 [Planet Minecraft](https://www.planetminecraft.com/data-pack/deathswap-6145205/) | 
 [GitHub](https://github.com/vipvincent/deathswap) | 
-[Wiki](https://vipvincent.github.io/wiki/en/deathswap) | 
+[Docs](https://vipvincent-docs.pages.dev/deathswap/) | 
 [Discord](https://discord.gg/3BKAydVfDk) | 
 [YouTube](https://www.youtube.com/@vipvincentgame) 
 
@@ -62,7 +62,7 @@ You can then configure the game and start the game through your inventory.
 
 For more installation instructions, please see the following document.
 
-- [Installation Guide](https://vipvincent.github.io/wiki/en/deathswap/install)
+- [Installation Guide](https://vipvincent-docs.pages.dev/en/deathswap/install/)
 
 ---
 
@@ -122,4 +122,4 @@ For more installation instructions, please see the following document.
 
 如需要更多安裝教學，請查看以下教學。
 
-- [安裝教學](https://vipvincent.github.io/wiki/deathswap/install)
+- [安裝教學](https://vipvincent-docs.pages.dev/zh-tw/deathswap/install/)

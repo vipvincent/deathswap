@@ -2,7 +2,7 @@
     "display": {
         "hidden": true,
         "icon": "minecraft:cobweb",
-        "title": "Slow and Sticky",
+        "title": "Sticky and Slow",
         "description": "Let me get out of the Cobweb."
     },
     "parent": "deathswap:hidden/en/root",

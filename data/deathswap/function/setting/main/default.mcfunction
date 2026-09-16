@@ -35,6 +35,7 @@ scoreboard players set *glowing deathswap.setting 0
 
 scoreboard players set *auto_furnace deathswap.setting 0
 scoreboard players set *start_pos deathswap.setting 0
+scoreboard players set *hurt_message deathswap.setting 1
 
 #---
 #text

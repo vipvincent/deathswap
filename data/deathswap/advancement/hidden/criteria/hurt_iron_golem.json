@@ -4,7 +4,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "entity_type": "minecraft:iron_golem"
+                    "type": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "entity_type": "minecraft:iron_golem"
+                    }
                 }
             }
         }

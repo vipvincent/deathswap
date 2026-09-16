@@ -5,8 +5,6 @@
 #Made by vipvincent
 #--------------------------------------------------
 
-#sidebar/rank
-
 #shared_object
 function deathswap:ui/sidebar/shared_object {score_objectives:"deathswap.display.rank"}
 

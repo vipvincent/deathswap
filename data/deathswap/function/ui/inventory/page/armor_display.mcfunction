@@ -18,10 +18,11 @@ execute if score *armor deathswap.setting matches 1 run item replace entity @s a
 execute if score *armor deathswap.setting matches 1 run item replace entity @s armor.feet with stick[custom_data={ui:1b},tooltip_display={hide_tooltip:true},unbreakable={},item_model="minecraft:leather_boots",equippable={slot:"feet",asset_id:"leather",equip_sound:{sound_id:item.armor.equip_generic,range:0}}]
 
 #1 leather color
-execute if score *armor deathswap.setting matches 1 run item modify entity @s armor.head deathswap:leather_color
-execute if score *armor deathswap.setting matches 1 run item modify entity @s armor.chest deathswap:leather_color
-execute if score *armor deathswap.setting matches 1 run item modify entity @s armor.legs deathswap:leather_color
-execute if score *armor deathswap.setting matches 1 run item modify entity @s armor.feet deathswap:leather_color
+execute if score *armor deathswap.setting matches 1 as @s[team=red] run function deathswap:lib/armor/leather_color {dyed_color:"11546150"}
+execute if score *armor deathswap.setting matches 1 as @s[team=blue] run function deathswap:lib/armor/leather_color {dyed_color:"3949748"}
+execute if score *armor deathswap.setting matches 1 as @s[team=green] run function deathswap:lib/armor/leather_color {dyed_color:"8439583"}
+execute if score *armor deathswap.setting matches 1 as @s[team=yellow] run function deathswap:lib/armor/leather_color {dyed_color:"16701501"}
+execute if score *armor deathswap.setting matches 1 as @s[team=spectator] run function deathswap:lib/armor/leather_color {dyed_color:"10329495"}
 
 #2 copper
 execute if score *armor deathswap.setting matches 2 run item replace entity @s armor.head with stick[custom_data={ui:1b},tooltip_display={hide_tooltip:true},unbreakable={},item_model="minecraft:copper_helmet",equippable={slot:"head",asset_id:"copper",equip_sound:{sound_id:item.armor.equip_generic,range:0}}]
@@ -60,7 +61,8 @@ execute if score *armor deathswap.setting matches 7 run item replace entity @s a
 execute if score *armor deathswap.setting matches 7 run item replace entity @s armor.feet with stick[custom_data={ui:1b},tooltip_display={hide_tooltip:true},unbreakable={},item_model="minecraft:netherite_boots",equippable={slot:"feet",asset_id:"netherite",equip_sound:{sound_id:item.armor.equip_generic,range:0}}]
 
 #template
-execute if score *armor deathswap.setting matches 1.. run item modify entity @s armor.head deathswap:template
-execute if score *armor deathswap.setting matches 1.. run item modify entity @s armor.chest deathswap:template
-execute if score *armor deathswap.setting matches 1.. run item modify entity @s armor.legs deathswap:template
-execute if score *armor deathswap.setting matches 1.. run item modify entity @s armor.feet deathswap:template
+execute if score *armor deathswap.setting matches 1.. as @s[team=red] run function deathswap:lib/armor/template {material:"redstone"}
+execute if score *armor deathswap.setting matches 1.. as @s[team=blue] run function deathswap:lib/armor/template {material:"lapis"}
+execute if score *armor deathswap.setting matches 1.. as @s[team=green] run function deathswap:lib/armor/template {material:"emerald"}
+execute if score *armor deathswap.setting matches 1.. as @s[team=yellow] run function deathswap:lib/armor/template {material:"gold"}
+execute if score *armor deathswap.setting matches 1.. as @s[team=spectator] run function deathswap:lib/armor/template {material:"iron"}

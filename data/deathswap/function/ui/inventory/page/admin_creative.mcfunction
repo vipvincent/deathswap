@@ -60,3 +60,5 @@ function deathswap:ui/inventory/item_type/clean {slot:"hotbar.5"}
 function deathswap:ui/inventory/item_type/clean {slot:"hotbar.6"}
 function deathswap:ui/inventory/item_type/clean {slot:"hotbar.7"}
 function deathswap:ui/inventory/item_type/clean {slot:"hotbar.8"}
+
+function deathswap:ui/inventory/item_type/clean {slot:"weapon.offhand"}

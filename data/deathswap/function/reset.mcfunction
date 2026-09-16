@@ -6,7 +6,7 @@
 #--------------------------------------------------
 
 #reset
-scoreboard players set *game deathswap.status -1
+scoreboard players set *game_phase deathswap.status -1
 
 #worldborder
 execute in minecraft:overworld run worldborder center 0 0
@@ -144,11 +144,11 @@ scoreboard players reset * deathswap.swap_calculated
 
 #---
 #schedule clear
-schedule clear deathswap:play/killer/choose_killer
+schedule clear deathswap:phase/gameplay/killer/choose_killer
 
 #---
 #game status
-scoreboard players set *game deathswap.status 0
+scoreboard players set *game_phase deathswap.status 0
 
 #ui page 0
 scoreboard players set @a[tag=admin] deathswap.ui_page 0

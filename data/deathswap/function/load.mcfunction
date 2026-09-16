@@ -23,7 +23,7 @@ execute unless data storage vipvincent:install_manager {deathswap:{install:1b}} 
 ]
 
 #update
-execute unless data storage vipvincent:install_manager {deathswap:{install_version:"v3.7"}} run return run function deathswap:update
+execute unless data storage vipvincent:install_manager {deathswap:{install_version:"v3.8"}} run return run function deathswap:update
 
 #langauge
 execute unless score *language deathswap.setting matches 1.. run function deathswap:ui/language_tip

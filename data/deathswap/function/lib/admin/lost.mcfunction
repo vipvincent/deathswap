@@ -24,14 +24,14 @@ execute if score *language deathswap.setting matches 2 run tellraw @a [\
 execute as @a at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~
 
 #---
-#prepare stage
-execute unless score *game deathswap.status matches 0 run return fail
+#preparation phase
+execute unless score *game_phase deathswap.status matches 0 run return fail
 
 #clear ui & gamemode
 clear @s
 gamemode survival @s
 
 #title
-execute if score *game deathswap.status matches 0 if score *language deathswap.setting matches 1 run title @s title {text:"Admin have been removed",color:"yellow"}
-execute if score *game deathswap.status matches 0 if score *language deathswap.setting matches 2 run title @s title {text:"已移除管理員權限",color:"yellow"}
-execute if score *game deathswap.status matches 0 run title @s subtitle [{"text": ""}]
+execute if score *game_phase deathswap.status matches 0 if score *language deathswap.setting matches 1 run title @s title {text:"Admin have been removed",color:"yellow"}
+execute if score *game_phase deathswap.status matches 0 if score *language deathswap.setting matches 2 run title @s title {text:"已移除管理員權限",color:"yellow"}
+execute if score *game_phase deathswap.status matches 0 run title @s subtitle [{"text": ""}]

@@ -51,10 +51,10 @@
             }
         },
         {
-            "label": {"text":"Wiki","color":"yellow"},
+            "label": {"text":"Docs","color":"yellow"},
             "action":{
                 "type": "open_url",
-                "url": "https://vipvincent.github.io/wiki/deathswap"
+                "url": "https://vipvincent-docs.pages.dev/deathswap/"
             }
         },
         {

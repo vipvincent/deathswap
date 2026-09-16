@@ -22,14 +22,14 @@ execute if score *language deathswap.setting matches 1 if score *swap_warn death
     [{score:{name:"*swap_warn",objective:"deathswap.setting"},color:"green"},"s"]\
 ]
 
-#zhtw 交換警告
+#zhtw 交換前警告
 execute if score *language deathswap.setting matches 2 if score *swap_warn deathswap.setting matches 0 run tellraw @a [\
     {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
-    {text:"交換警告"},{text:"設定為"},{text:"關閉",color:"red"}\
+    {text:"交換前警告"},{text:"設定為"},{text:"關閉",color:"red"}\
 ]
 execute if score *language deathswap.setting matches 2 if score *swap_warn deathswap.setting matches 1.. run tellraw @a [\
     {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
-    {text:"交換警告"},{text:"設定為"},\
+    {text:"交換前警告"},{text:"設定為"},\
     [{score:{name:"*swap_warn",objective:"deathswap.setting"},color:"green"},"秒"]\
 ]
 

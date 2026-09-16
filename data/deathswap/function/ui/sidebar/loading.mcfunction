@@ -13,19 +13,19 @@ function deathswap:ui/sidebar/shared_object {score_objectives:"deathswap.display
 scoreboard players set *loading_time deathswap.display.loading -1
 
 #loading_time/loading
-execute if score *language deathswap.setting matches 1 if score *game deathswap.status matches 1 if score *loading deathswap.timer matches 1..299 run \
+execute if score *language deathswap.setting matches 1 if score *game_phase deathswap.status matches 1 if score *loading deathswap.timer matches 1..299 run \
 scoreboard players display name *loading_time deathswap.display.loading ["",\
     {"text":"System is preparing..."}\
 ]
-execute if score *language deathswap.setting matches 1 if score *game deathswap.status matches 1 if score *loading deathswap.timer matches 300..399 run \
+execute if score *language deathswap.setting matches 1 if score *game_phase deathswap.status matches 1 if score *loading deathswap.timer matches 300..399 run \
 scoreboard players display name *loading_time deathswap.display.loading ["",\
     {"text":"Game is starting..."}\
 ]
-execute if score *language deathswap.setting matches 2 if score *game deathswap.status matches 1 if score *loading deathswap.timer matches 1..299 run \
+execute if score *language deathswap.setting matches 2 if score *game_phase deathswap.status matches 1 if score *loading deathswap.timer matches 1..299 run \
 scoreboard players display name *loading_time deathswap.display.loading ["",\
     {"text":"系統準備中..."}\
 ]
-execute if score *language deathswap.setting matches 2 if score *game deathswap.status matches 1 if score *loading deathswap.timer matches 300..399 run \
+execute if score *language deathswap.setting matches 2 if score *game_phase deathswap.status matches 1 if score *loading deathswap.timer matches 300..399 run \
 scoreboard players display name *loading_time deathswap.display.loading ["",\
     {"text":"遊戲即將開始..."}\
 ]

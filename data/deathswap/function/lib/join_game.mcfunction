@@ -42,35 +42,35 @@ execute if score *language deathswap.setting matches 1.. run execute as @a at @s
 
 #---
 #status 0
-execute if score *game deathswap.status matches 0 run effect clear @a
-execute if score *game deathswap.status matches 0 run clear @s
-execute if score *game deathswap.status matches 0 run xp set @a 0 points
-execute if score *game deathswap.status matches 0 run xp set @a 0 levels
-execute if score *game deathswap.status matches 0 run tp @s @e[tag=lobby,limit=1]
-execute if score *game deathswap.status matches 0 run gamemode survival @s
-execute if score *game deathswap.status matches 0 run team leave @s
-execute if score *game deathswap.status matches 0 run tag @s remove player
-execute if score *game deathswap.status matches 0 run tag @s remove spectator
-execute if score *game deathswap.status matches 0 run tag @s remove eliminated
-execute if score *game deathswap.status matches 0 run tag @s remove win
-execute if score *game deathswap.status matches 0 run tag @s remove killer
-execute if score *game deathswap.status matches 0 run function deathswap:lib/still/off
+execute if score *game_phase deathswap.status matches 0 run effect clear @a
+execute if score *game_phase deathswap.status matches 0 run clear @s
+execute if score *game_phase deathswap.status matches 0 run xp set @a 0 points
+execute if score *game_phase deathswap.status matches 0 run xp set @a 0 levels
+execute if score *game_phase deathswap.status matches 0 run tp @s @e[tag=lobby,limit=1]
+execute if score *game_phase deathswap.status matches 0 run gamemode survival @s
+execute if score *game_phase deathswap.status matches 0 run team leave @s
+execute if score *game_phase deathswap.status matches 0 run tag @s remove player
+execute if score *game_phase deathswap.status matches 0 run tag @s remove spectator
+execute if score *game_phase deathswap.status matches 0 run tag @s remove eliminated
+execute if score *game_phase deathswap.status matches 0 run tag @s remove win
+execute if score *game_phase deathswap.status matches 0 run tag @s remove killer
+execute if score *game_phase deathswap.status matches 0 run function deathswap:lib/still/off
 
-execute if score *game deathswap.status matches 0 run function deathswap:ui/admin_tip
+execute if score *game_phase deathswap.status matches 0 run function deathswap:ui/admin_tip
 
 #---
 #status 2 play join
-execute if score *game deathswap.status matches 2 if score *language deathswap.setting matches 1 if entity @s[tag=player] run tellraw @a [\
+execute if score *game_phase deathswap.status matches 2 if score *language deathswap.setting matches 1 if entity @s[tag=player] run tellraw @a [\
     {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
     {selector:"@s",color:"white"},{text:" auto-eliminated for leaving, now spectating."}\
 ]
-execute if score *game deathswap.status matches 2 if score *language deathswap.setting matches 2 if entity @s[tag=player] run tellraw @a [\
+execute if score *game_phase deathswap.status matches 2 if score *language deathswap.setting matches 2 if entity @s[tag=player] run tellraw @a [\
     {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
     {selector:"@s",color:"white"},{text:" 因為中途離開遊戲而被自動淘汰，並加入旁觀。"}\
 ]
-execute if score *game deathswap.status matches 2 run kill @s
+execute if score *game_phase deathswap.status matches 2 run kill @s
 
 #---
 #spectator
-execute if score *game deathswap.status matches 1..3 run team join spectator @s
-execute if score *game deathswap.status matches 1..3 run gamemode spectator @s
+execute if score *game_phase deathswap.status matches 1..3 run team join spectator @s
+execute if score *game_phase deathswap.status matches 1..3 run gamemode spectator @s

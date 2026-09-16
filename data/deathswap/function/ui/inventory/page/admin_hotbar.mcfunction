@@ -23,8 +23,8 @@ function deathswap:ui/inventory/item_type/right_click {\
 function deathswap:ui/inventory/item_type/right_click {\
     id:"hotbar.tp_all",slot:"hotbar.1",\
     item:"ender_pearl",count:1,\
-    command:"function deathswap:prepare/tp_player_here",\
-    command:"function deathswap:prepare/tp_player_here",\
+    command:"function deathswap:phase/preparation/tp_player_here",\
+    command:"function deathswap:phase/preparation/tp_player_here",\
     name_en:{"text":"Teleport All Players to here","color":"yellow","italic":false},\
     name_zhtw:{"text":"傳送所有玩家到這裡","color":"yellow","italic":false},\
     lore_en:[],\
@@ -36,7 +36,7 @@ function deathswap:ui/inventory/item_type/right_click {\
 function deathswap:ui/inventory/item_type/right_click {\
     id:"hotbar.set_lobby",slot:"hotbar.7",\
     item:"lectern",count:1,\
-    command:"function deathswap:prepare/set_lobby",\
+    command:"function deathswap:phase/preparation/set_lobby",\
     name_en:{"text":"Set Game Lobby","color":"yellow","italic":false},\
     name_zhtw:{"text":"設置遊戲大廳","color":"yellow","italic":false},\
     lore_en:[],\
@@ -48,10 +48,14 @@ function deathswap:ui/inventory/item_type/right_click {\
 function deathswap:ui/inventory/item_type/right_click {\
     id:"hotbar.start_game",slot:"hotbar.8",\
     item:"emerald",count:1,\
-    command:"function deathswap:prepare/start_game",\
+    command:"function deathswap:phase/preparation/start_game",\
     name_en:{"text":"Start Game!","color":"green","italic":false},\
     name_zhtw:{"text":"開始遊戲！","color":"green","italic":false},\
     lore_en:[],\
     lore_zhtw:[],\
     components:"",\
 } 
+
+#---
+#clean
+function deathswap:ui/inventory/item_type/clean {slot:"weapon.offhand"}

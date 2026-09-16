@@ -8,7 +8,7 @@
                         "tags": [
                             {
                                 "expected": true,
-                                "id": "minecraft:is_explosion"
+                                "id": "#is_explosion"
                             }
                         ]
                     }

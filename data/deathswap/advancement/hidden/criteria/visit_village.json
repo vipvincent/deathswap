@@ -4,7 +4,8 @@
             "trigger": "location",
             "conditions": {
                 "player": {
-                    "location":{
+                    "type": "location_check",
+                    "predicate": {
                         "structures": "#minecraft:village"
                     }
                 }

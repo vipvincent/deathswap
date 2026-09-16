@@ -12,12 +12,12 @@
 # 12 lanugage/zhtw 
 
 #info
-execute as @s[scores={deathswap=1}] run return run function deathswap:ui/info
+execute if score @s deathswap matches 1 run return run function deathswap:ui/info
 
 #language
-execute as @s[tag=admin,scores={deathswap=10}] run return run function deathswap:language
-execute as @s[tag=admin,scores={deathswap=11}] run return run function deathswap:setting/language/en
-execute as @s[tag=admin,scores={deathswap=12}] run return run function deathswap:setting/language/zhtw
+execute if score @s[tag=admin] deathswap matches 10 run return run function deathswap:language
+execute if score @s[tag=admin] deathswap matches 11 run return run function deathswap:setting/language/en
+execute if score @s[tag=admin] deathswap matches 12 run return run function deathswap:setting/language/zhtw
 
 #---
 #error

@@ -349,7 +349,7 @@ execute if score *mode deathswap.setting matches 1 run function deathswap:ui/inv
 #swap_bossbar
 function deathswap:ui/inventory/item_type/list {\
     id:"setting.swap_bossbar",slot:"inventory.4",\
-    item_list:["paper","paper"],\
+    item_list:["redstone_lamp","redstone_lamp"],\
     count_list:[1,1],\
     toggle:"true",\
     score_name:"*swap_bossbar",score_objectives:"deathswap.setting",\
@@ -375,9 +375,9 @@ function deathswap:ui/inventory/item_type/score {\
     command:"function deathswap:setting/main/swap_warn",\
     unit_en:"s",unit_zhtw:"秒",\
     name_disabled_en:{text:"Swap Warn: Disabled",color:red,italic:false},\
-    name_disabled_zhtw:{text:"交換警告：關閉",color:red,italic:false},\
+    name_disabled_zhtw:{text:"交換前警告：關閉",color:red,italic:false},\
     name_en:{text:"Swap Warn: ",color:green,italic:false},\
-    name_zhtw:{text:"交換警告：",color:green,italic:false},\
+    name_zhtw:{text:"交換前警告：",color:green,italic:false},\
     lore_en:[{text:"Give a countdown warning before the swap",color:gray,italic:false}],\
     lore_zhtw:[{text:"交換前給於倒數警告",color:gray,italic:false}],\
     components:"",\
@@ -391,9 +391,9 @@ function deathswap:ui/inventory/item_type/score {\
     command:"function deathswap:setting/main/swap_invincible",\
     unit_en:"s",unit_zhtw:"秒",\
     name_disabled_en:{text:"Swap Invincibility: Disabled",color:red,italic:false},\
-    name_disabled_zhtw:{text:"交換無敵：關閉",color:red,italic:false},\
+    name_disabled_zhtw:{text:"交換後無敵：關閉",color:red,italic:false},\
     name_en:{text:"Swap Invincibility: ",color:green,italic:false},\
-    name_zhtw:{text:"交換無敵：",color:green,italic:false},\
+    name_zhtw:{text:"交換後無敵：",color:green,italic:false},\
     lore_en:[{text:"Give resistance during swap",color:gray,italic:false}],\
     lore_zhtw:[{text:"交換時給予抗性",color:gray,italic:false}],\
     components:"",\
@@ -466,7 +466,7 @@ function deathswap:ui/inventory/item_type/list {\
     ",\
 }
 
-#furnace
+#auto_furnace
 function deathswap:ui/inventory/item_type/list {\
     id:"setting.furnace",slot:"inventory.6",\
     item_list:["raw_iron","iron_ingot"],\
@@ -507,6 +507,29 @@ function deathswap:ui/inventory/item_type/list {\
     components:"",\
 }
 
+#hurt_message
+function deathswap:ui/inventory/item_type/list {\
+    id:"setting.hurt_message",slot:"inventory.24",\
+    item_list:["paper","paper","paper"],\
+    count_list:[1,1,1],\
+    toggle:"true",\
+    score_name:"*hurt_message",score_objectives:"deathswap.setting",\
+    command:"function deathswap:setting/main/hurt_message",\
+    name_list_en:[\
+        {text:"Hurt Message: Disable",color:red,italic:false},\
+        {text:"Hurt Message: Show only Teammates",color:green,italic:false},\
+        {text:"Hurt Message: Show All",color:green,italic:false},\
+    ],\
+    name_list_zhtw:[\
+        {text:"受傷訊息：關閉",color:red,italic:false},\
+        {text:"受傷訊息：僅同隊顯示",color:green,italic:false},\
+        {text:"受傷訊息：所有人顯示",color:green,italic:false},\
+    ],\
+    lore_en:[{text:"A message will be displayed when the player is injured.",color:gray,italic:false}],\
+    lore_zhtw:[{text:"玩家受傷時將顯示訊息",color:gray,italic:false}],\
+    components:"",\
+}
+
 #---
 #placeholder
 #function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.0"}
@@ -535,6 +558,6 @@ function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.17"}
 #function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.21"}
 #function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.22"}
 #function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.23"}
-function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.24"}
+#function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.24"}
 function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.25"}
 #function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.26"}

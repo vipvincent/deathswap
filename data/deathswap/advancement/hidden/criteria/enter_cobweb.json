@@ -3,7 +3,7 @@
         "enter_cobweb":{
             "trigger": "enter_block",
             "conditions": {
-                "block": "minecraft:cobweb"
+                "blocks": "minecraft:cobweb"
             }
         }
     },

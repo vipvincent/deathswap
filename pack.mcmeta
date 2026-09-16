@@ -3,11 +3,11 @@
         "description": [
             "",
             {"text":"Death Swap 死亡交換 ","color":"gold"},
-            {"text":"v3.7","color":"yellow"},
+            {"text":"v3.8","color":"yellow"},
             "\n",
             {"text":"Made by vipvincent","color":"aqua"}
         ],
-        "min_format": 107,
-        "max_format": 107
+        "min_format": 121,
+        "max_format": 121
     }
 }

@@ -24,8 +24,8 @@ execute if score *language deathswap.setting matches 2 run tellraw @a [\
 execute as @s at @s run playsound entity.player.levelup master @s ~ ~ ~
 
 #---
-#prepare stage
-execute unless score *game deathswap.status matches 0 run return fail
+#preparation phase
+execute unless score *game_phase deathswap.status matches 0 run return fail
 
 #creative tag
 tag @s[gamemode=creative] add creative

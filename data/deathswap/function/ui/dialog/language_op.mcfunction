@@ -16,6 +16,7 @@ dialog show @s {\
         },\
         {\
             "type":"plain_message",\
+            "width": 300,\
             "contents": {translate:"options.languageAccuracyWarning",color:"gray"}\
         }\
     ],\

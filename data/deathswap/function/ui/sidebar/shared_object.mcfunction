@@ -5,8 +5,6 @@
 #Made by vipvincent
 #--------------------------------------------------
 
-#sidebar/shared_object
-
 #header
 $execute if score *language deathswap.setting matches 1 run scoreboard objectives modify $(score_objectives) displayname [\
     {text:"Death Swap ",color:gold},\

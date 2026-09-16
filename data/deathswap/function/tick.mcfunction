@@ -18,15 +18,15 @@ scoreboard players set @a deathswap.leave_game 0
 function deathswap:lib/admin/main
 
 #---
-# game status
-# 0 prepare 
+# game phase
+# 0 preparation 
 # 1 loading
-# 2 play 
-# 3 win 
-execute if score *game deathswap.status matches 0 run function deathswap:prepare/tick
-execute if score *game deathswap.status matches 1 run function deathswap:loading/tick
-execute if score *game deathswap.status matches 2 run function deathswap:play/tick
-execute if score *game deathswap.status matches 3 run function deathswap:end/tick
+# 2 gameplay 
+# 3 ending 
+execute if score *game_phase deathswap.status matches 0 run function deathswap:phase/preparation/tick
+execute if score *game_phase deathswap.status matches 1 run function deathswap:phase/loading/tick
+execute if score *game_phase deathswap.status matches 2 run function deathswap:phase/gameplay/tick
+execute if score *game_phase deathswap.status matches 3 run function deathswap:phase/ending/tick
 
 #---
 #max_health

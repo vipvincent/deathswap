@@ -6,7 +6,7 @@
 #--------------------------------------------------
 
 #load_version
-data modify storage vipvincent:install_manager deathswap.load_version set value "v3.7"
+data modify storage vipvincent:install_manager deathswap.load_version set value "v3.8"
 
 #not install
 execute unless data storage vipvincent:install_manager {deathswap:{install:1b}} run tellraw @a [\
@@ -41,7 +41,7 @@ execute unless data storage vipvincent:install_manager {deathswap:{install:1b}} 
     {\
         text: " [Installation Guide 安裝指南]",color:"yellow",\
         click_event: {\
-            action:"open_url",url: "https://vipvincent.github.io/deathswap/install" \
+            action:"open_url",url: "https://vipvincent-docs.pages.dev/zh-tw/deathswap/install/" \
         },\
         hover_event: {\
             action: show_text,value: [\

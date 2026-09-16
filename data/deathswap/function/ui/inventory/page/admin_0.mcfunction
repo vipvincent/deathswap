@@ -45,7 +45,7 @@ function deathswap:ui/inventory/item_type/normal {\
 function deathswap:ui/inventory/item_type/normal {\
     id:"reset_wins",slot:"inventory.0",\
     item:"nether_star",count:1,\
-    command:"function deathswap:prepare/reset_wins",\
+    command:"function deathswap:phase/preparation/reset_wins",\
     name_en:{text:"Reset Win Scores",color:yellow,italic:false},\
     name_zhtw:{text:"重製獲勝分數",color:yellow,italic:false},\
     lore_en:[{text:"Clear win scores for all players",color:gray,italic:false}],\

@@ -9,7 +9,7 @@
 #  1 reset
 
 #reset
-execute as @s[tag=admin,scores={reset=1}] run return run function deathswap:reset
+execute if score @s reset matches 1 run return run function deathswap:reset
 
 #---
 #error

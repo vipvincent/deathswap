@@ -53,6 +53,8 @@ data remove storage vipvincent:install_manager deathswap.install
 data remove storage vipvincent:install_manager deathswap.install_stage
 data remove storage vipvincent:install_manager deathswap.install_version
 
+execute unless data storage vipvincent:install_manager {deathswap:{reinstall_stage:1b}} run data remove storage vipvincent:install_manager deathswap
+
 #ui
 data remove storage deathswap:ui text
 data remove storage deathswap:ui time

@@ -44,13 +44,13 @@ execute if score *language deathswap.setting matches 1 run tellraw @s [\
     },\
     "\n",\
     {\
-        text: "[Wiki] ",color: yellow,\
+        text: "[Docs] ",color: yellow,\
         click_event: {\
-            action: open_url,url: "https://vipvincent.github.io/wiki/en/deathswap" \
+            action: open_url,url: "https://vipvincent-docs.pages.dev/en/deathswap/" \
         },\
         hover_event:{\
             action: show_text,value: [\
-                "Click here to ",{text: "Wiki",color: yellow}\
+                "Click here to ",{text: "Docs",color: yellow}\
             ]\
         }\
     },\
@@ -126,13 +126,13 @@ execute if score *language deathswap.setting matches 2 run tellraw @s [\
     },\
     "\n",\
     {\
-        text: "[Wiki] ",color: yellow,\
+        text: "[Docs] ",color: yellow,\
         click_event: {\
-            action: open_url,url: "https://vipvincent.github.io/wiki/deathswap" \
+            action: open_url,url: "https://vipvincent-docs.pages.dev/zh-tw/deathswap/" \
         },\
         hover_event:{\
             action: show_text,value: [\
-                "點擊前往 ",{text: "Wiki",color: yellow}\
+                "點擊前往 ",{text: "Docs",color: yellow}\
             ]\
         }\
     },\

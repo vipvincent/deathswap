@@ -5,9 +5,7 @@
 #Made by vipvincent
 #--------------------------------------------------
 
-#inventory/item_type/item_modifer/name
-
 $item modify entity @s $(slot) {\
-    "function":"set_name",\
+    "type":"set_name",\
     "name": [$(name)]\
 }

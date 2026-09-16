@@ -5,9 +5,7 @@
 #Made by vipvincent
 #--------------------------------------------------
 
-#inventory/item_type/item_modifer/count
-
 $item modify entity @s $(slot) {\
-    "function":"set_count",\
+    "type":"set_count",\
     "count": $(count) \
 }

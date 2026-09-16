@@ -128,7 +128,7 @@ tag @s add admin
 #---
 #data - install
 data modify storage vipvincent:install_manager deathswap.install set value 1b
-data modify storage vipvincent:install_manager deathswap.install_version set value "v3.7"
+data modify storage vipvincent:install_manager deathswap.install_version set value "v3.8"
 data modify storage vipvincent:install_manager deathswap.install_stage set value 1b
 
 #language

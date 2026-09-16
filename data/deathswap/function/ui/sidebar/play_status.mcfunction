@@ -128,43 +128,43 @@ if score *yellow_count deathswap.status matches 0 run scoreboard players display
 #team/tw
 execute if score *mode deathswap.setting matches 1 if score *language deathswap.setting matches 2 \
 if score *red_count deathswap.status matches 1.. run scoreboard players display name *team_red deathswap.display.play_status ["",\
-    {"text":"紅","color":"red"},{"text":"："},\
+    {"text":"紅隊","color":"red"},{"text":"："},\
     {"score":{"name":"*red_count","objective":"deathswap.status"},"color":"green"}\
 ]
 execute if score *mode deathswap.setting matches 1 if score *language deathswap.setting matches 2 \
 if score *blue_count deathswap.status matches 1.. run scoreboard players display name *team_blue deathswap.display.play_status ["",\
-    {"text":"藍","color":"blue"},{"text":"："},\
+    {"text":"藍隊","color":"blue"},{"text":"："},\
     {"score":{"name":"*blue_count","objective":"deathswap.status"},"color":"green"}\
 ]
 execute if score *mode deathswap.setting matches 1 if score *language deathswap.setting matches 2 \
 if score *green_count deathswap.status matches 1.. run scoreboard players display name *team_green deathswap.display.play_status ["",\
-    {"text":"綠","color":"green"},{"text":"："},\
+    {"text":"綠隊","color":"green"},{"text":"："},\
     {"score":{"name":"*green_count","objective":"deathswap.status"},"color":"green"}\
 ]
 execute if score *mode deathswap.setting matches 1 if score *language deathswap.setting matches 2 \
 if score *yellow_count deathswap.status matches 1.. run scoreboard players display name *team_yellow deathswap.display.play_status ["",\
-    {"text":"黃","color":"yellow"},{"text":"："},\
+    {"text":"黃隊","color":"yellow"},{"text":"："},\
     {"score":{"name":"*yellow_count","objective":"deathswap.status"},"color":"green"}\
 ]
 
 #team/eliminated/tw
 execute if score *mode deathswap.setting matches 1 if score *language deathswap.setting matches 2 \
 if score *red_count deathswap.status matches 0 run scoreboard players display name *team_red deathswap.display.play_status ["",\
-    {"text":"紅","color":"red"},{"text":"："},\
+    {"text":"紅隊","color":"red"},{"text":"："},\
     {"text":"❌","color":"red"}\
 ]
 execute if score *mode deathswap.setting matches 1 if score *language deathswap.setting matches 2 \
 if score *blue_count deathswap.status matches 0 run scoreboard players display name *team_blue deathswap.display.play_status ["",\
-    {"text":"藍","color":"blue"},{"text":"："},\
+    {"text":"藍隊","color":"blue"},{"text":"："},\
     {"text":"❌","color":"red"}\
 ]
 execute if score *mode deathswap.setting matches 1 if score *language deathswap.setting matches 2 \
 if score *green_count deathswap.status matches 0 run scoreboard players display name *team_green deathswap.display.play_status ["",\
-    {"text":"綠","color":"green"},{"text":"："},\
+    {"text":"綠隊","color":"green"},{"text":"："},\
     {"text":"❌","color":"red"}\
 ]
 execute if score *mode deathswap.setting matches 1 if score *language deathswap.setting matches 2 \
 if score *yellow_count deathswap.status matches 0 run scoreboard players display name *team_yellow deathswap.display.play_status ["",\
-    {"text":"黃","color":"yellow"},{"text":"："},\
+    {"text":"黃隊","color":"yellow"},{"text":"："},\
     {"text":"❌","color":"red"}\
 ]
